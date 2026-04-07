@@ -331,7 +331,7 @@
   - 重要性: 对小到中等素因子特别有效，是发现大素因子的利器
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0015 | 源序号 15] 快速幂算法/二进制幂 (Binary Exponentiation)
+- [x] [MATH-0015 | 源序号 15] 快速幂算法/二进制幂 (Binary Exponentiation)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论/算法`
   - 现有摘要: 通过平方求幂在O(log n)时间内计算a^n mod m

@@ -1,0 +1,12 @@
+{
+  "index": 15,
+  "uid": "MATH-0015",
+  "source_number": 15,
+  "name": "快速幂算法/二进制幂 (Binary Exponentiation)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数论",
+  "folder_name": "数学-数论-0015-快速幂算法／二进制幂_(Binary_Exponentiation)",
+  "folder_relpath": "Algorithms/数学-数论-0015-快速幂算法／二进制幂_(Binary_Exponentiation)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot15/Docs/Stage0_Blueprint.md"
+}
