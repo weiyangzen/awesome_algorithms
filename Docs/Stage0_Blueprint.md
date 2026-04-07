@@ -1,10 +1,44 @@
 # Stage0 Blueprint
 
-> 状态: Authoritative Blueprint
+> 状态: Completed Final Delivery
 > 生成日期: 2026-04-07
-> 作用: 本文件是 Stage 0 的唯一 requirement source；如果后续引入 execution cron，只允许从本文件派生 todo。
-> 结构策略: 只保留算法级 checklist；学科、子分类和研究模板都作为非-checklist 结构信息存在。
+> 作用: 本文件曾是 Stage 0 的唯一 requirement source；当前 Stage 0 已全部完成，本文件同时承担最终交付索引的角色。
+> 结构策略: 保留算法级 checklist 作为最终完成记录；学科、子分类和研究模板继续作为交付目录与说明表面存在。
 > 来源: `Docs/researches/top_500_math_algorithms.md`、`Docs/researches/top_500_cs_algorithms.md`、`Docs/researches/physics_top500_algorithms.md`
+
+## Final Snapshot
+
+| Metric | Value |
+| --- | ---: |
+| Stage0 final items | 1372 |
+| Completed items | 1372 |
+| Open items | 0 |
+| Mathematics | 567 |
+| Physics | 477 |
+| Computer Science | 328 |
+| Output folders under `Algorithms/` | 1372 |
+
+Stage0 is complete.
+
+This blueprint is now both:
+
+- the authoritative historical record of what Stage0 covered
+- the final index into the delivered algorithm artifacts under `Algorithms/`
+
+## Final Deliverables
+
+What this completed blueprint now maps to:
+
+- one completed folder per algorithm under `Algorithms/`
+- one `README.md` per algorithm
+- one runnable `demo.py` per algorithm
+- one `meta.json` per algorithm
+- repository-level Python environment managed by `uv`
+
+Recommended companion documents:
+
+- Final summary: [`Docs/Stage0_Final_Summary.md`](./Stage0_Final_Summary.md)
+- Repository landing page: [`README.md`](../README.md)
 
 ## 使用规则
 
@@ -15,6 +49,7 @@
 - 每个算法条目统一引用 `R01-R18` 研究模板，避免在 1400+ 条清单中重复展开长字段。
 - 每个算法后续演示默认要有 `Python MVP` 路径；首选生态包括但不限于 `numpy`、`scipy`、`pandas`、`scikit-learn`、`PyTorch`。
 - 如果某个第三方包通过少量函数调用就能完成任务，也不能把该包当成黑箱；必须补 `R18`，把源码或核心实现路径追出来，并拆成 `3-10` 个算法步骤。
+- Stage0 当前已全部完成；下面的 checklist 已从执行面切换为完成记录与导航索引。
 
 ## 跨领域去重规则
 
@@ -69,6 +104,8 @@
 - 跨学科重复基准名数量: `51`
 - 被移除的低优先级跨领域重复条目数: `105`
 - 去重后纳入蓝图的条目总数: `1372`
+- 当前完成条目总数: `1372`
+- 当前未完成条目总数: `0`
 - 结构异常: `Docs/researches/top_500_cs_algorithms.md` 的目录宣称 500 项，但当前文件正文仅能解析出 410 个算法条目，编号 `111-200` 在文件正文中缺失。
 - 本蓝图不补造缺失算法，只收录当前仓库里实际存在且可解析的条目。
 
