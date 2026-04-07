@@ -583,7 +583,7 @@
   - 重要性: 长期保持理论最优的大数乘法算法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0044 | 源序号 44] Fürer算法/Harvey-van der Hoeven算法
+- [x] [MATH-0044 | 源序号 44] Fürer算法/Harvey-van der Hoeven算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 算法/数论`
   - 现有摘要: 达到O(n log n)复杂度的大数乘法算法
