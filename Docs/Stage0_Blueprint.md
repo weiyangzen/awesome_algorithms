@@ -6164,7 +6164,7 @@
   - 重要性: 广义相对论的经典验证
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0369 | 源序号 388] 近日点进动 (Perihelion Precession)
+- [x] [PHYS-0369 | 源序号 388] 近日点进动 (Perihelion Precession)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第七部分：相对论与宇宙学扩展（361-400） / 广义相对论`
   - 现有摘要: 行星轨道近心点的移动
