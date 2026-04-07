@@ -1,0 +1,12 @@
+{
+  "index": 423,
+  "uid": "MATH-0280",
+  "source_number": 280,
+  "name": "线性回归 - 正则化",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "回归分析",
+  "folder_name": "数学-回归分析-0280-线性回归_-_正则化",
+  "folder_relpath": "Algorithms/数学-回归分析-0280-线性回归_-_正则化",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
