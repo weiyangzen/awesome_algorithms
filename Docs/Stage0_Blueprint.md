@@ -4209,7 +4209,7 @@
   - 重要性: 线性边值问题的系统解法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0431 | 源序号 431] Sturm-Liouville理论
+- [x] [MATH-0431 | 源序号 431] Sturm-Liouville理论
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `微分方程 / 常微分方程`
   - 现有摘要: 二阶线性算子的谱理论
