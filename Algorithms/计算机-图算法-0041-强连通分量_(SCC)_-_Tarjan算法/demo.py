@@ -1,4 +1,4 @@
-"""Minimal runnable MVP for strongly connected components (Tarjan, directed graph)."""
+"""Minimal runnable MVP for strongly connected components (Tarjan algorithm, directed graph)."""
 
 from __future__ import annotations
 
@@ -14,18 +14,14 @@ Edge = tuple[int, int]
 class TarjanResult:
     sccs: list[list[int]]
     component_id_of_vertex: list[int]
-    discovery_time: list[int]
+    discovery_index: list[int]
     low_link: list[int]
-    dfs_order: list[int]
     condensation_edges: list[Edge]
     condensation_topo_order: list[int]
 
 
-def build_directed_graph(
-    n: int,
-    edges: Iterable[Edge],
-) -> tuple[list[list[int]], list[Edge]]:
-    """Build adjacency list for a directed graph with input validation."""
+def build_directed_graph(n: int, edges: Iterable[Edge]) -> tuple[list[list[int]], list[Edge]]:
+    """Build adjacency list for a directed graph with edge range checks."""
     if n < 0:
         raise ValueError("n must be non-negative")
 
@@ -37,7 +33,6 @@ def build_directed_graph(
         v = int(raw_v)
         if not (0 <= u < n and 0 <= v < n):
             raise ValueError(f"edge ({u}, {v}) out of range for n={n}")
-
         adj[u].append(v)
         normalized_edges.append((u, v))
 
@@ -74,36 +69,34 @@ def topological_sort_dag(num_vertices: int, edges: Iterable[Edge]) -> list[int]:
 
 
 def tarjan_scc(n: int, edges: Iterable[Edge]) -> TarjanResult:
-    """Compute SCCs with Tarjan's algorithm (single DFS pass + low-link)."""
+    """Compute SCCs with Tarjan's single-DFS low-link algorithm."""
     adj, normalized_edges = build_directed_graph(n, edges)
 
-    discovery_time = [-1] * n
+    discovery_index = [-1] * n
     low_link = [-1] * n
     on_stack = [False] * n
     stack: list[int] = []
-    dfs_order: list[int] = []
-    raw_components: list[list[int]] = []
-
+    sccs_raw: list[list[int]] = []
     time = 0
 
-    def dfs(u: int) -> None:
+    def strong_connect(u: int) -> None:
         nonlocal time
-        discovery_time[u] = time
+        discovery_index[u] = time
         low_link[u] = time
         time += 1
 
-        dfs_order.append(u)
         stack.append(u)
         on_stack[u] = True
 
         for v in adj[u]:
-            if discovery_time[v] == -1:
-                dfs(v)
+            if discovery_index[v] == -1:
+                strong_connect(v)
                 low_link[u] = min(low_link[u], low_link[v])
             elif on_stack[v]:
-                low_link[u] = min(low_link[u], discovery_time[v])
+                low_link[u] = min(low_link[u], discovery_index[v])
 
-        if low_link[u] == discovery_time[u]:
+        # If u is an SCC root, pop until u is reached.
+        if low_link[u] == discovery_index[u]:
             component: list[int] = []
             while True:
                 w = stack.pop()
@@ -111,19 +104,14 @@ def tarjan_scc(n: int, edges: Iterable[Edge]) -> TarjanResult:
                 component.append(w)
                 if w == u:
                     break
-            raw_components.append(component)
+            sccs_raw.append(component)
 
     for start in range(n):
-        if discovery_time[start] == -1:
-            dfs(start)
-
-    component_id_raw = [-1] * n
-    for old_id, component in enumerate(raw_components):
-        for vertex in component:
-            component_id_raw[vertex] = old_id
+        if discovery_index[start] == -1:
+            strong_connect(start)
 
     ordered_components_with_old_id = sorted(
-        ((sorted(component), old_id) for old_id, component in enumerate(raw_components)),
+        ((sorted(component), old_id) for old_id, component in enumerate(sccs_raw)),
         key=lambda item: (item[0][0], len(item[0]), item[0]),
     )
 
@@ -132,7 +120,13 @@ def tarjan_scc(n: int, edges: Iterable[Edge]) -> TarjanResult:
     }
 
     sccs = [component for component, _old_id in ordered_components_with_old_id]
-    component_id_of_vertex = [old_to_new[component_id_raw[v]] for v in range(n)]
+
+    raw_component_of_vertex = [-1] * n
+    for old_id, raw_component in enumerate(sccs_raw):
+        for v in raw_component:
+            raw_component_of_vertex[v] = old_id
+
+    component_id_of_vertex = [old_to_new[raw_component_of_vertex[v]] for v in range(n)]
 
     condensation_edge_set: set[Edge] = set()
     for u, v in normalized_edges:
@@ -147,9 +141,8 @@ def tarjan_scc(n: int, edges: Iterable[Edge]) -> TarjanResult:
     return TarjanResult(
         sccs=sccs,
         component_id_of_vertex=component_id_of_vertex,
-        discovery_time=discovery_time,
+        discovery_index=discovery_index,
         low_link=low_link,
-        dfs_order=dfs_order,
         condensation_edges=condensation_edges,
         condensation_topo_order=condensation_topo_order,
     )
@@ -238,29 +231,31 @@ def run_demo_cases() -> None:
             },
         },
         {
-            "name": "Case-3: DAG (every vertex is its own SCC)",
-            "n": 5,
+            "name": "Case-3: self-loop, duplicate edges and singleton SCCs",
+            "n": 6,
             "edges": np.array(
                 [
+                    [0, 0],
                     [0, 1],
-                    [0, 2],
-                    [1, 3],
+                    [1, 2],
+                    [2, 1],
+                    [2, 3],
                     [2, 3],
                     [3, 4],
+                    [4, 5],
                 ],
                 dtype=np.int64,
             ),
             "expected_sccs": {
                 frozenset({0}),
-                frozenset({1}),
-                frozenset({2}),
+                frozenset({1, 2}),
                 frozenset({3}),
                 frozenset({4}),
+                frozenset({5}),
             },
             "expected_condensation_edges": {
                 (0, 1),
-                (0, 2),
-                (1, 3),
+                (1, 2),
                 (2, 3),
                 (3, 4),
             },
@@ -274,9 +269,8 @@ def run_demo_cases() -> None:
         print(f"[{idx}] {case['name']}")
         print(f"  SCCs: {result.sccs}")
         print(f"  component_id_of_vertex: {result.component_id_of_vertex}")
-        print(f"  discovery_time: {result.discovery_time}")
+        print(f"  discovery_index: {result.discovery_index}")
         print(f"  low_link: {result.low_link}")
-        print(f"  dfs_order: {result.dfs_order}")
         print(f"  condensation_edges: {result.condensation_edges}")
         print(f"  condensation_topo_order: {result.condensation_topo_order}")
 
