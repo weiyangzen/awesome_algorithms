@@ -1,0 +1,12 @@
+{
+  "index": 1269,
+  "uid": "CS-0225",
+  "source_number": 379,
+  "name": "严格两阶段锁",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "数据库",
+  "folder_name": "计算机-数据库-0379-严格两阶段锁",
+  "folder_relpath": "Algorithms/计算机-数据库-0379-严格两阶段锁",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
