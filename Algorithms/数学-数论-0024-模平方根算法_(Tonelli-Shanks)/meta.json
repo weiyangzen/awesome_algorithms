@@ -1,0 +1,12 @@
+{
+  "index": 24,
+  "uid": "MATH-0024",
+  "source_number": 24,
+  "name": "模平方根算法 (Tonelli-Shanks)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数论",
+  "folder_name": "数学-数论-0024-模平方根算法_(Tonelli-Shanks)",
+  "folder_relpath": "Algorithms/数学-数论-0024-模平方根算法_(Tonelli-Shanks)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
