@@ -4757,7 +4757,7 @@
   - 重要性: 晶格振动、能量传递
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0137 | 源序号 137] 傅科摆 (Foucault Pendulum)
+- [x] [PHYS-0137 | 源序号 137] 傅科摆 (Foucault Pendulum)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第二部分：经典力学扩展（101-150） / 经典力学`
   - 现有摘要: 证明地球自转的摆实验
