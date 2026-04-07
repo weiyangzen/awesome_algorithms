@@ -7578,7 +7578,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `3`
 
-- [ ] [PHYS-0217 | 源序号 218] 动力学平均场理论 (Dynamical Mean Field Theory, DMFT)
+- [x] [PHYS-0217 | 源序号 218] 动力学平均场理论 (Dynamical Mean Field Theory, DMFT)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 强关联物理`
   - 现有摘要: 强关联系统的非微扰方法
