@@ -1,0 +1,12 @@
+{
+  "index": 1270,
+  "uid": "CS-0226",
+  "source_number": 380,
+  "name": "乐观并发控制",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "数据库",
+  "folder_name": "计算机-数据库-0380-乐观并发控制",
+  "folder_relpath": "Algorithms/计算机-数据库-0380-乐观并发控制",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
