@@ -1,0 +1,12 @@
+{
+  "index": 438,
+  "uid": "MATH-0292",
+  "source_number": 292,
+  "name": "核回归 (Nadaraya-Watson)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "非参数回归",
+  "folder_name": "数学-非参数回归-0292-核回归_(Nadaraya-Watson)",
+  "folder_relpath": "Algorithms/数学-非参数回归-0292-核回归_(Nadaraya-Watson)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot18/Docs/Stage0_Blueprint.md"
+}
