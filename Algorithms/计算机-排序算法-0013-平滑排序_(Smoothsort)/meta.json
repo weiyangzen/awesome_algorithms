@@ -1,0 +1,12 @@
+{
+  "index": 1057,
+  "uid": "CS-0013",
+  "source_number": 13,
+  "name": "平滑排序 (Smoothsort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0013-平滑排序_(Smoothsort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0013-平滑排序_(Smoothsort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot17/Docs/Stage0_Blueprint.md"
+}

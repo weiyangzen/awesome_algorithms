@@ -8476,7 +8476,7 @@
   - 重要性: ★★★★☆
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [CS-0013 | 源序号 13] 平滑排序 (Smoothsort)
+- [x] [CS-0013 | 源序号 13] 平滑排序 (Smoothsort)
   - 来源: `Docs/researches/top_500_cs_algorithms.md`
   - 原始类目: `核心基础算法 / 排序算法`
   - 现有摘要: Edsgar Dijkstra提出的自适应排序算法
