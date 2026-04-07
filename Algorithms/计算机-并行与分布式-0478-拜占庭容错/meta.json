@@ -1,0 +1,12 @@
+{
+  "index": 1361,
+  "uid": "CS-0317",
+  "source_number": 478,
+  "name": "拜占庭容错",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "并行与分布式",
+  "folder_name": "计算机-并行与分布式-0478-拜占庭容错",
+  "folder_relpath": "Algorithms/计算机-并行与分布式-0478-拜占庭容错",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
