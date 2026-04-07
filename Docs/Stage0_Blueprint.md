@@ -4792,7 +4792,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `9`
 
-- [ ] [PHYS-0006 | 源序号 6] 拉格朗日力学 (Lagrangian Mechanics)
+- [x] [PHYS-0006 | 源序号 6] 拉格朗日力学 (Lagrangian Mechanics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 经典力学基础 / 分析力学`
   - 现有摘要: 基于最小作用量原理，用拉格朗日量L=T-V描述系统运动
