@@ -1,0 +1,12 @@
+{
+  "index": 3,
+  "uid": "MATH-0003",
+  "source_number": 3,
+  "name": "素数筛法 - 埃拉托斯特尼筛 (Sieve of Eratosthenes)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数论",
+  "folder_name": "数学-数论-0003-素数筛法_-_埃拉托斯特尼筛_(Sieve_of_Eratosthenes)",
+  "folder_relpath": "Algorithms/数学-数论-0003-素数筛法_-_埃拉托斯特尼筛_(Sieve_of_Eratosthenes)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
