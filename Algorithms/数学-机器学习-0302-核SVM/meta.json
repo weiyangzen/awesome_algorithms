@@ -1,0 +1,12 @@
+{
+  "index": 365,
+  "uid": "MATH-0302",
+  "source_number": 302,
+  "name": "核SVM",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "机器学习",
+  "folder_name": "数学-机器学习-0302-核SVM",
+  "folder_relpath": "Algorithms/数学-机器学习-0302-核SVM",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
