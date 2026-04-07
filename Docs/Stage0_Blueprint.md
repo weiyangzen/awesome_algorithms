@@ -4848,7 +4848,7 @@
   - 重要性: 量子力学对易子的经典对应
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0148 | 源序号 148] 正则变换 (Canonical Transformation)
+- [x] [PHYS-0148 | 源序号 148] 正则变换 (Canonical Transformation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第二部分：经典力学扩展（101-150） / 分析力学`
   - 现有摘要: 保持哈密顿方程形式不变的变量变换
