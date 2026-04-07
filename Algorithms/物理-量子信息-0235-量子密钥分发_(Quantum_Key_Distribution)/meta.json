@@ -1,0 +1,12 @@
+{
+  "index": 959,
+  "uid": "PHYS-0234",
+  "source_number": 235,
+  "name": "量子密钥分发 (Quantum Key Distribution)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "量子信息",
+  "folder_name": "物理-量子信息-0235-量子密钥分发_(Quantum_Key_Distribution)",
+  "folder_relpath": "Algorithms/物理-量子信息-0235-量子密钥分发_(Quantum_Key_Distribution)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
