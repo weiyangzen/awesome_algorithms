@@ -1,0 +1,12 @@
+{
+  "index": 728,
+  "uid": "PHYS-0206",
+  "source_number": 207,
+  "name": "LDA近似 (Local Density Approximation)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0207-LDA近似_(Local_Density_Approximation)",
+  "folder_relpath": "Algorithms/物理-计算物理-0207-LDA近似_(Local_Density_Approximation)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot08/Docs/Stage0_Blueprint.md"
+}
