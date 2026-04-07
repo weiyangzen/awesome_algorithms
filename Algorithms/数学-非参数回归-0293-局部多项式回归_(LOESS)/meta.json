@@ -1,0 +1,12 @@
+{
+  "index": 439,
+  "uid": "MATH-0293",
+  "source_number": 293,
+  "name": "局部多项式回归 (LOESS)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "非参数回归",
+  "folder_name": "数学-非参数回归-0293-局部多项式回归_(LOESS)",
+  "folder_relpath": "Algorithms/数学-非参数回归-0293-局部多项式回归_(LOESS)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
