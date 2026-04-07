@@ -1,0 +1,12 @@
+{
+  "index": 526,
+  "uid": "MATH-0484",
+  "source_number": 484,
+  "name": "最大流 - Edmonds-Karp",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "网络流",
+  "folder_name": "数学-网络流-0484-最大流_-_Edmonds-Karp",
+  "folder_relpath": "Algorithms/数学-网络流-0484-最大流_-_Edmonds-Karp",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
