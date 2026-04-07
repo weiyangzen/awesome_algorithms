@@ -933,7 +933,7 @@
   - 重要性: 实用ODE求解器的标准算法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0150 | 源序号 150] Adams-Bashforth方法
+- [x] [MATH-0150 | 源序号 150] Adams-Bashforth方法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析/ODE`
   - 现有摘要: 多步显式ODE求解方法
