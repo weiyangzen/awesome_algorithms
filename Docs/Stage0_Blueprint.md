@@ -4750,7 +4750,7 @@
   - 重要性: 桥梁倒塌、核磁共振原理
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0136 | 源序号 136] 耦合振子 (Coupled Oscillators)
+- [x] [PHYS-0136 | 源序号 136] 耦合振子 (Coupled Oscillators)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第二部分：经典力学扩展（101-150） / 经典力学`
   - 现有摘要: 相互耦合的多个振子系统
