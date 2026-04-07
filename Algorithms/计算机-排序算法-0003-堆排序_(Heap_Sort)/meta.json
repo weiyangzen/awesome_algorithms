@@ -1,0 +1,12 @@
+{
+  "index": 1047,
+  "uid": "CS-0003",
+  "source_number": 3,
+  "name": "堆排序 (Heap Sort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0003-堆排序_(Heap_Sort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0003-堆排序_(Heap_Sort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
