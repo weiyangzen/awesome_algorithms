@@ -1,0 +1,12 @@
+{
+  "index": 1133,
+  "uid": "CS-0089",
+  "source_number": 110,
+  "name": "为运算表达式设计优先级",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "分治算法",
+  "folder_name": "计算机-分治算法-0110-为运算表达式设计优先级",
+  "folder_relpath": "Algorithms/计算机-分治算法-0110-为运算表达式设计优先级",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot13/Docs/Stage0_Blueprint.md"
+}
