@@ -7508,7 +7508,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `5`
 
-- [ ] [PHYS-0201 | 源序号 202] 玻恩-奥本海默近似 (Born-Oppenheimer Approximation)
+- [x] [PHYS-0201 | 源序号 202] 玻恩-奥本海默近似 (Born-Oppenheimer Approximation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子化学/分子物理`
   - 现有摘要: 分离电子和核运动的近似
