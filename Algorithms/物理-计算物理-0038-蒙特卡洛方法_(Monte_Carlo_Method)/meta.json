@@ -1,0 +1,12 @@
+{
+  "index": 723,
+  "uid": "PHYS-0038",
+  "source_number": 38,
+  "name": "蒙特卡洛方法 (Monte Carlo Method)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0038-蒙特卡洛方法_(Monte_Carlo_Method)",
+  "folder_relpath": "Algorithms/物理-计算物理-0038-蒙特卡洛方法_(Monte_Carlo_Method)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
