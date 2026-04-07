@@ -8264,7 +8264,7 @@
   - 重要性: 分子振动、声子
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0463 | 源序号 486] 红外光谱 (Infrared Spectroscopy)
+- [x] [PHYS-0463 | 源序号 486] 红外光谱 (Infrared Spectroscopy)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 光谱学`
   - 现有摘要: 红外吸收光谱
