@@ -5415,7 +5415,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `11`
 
-- [ ] [PHYS-0027 | 源序号 27] 氢原子波函数 (Hydrogen Atom Wave Functions)
+- [x] [PHYS-0027 | 源序号 27] 氢原子波函数 (Hydrogen Atom Wave Functions)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 量子力学基础 / 原子物理`
   - 现有摘要: 氢原子中电子的定态薛定谔方程解
