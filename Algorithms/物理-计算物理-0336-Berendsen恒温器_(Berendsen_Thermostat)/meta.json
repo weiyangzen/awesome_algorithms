@@ -1,0 +1,12 @@
+{
+  "index": 749,
+  "uid": "PHYS-0329",
+  "source_number": 336,
+  "name": "Berendsen恒温器 (Berendsen Thermostat)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0336-Berendsen恒温器_(Berendsen_Thermostat)",
+  "folder_relpath": "Algorithms/物理-计算物理-0336-Berendsen恒温器_(Berendsen_Thermostat)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
