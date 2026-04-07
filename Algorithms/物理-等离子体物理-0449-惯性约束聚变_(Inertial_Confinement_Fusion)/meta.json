@@ -1,0 +1,12 @@
+{
+  "index": 944,
+  "uid": "PHYS-0429",
+  "source_number": 449,
+  "name": "惯性约束聚变 (Inertial Confinement Fusion)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "等离子体物理",
+  "folder_name": "物理-等离子体物理-0449-惯性约束聚变_(Inertial_Confinement_Fusion)",
+  "folder_relpath": "Algorithms/物理-等离子体物理-0449-惯性约束聚变_(Inertial_Confinement_Fusion)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
