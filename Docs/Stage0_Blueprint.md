@@ -8313,7 +8313,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `4`
 
-- [ ] [PHYS-0469 | 源序号 492] 粒子数反转 (Population Inversion)
+- [x] [PHYS-0469 | 源序号 492] 粒子数反转 (Population Inversion)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 激光物理`
   - 现有摘要: 高能级粒子数多于低能级
