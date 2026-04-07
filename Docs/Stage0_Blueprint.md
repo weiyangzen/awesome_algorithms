@@ -6801,7 +6801,7 @@
   - 重要性: 超导量子干涉器件(SQUID)的原理，电压标准
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0197 | 源序号 198] 超导体电动力学 (Electrodynamics of Superconductors)
+- [x] [PHYS-0197 | 源序号 198] 超导体电动力学 (Electrodynamics of Superconductors)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 超导物理`
   - 现有摘要: 超导体的电磁响应
