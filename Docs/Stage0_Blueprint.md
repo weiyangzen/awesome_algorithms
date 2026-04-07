@@ -6962,7 +6962,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `9`
 
-- [ ] [PHYS-0081 | 源序号 81] 纳维-斯托克斯方程 (Navier-Stokes Equations)
+- [x] [PHYS-0081 | 源序号 81] 纳维-斯托克斯方程 (Navier-Stokes Equations)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 流体力学核心 / 流体力学`
   - 现有摘要: 描述粘性流体运动的偏微分方程组
