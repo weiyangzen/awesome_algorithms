@@ -1983,7 +1983,7 @@
   - 重要性: 全局收敛的二阶方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0350 | 源序号 350] Levenberg-Marquardt
+- [x] [MATH-0350 | 源序号 350] Levenberg-Marquardt
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `优化理论 / 优化`
   - 现有摘要: 非线性最小二乘优化

@@ -1,0 +1,12 @@
+{
+  "index": 241,
+  "uid": "MATH-0350",
+  "source_number": 350,
+  "name": "Levenberg-Marquardt",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "优化",
+  "folder_name": "数学-优化-0350-Levenberg-Marquardt",
+  "folder_relpath": "Algorithms/数学-优化-0350-Levenberg-Marquardt",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
