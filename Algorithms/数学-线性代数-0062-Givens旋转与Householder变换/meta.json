@@ -1,0 +1,12 @@
+{
+  "index": 183,
+  "uid": "MATH-0062",
+  "source_number": 62,
+  "name": "Givens旋转与Householder变换",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "线性代数",
+  "folder_name": "数学-线性代数-0062-Givens旋转与Householder变换",
+  "folder_relpath": "Algorithms/数学-线性代数-0062-Givens旋转与Householder变换",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
