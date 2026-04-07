@@ -5744,7 +5744,7 @@
   - 重要性: 高维积分、复杂系统模拟的核心工具
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0039 | 源序号 39] 分子动力学模拟 (Molecular Dynamics Simulation)
+- [x] [PHYS-0039 | 源序号 39] 分子动力学模拟 (Molecular Dynamics Simulation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 统计力学核心 / 计算物理`
   - 现有摘要: 数值求解牛顿方程模拟原子分子运动
