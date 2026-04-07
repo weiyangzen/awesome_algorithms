@@ -6570,7 +6570,7 @@
   - 重要性: 重整化的前提
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0386 | 源序号 405] 维度正规化 (Dimensional Regularization)
+- [x] [PHYS-0386 | 源序号 405] 维度正规化 (Dimensional Regularization)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 量子场论`
   - 现有摘要: 在d维空间计算积分
