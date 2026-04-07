@@ -5660,7 +5660,7 @@
   - 重要性: 胶体物理
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0311 | 源序号 314] 克雷姆斯-克罗尼格关系 (Kramers-Kronig Relations)
+- [x] [PHYS-0311 | 源序号 314] 克雷姆斯-克罗尼格关系 (Kramers-Kronig Relations)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第六部分：统计力学与计算物理（301-360） / 统计力学/光学`
   - 现有摘要: 响应函数实部与虚部的关系
