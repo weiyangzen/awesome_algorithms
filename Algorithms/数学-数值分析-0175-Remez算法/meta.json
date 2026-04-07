@@ -1,0 +1,12 @@
+{
+  "index": 123,
+  "uid": "MATH-0175",
+  "source_number": 175,
+  "name": "Remez算法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0175-Remez算法",
+  "folder_relpath": "Algorithms/数学-数值分析-0175-Remez算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
