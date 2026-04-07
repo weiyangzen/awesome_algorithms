@@ -1990,7 +1990,7 @@
   - 重要性: 曲线拟合的标准算法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0351 | 源序号 351] Gauss-Newton方法
+- [x] [MATH-0351 | 源序号 351] Gauss-Newton方法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `优化理论 / 优化`
   - 现有摘要: 利用Jacobian近似Hessian
