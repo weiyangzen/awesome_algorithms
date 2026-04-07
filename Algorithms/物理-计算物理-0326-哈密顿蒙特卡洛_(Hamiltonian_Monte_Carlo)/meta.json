@@ -1,0 +1,12 @@
+{
+  "index": 742,
+  "uid": "PHYS-0322",
+  "source_number": 326,
+  "name": "哈密顿蒙特卡洛 (Hamiltonian Monte Carlo)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0326-哈密顿蒙特卡洛_(Hamiltonian_Monte_Carlo)",
+  "folder_relpath": "Algorithms/物理-计算物理-0326-哈密顿蒙特卡洛_(Hamiltonian_Monte_Carlo)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot02/Docs/Stage0_Blueprint.md"
+}
