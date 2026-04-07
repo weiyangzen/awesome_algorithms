@@ -1,0 +1,12 @@
+{
+  "index": 141,
+  "uid": "MATH-0443",
+  "source_number": 443,
+  "name": "后验误差估计",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0443-后验误差估计",
+  "folder_relpath": "Algorithms/数学-数值分析-0443-后验误差估计",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
