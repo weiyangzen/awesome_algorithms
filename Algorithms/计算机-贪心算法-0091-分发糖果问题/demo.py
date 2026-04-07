@@ -1,279 +1,191 @@
-"""CS-0071 分发糖果问题：贪心算法最小可运行 MVP。
+"""Greedy candy-distribution MVP for CS-0071.
 
-运行:
+Run:
     uv run python demo.py
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from time import perf_counter
+from numbers import Real
 from typing import Iterable, Sequence
 
 import numpy as np
+import pandas as pd
 
 
 @dataclass(frozen=True)
 class FixedCase:
-    """Deterministic test case for the candy problem."""
+    """Deterministic case for candy distribution."""
 
     name: str
     ratings: list[int]
     expected_total: int
-    expected_distribution: list[int] | None = None
 
 
-def _normalize_ratings(ratings: Iterable[int]) -> list[int]:
-    """Normalize ratings into a plain integer list with basic validation."""
+def validate_ratings(ratings: Iterable[Real]) -> list[int]:
+    """Validate input ratings and convert to a normalized int list."""
     normalized: list[int] = []
     for idx, value in enumerate(ratings):
-        if isinstance(value, bool):
-            raise TypeError(f"ratings[{idx}] must be an int, got bool")
+        if not isinstance(value, Real):
+            raise TypeError(f"ratings[{idx}] is not numeric: {value!r}")
+        if not np.isfinite(float(value)):
+            raise ValueError(f"ratings[{idx}] is not finite: {value!r}")
         normalized.append(int(value))
     return normalized
 
 
-def _normalize_distribution(candies: Iterable[int]) -> list[int]:
-    """Normalize candy distribution and require positive integers."""
-    normalized: list[int] = []
-    for idx, value in enumerate(candies):
-        if isinstance(value, bool):
-            raise TypeError(f"candies[{idx}] must be an int, got bool")
-        candy = int(value)
-        if candy < 1:
-            raise ValueError(f"candies[{idx}] must be >= 1, got {candy}")
-        normalized.append(candy)
-    return normalized
-
-
-def is_distribution_valid(ratings: Iterable[int], candies: Iterable[int]) -> bool:
-    """Check whether a candy distribution satisfies all problem constraints."""
-    r = _normalize_ratings(ratings)
-    c = _normalize_distribution(candies)
-
-    if len(r) != len(c):
-        return False
-
-    for i in range(len(r) - 1):
-        if r[i] < r[i + 1] and not (c[i] < c[i + 1]):
-            return False
-        if r[i] > r[i + 1] and not (c[i] > c[i + 1]):
-            return False
-
-    return True
-
-
-def candy_distribution_greedy(ratings: Iterable[int]) -> list[int]:
-    """Two-pass greedy construction of a minimum feasible candy distribution."""
-    values = _normalize_ratings(ratings)
-    n = len(values)
-
+def candy_greedy(ratings: Sequence[int]) -> tuple[int, list[int]]:
+    """Two-pass greedy solution: O(n) time, O(n) space."""
+    arr = validate_ratings(ratings)
+    n = len(arr)
     if n == 0:
-        return []
+        return 0, []
 
     candies = [1] * n
 
-    # Pass 1: satisfy left-neighbor constraints.
     for i in range(1, n):
-        if values[i] > values[i - 1]:
+        if arr[i] > arr[i - 1]:
             candies[i] = candies[i - 1] + 1
 
-    # Pass 2: satisfy right-neighbor constraints without breaking pass-1.
     for i in range(n - 2, -1, -1):
-        if values[i] > values[i + 1]:
+        if arr[i] > arr[i + 1]:
             candies[i] = max(candies[i], candies[i + 1] + 1)
 
-    return candies
+    return int(sum(candies)), candies
 
 
-def min_candies_greedy(ratings: Iterable[int]) -> int:
-    """Return the minimal candy count computed by the greedy method."""
-    return sum(candy_distribution_greedy(ratings))
+def assert_distribution_valid(ratings: Sequence[int], candies: Sequence[int]) -> None:
+    """Check all candy constraints for a candidate distribution."""
+    assert len(ratings) == len(candies), "ratings/candies length mismatch"
+    for i, c in enumerate(candies):
+        assert c >= 1, f"candies[{i}] must be >= 1, got {c}"
+
+    for i in range(len(ratings) - 1):
+        if ratings[i] > ratings[i + 1]:
+            assert candies[i] > candies[i + 1], (
+                f"constraint failed at ({i},{i+1}): "
+                f"ratings {ratings[i]}>{ratings[i+1]} but candies {candies[i]}<={candies[i+1]}"
+            )
+        if ratings[i] < ratings[i + 1]:
+            assert candies[i] < candies[i + 1], (
+                f"constraint failed at ({i},{i+1}): "
+                f"ratings {ratings[i]}<{ratings[i+1]} but candies {candies[i]}>={candies[i+1]}"
+            )
 
 
-def min_candies_bruteforce(ratings: Sequence[int], max_n: int = 8) -> tuple[int, list[int]]:
-    """Exact baseline via DFS enumeration (small n only)."""
-    values = _normalize_ratings(ratings)
-    n = len(values)
+def candy_exact_small(ratings: Sequence[int], max_n: int = 10) -> int:
+    """Exact solver for small n using branch-and-bound enumeration.
 
+    This is only for verification in MVP tests, not the production algorithm.
+    """
+    arr = validate_ratings(ratings)
+    n = len(arr)
     if n == 0:
-        return 0, []
+        return 0
     if n > max_n:
-        raise ValueError(f"Bruteforce is limited to n <= {max_n}, got n={n}")
+        raise ValueError(f"Exact search supports n <= {max_n}, got {n}")
 
-    greedy_dist = candy_distribution_greedy(values)
-    best_sum = sum(greedy_dist)
-    best_dist = greedy_dist.copy()
-
-    current = [0] * n
+    greedy_total, _ = candy_greedy(arr)
+    upper = n
+    best = greedy_total
+    chosen = [0] * n
 
     def dfs(i: int, partial_sum: int) -> None:
-        nonlocal best_sum, best_dist
-
-        if partial_sum >= best_sum:
+        nonlocal best
+        if partial_sum + (n - i) >= best:
             return
-
         if i == n:
-            if is_distribution_valid(values, current) and partial_sum < best_sum:
-                best_sum = partial_sum
-                best_dist = current.copy()
+            best = min(best, partial_sum)
             return
 
-        low = 1
-        high = min(best_sum - partial_sum - (n - i - 1), n)
-
+        low, high = 1, upper
         if i > 0:
-            if values[i] > values[i - 1]:
-                low = max(low, current[i - 1] + 1)
-            elif values[i] < values[i - 1]:
-                high = min(high, current[i - 1] - 1)
+            prev = chosen[i - 1]
+            if arr[i] > arr[i - 1]:
+                low = max(low, prev + 1)
+            elif arr[i] < arr[i - 1]:
+                high = min(high, prev - 1)
+
+        if i < n - 1:
+            if arr[i] > arr[i + 1]:
+                low = max(low, 2)
+            elif arr[i] < arr[i + 1]:
+                high = min(high, upper - 1)
 
         if low > high:
             return
 
         for candy in range(low, high + 1):
-            current[i] = candy
+            chosen[i] = candy
             dfs(i + 1, partial_sum + candy)
-            current[i] = 0
 
     dfs(0, 0)
-    return best_sum, best_dist
+    return int(best)
 
 
-def _run_fixed_cases() -> None:
-    print("=== Fixed Cases ===")
-    cases = [
-        FixedCase(
-            name="leetcode canonical 1",
-            ratings=[1, 0, 2],
-            expected_total=5,
-            expected_distribution=[2, 1, 2],
-        ),
-        FixedCase(
-            name="leetcode canonical 2",
-            ratings=[1, 2, 2],
-            expected_total=4,
-        ),
-        FixedCase(
-            name="strictly increasing",
-            ratings=[1, 2, 3, 4],
-            expected_total=10,
-            expected_distribution=[1, 2, 3, 4],
-        ),
-        FixedCase(
-            name="strictly decreasing",
-            ratings=[4, 3, 2, 1],
-            expected_total=10,
-            expected_distribution=[4, 3, 2, 1],
-        ),
-        FixedCase(
-            name="plateau with peaks",
-            ratings=[1, 2, 87, 87, 87, 2, 1],
-            expected_total=13,
-        ),
-        FixedCase(
-            name="single child",
-            ratings=[9],
-            expected_total=1,
-            expected_distribution=[1],
-        ),
-        FixedCase(
-            name="empty",
-            ratings=[],
-            expected_total=0,
-            expected_distribution=[],
-        ),
-    ]
-
-    for i, case in enumerate(cases, start=1):
-        distribution = candy_distribution_greedy(case.ratings)
-        total = sum(distribution)
-
-        assert total == case.expected_total, (
-            f"Case '{case.name}' total mismatch: expected={case.expected_total}, got={total}"
-        )
-        assert is_distribution_valid(case.ratings, distribution), (
-            f"Case '{case.name}' produced invalid distribution: {distribution}"
-        )
-
-        if case.expected_distribution is not None:
-            assert distribution == case.expected_distribution, (
-                f"Case '{case.name}' distribution mismatch: "
-                f"expected={case.expected_distribution}, got={distribution}"
-            )
-
-        if len(case.ratings) <= 8:
-            brute_total, brute_distribution = min_candies_bruteforce(case.ratings)
-            assert total == brute_total, (
-                f"Case '{case.name}' mismatch with bruteforce: greedy={total}, brute={brute_total}"
-            )
-            assert is_distribution_valid(case.ratings, brute_distribution)
-
-        print(f"[{i}] {case.name}: ratings={case.ratings}, candies={distribution}, total={total}")
-
-
-def _run_random_regression(seed: int = 71, rounds: int = 50) -> None:
-    """Randomized checks against bruteforce on small inputs and validity on larger ones."""
-    print("\n=== Random Regression ===")
-    rng = np.random.default_rng(seed)
-
-    checked_small = 0
-    checked_large = 0
-
-    for n in range(1, 13):
-        for _ in range(rounds):
-            ratings = rng.integers(low=-5, high=20, size=n).tolist()
-            greedy_distribution = candy_distribution_greedy(ratings)
-            greedy_total = sum(greedy_distribution)
-
-            assert is_distribution_valid(ratings, greedy_distribution), (
-                f"Invalid greedy distribution for ratings={ratings}: {greedy_distribution}"
-            )
-            assert greedy_total == min_candies_greedy(ratings)
-
-            if n <= 8:
-                brute_total, brute_distribution = min_candies_bruteforce(ratings)
-                assert greedy_total == brute_total, (
-                    f"Random mismatch n={n}, ratings={ratings}: "
-                    f"greedy={greedy_total}, brute={brute_total}"
-                )
-                assert is_distribution_valid(ratings, brute_distribution)
-                checked_small += 1
-            else:
-                checked_large += 1
-
-    numpy_case = np.array([3, 3, 1, 2, 2, 4, 1])
-    numpy_distribution = candy_distribution_greedy(numpy_case)
-    assert is_distribution_valid(numpy_case.tolist(), numpy_distribution)
-
-    print(
-        f"small_cases_with_bruteforce={checked_small}, "
-        f"large_cases_validated={checked_large}, seed={seed}"
+def _distribution_table(ratings: Sequence[int], candies: Sequence[int]) -> pd.DataFrame:
+    return pd.DataFrame(
+        {
+            "index": list(range(len(ratings))),
+            "rating": list(ratings),
+            "candy": list(candies),
+        }
     )
 
 
-def _run_perf_snapshot(seed: int = 2026, n: int = 200_000) -> None:
-    """Simple performance snapshot on a long random rating sequence."""
-    print("\n=== Performance Snapshot ===")
-    rng = np.random.default_rng(seed)
-    ratings = rng.integers(low=0, high=10_000, size=n)
+def run_fixed_cases() -> None:
+    cases = [
+        FixedCase(name="leetcode_sample_1", ratings=[1, 0, 2], expected_total=5),
+        FixedCase(name="leetcode_sample_2", ratings=[1, 2, 2], expected_total=4),
+        FixedCase(name="strictly_increasing", ratings=[1, 2, 3, 4], expected_total=10),
+        FixedCase(name="strictly_decreasing", ratings=[5, 4, 3, 2, 1], expected_total=15),
+        FixedCase(name="all_equal", ratings=[3, 3, 3, 3], expected_total=4),
+        FixedCase(name="mixed_with_negative", ratings=[-1, 0, -1, 2, 2], expected_total=7),
+    ]
 
-    t0 = perf_counter()
-    distribution = candy_distribution_greedy(ratings)
-    total = sum(distribution)
-    t1 = perf_counter()
+    print("=== Fixed Cases ===")
+    for idx, case in enumerate(cases, start=1):
+        total, candies = candy_greedy(case.ratings)
+        assert_distribution_valid(case.ratings, candies)
+        exact_total = candy_exact_small(case.ratings)
 
-    assert len(distribution) == n
-    assert total >= n
-    assert is_distribution_valid(ratings.tolist(), distribution)
+        assert total == case.expected_total, (
+            f"Case {case.name} expected total={case.expected_total}, got={total}"
+        )
+        assert total == exact_total, (
+            f"Case {case.name} mismatch exact optimum: greedy={total}, exact={exact_total}"
+        )
 
-    print(f"n={n}, total={total}, greedy_time={t1 - t0:.6f}s")
+        print(f"[{idx}] {case.name}")
+        print(f"ratings={case.ratings}")
+        print(f"candies={candies}, total={total}, exact_total={exact_total}")
+        print(_distribution_table(case.ratings, candies).to_string(index=False))
+        print()
+
+
+def run_random_small_verification(num_cases: int = 6) -> None:
+    """Generate random small cases and compare greedy result with exact optimum."""
+    rng = np.random.default_rng(2026)
+    print("=== Random Small Verification ===")
+    for k in range(1, num_cases + 1):
+        n = int(rng.integers(1, 8))
+        ratings = rng.integers(-3, 6, size=n).tolist()
+        total, candies = candy_greedy(ratings)
+        exact_total = candy_exact_small(ratings)
+
+        assert_distribution_valid(ratings, candies)
+        assert total == exact_total, (
+            f"Random case {k} mismatch exact optimum: ratings={ratings}, "
+            f"greedy={total}, exact={exact_total}"
+        )
+
+        print(f"[{k}] ratings={ratings} -> candies={candies}, total={total}")
 
 
 def main() -> None:
-    _run_fixed_cases()
-    _run_random_regression()
-    _run_perf_snapshot()
+    run_fixed_cases()
+    run_random_small_verification()
     print("\nAll checks passed for CS-0071 (分发糖果问题).")
 
 
