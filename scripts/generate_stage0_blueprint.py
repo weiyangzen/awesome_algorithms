@@ -66,6 +66,16 @@ DELIVERABLES = [
         "前驱/后继算法与典型应用",
         "说明它继承了谁、后来被谁扩展，以及典型应用场景或 benchmark。",
     ),
+    (
+        "R17",
+        "Python MVP 实现方案",
+        "为该算法设计一个以 Python 为主的最小可运行演示；优先使用 numpy、scipy、pandas、scikit-learn。",
+    ),
+    (
+        "R18",
+        "源码追踪与 3-10 步算法拆解",
+        "若第三方包调用可一两行完成，必须追到源码或核心实现，并把算法拆成 3-10 个合理步骤。",
+    ),
 ]
 
 
@@ -336,21 +346,26 @@ def build_blueprint(items: list[Item]) -> str:
     lines.append("- 本蓝图严格按 `学科 -> 子分类` 两级结构组织。")
     lines.append("- 每个 `[ ]` 项对应当前源文档中的一个算法条目；跨学科同名算法、或同一学科内因上下文不同而重复出现的同名条目，不在本阶段自动合并。")
     lines.append("- 子分类、统计表、研究模板、完成标准都不是 checklist item；真正可勾选的只有算法条目本身。")
-    lines.append("- 每个算法条目统一引用 `R01-R16` 研究模板，避免在 1400+ 条清单中重复展开长字段。")
+    lines.append("- 每个算法条目统一引用 `R01-R18` 研究模板，避免在 1400+ 条清单中重复展开长字段。")
+    lines.append("- 每个算法后续演示默认要有 `Python MVP` 路径；首选生态是 `numpy`、`scipy`、`pandas`、`scikit-learn`。")
+    lines.append("- 如果某个第三方包通过少量函数调用就能完成任务，也不能把该包当成黑箱；必须补 `R18`，把源码或核心实现路径追出来，并拆成 `3-10` 个算法步骤。")
     lines.append("")
     lines.append("## 完成标准")
     lines.append("")
-    lines.append("- 只有当 `R01-R16` 全部补齐且内部表述一致时，算法条目才允许从 `[ ]` 改为 `[x]`。")
+    lines.append("- 只有当 `R01-R18` 全部补齐且内部表述一致时，算法条目才允许从 `[ ]` 改为 `[x]`。")
     lines.append("- `R04-R05` 对纯理论物理条目可解释为“典型计算实现或数值求解复杂度”；如果确实不存在独立算法形式，必须明确写 `N/A + 原因`。")
     lines.append("- `R11-R13` 若不适用，也必须写出 `N/A + 为什么不适用`，不能留空。")
     lines.append("- `R08` 和 `R16` 需要互相校验：前者强调依赖链，后者强调谱系位置和应用落点。")
+    lines.append("- `R17` 需要给出最小可运行演示的实现边界、输入输出和依赖；原则上优先用 `numpy`、`scipy`、`pandas`、`scikit-learn` 完成。")
+    lines.append("- 如果 `R17` 主要依赖外部包封装，`R18` 必须回到源码和算法本身，把关键流程拆成 `3-10` 步；只写“调用某函数”不算完成。")
     lines.append("")
     lines.append("## 推荐研究顺序")
     lines.append("")
     lines.append("- 第一层 `R01-R03`: 先把对象定义、时代位置、提出背景弄清。")
     lines.append("- 第二层 `R04-R08`: 再补复杂度、示例、意义、依赖链。")
     lines.append("- 第三层 `R09-R14`: 再补边界条件、正确性、误差、真实成本、保证、失效模式。")
-    lines.append("- 第四层 `R15-R16`: 最后补工程实现、谱系关系、应用和 benchmark。")
+    lines.append("- 第四层 `R15-R16`: 再补工程实现、谱系关系、应用和 benchmark。")
+    lines.append("- 第五层 `R17-R18`: 最后给出 Python MVP 方案，并在必要时完成源码追踪和 `3-10` 步算法拆解。")
     lines.append("")
     lines.append("## 研究模板")
     lines.append("")
@@ -387,7 +402,9 @@ def build_blueprint(items: list[Item]) -> str:
             scoped.sort(key=lambda item: item.number)
             lines.append(f"### {subcat} ({len(scoped)})")
             lines.append("")
-            lines.append(f"- 研究模板: `R01-R16`")
+            lines.append(f"- 研究模板: `R01-R18`")
+            lines.append("- MVP 约束: 优先使用 `numpy`、`scipy`、`pandas`、`scikit-learn`；如需其他包，也必须保留算法解释权。")
+            lines.append("- 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。")
             lines.append(f"- 本子分类条目数: `{len(scoped)}`")
             lines.append("")
             for item in scoped:
@@ -399,7 +416,7 @@ def build_blueprint(items: list[Item]) -> str:
                     lines.append(f"  - 现有摘要: {item.description}")
                 if item.importance:
                     lines.append(f"  - 重要性: {item.importance}")
-                lines.append("  - 完成条件: `R01-R16` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14` 三组内容互相一致。")
+                lines.append("  - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。")
                 lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
