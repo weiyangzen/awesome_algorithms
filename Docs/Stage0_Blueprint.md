@@ -7683,7 +7683,7 @@
   - 重要性: 量子非定域性的实验检验
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0232 | 源序号 233] CHSH不等式 (CHSH Inequality)
+- [x] [PHYS-0232 | 源序号 233] CHSH不等式 (CHSH Inequality)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子基础`
   - 现有摘要: 贝尔不等式的实验可检验形式
