@@ -1,0 +1,12 @@
+{
+  "index": 603,
+  "uid": "PHYS-0111",
+  "source_number": 111,
+  "name": "哈密顿-雅可比方程 (Hamilton-Jacobi Equation)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "分析力学",
+  "folder_name": "物理-分析力学-0111-哈密顿-雅可比方程_(Hamilton-Jacobi_Equation)",
+  "folder_relpath": "Algorithms/物理-分析力学-0111-哈密顿-雅可比方程_(Hamilton-Jacobi_Equation)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
