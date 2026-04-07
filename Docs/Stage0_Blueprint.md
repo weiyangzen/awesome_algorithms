@@ -7746,7 +7746,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `16`
 
-- [ ] [PHYS-0278 | 源序号 281] 热力学第零定律 (Zeroth Law of Thermodynamics)
+- [x] [PHYS-0278 | 源序号 281] 热力学第零定律 (Zeroth Law of Thermodynamics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第五部分：统计力学与热力学扩展（281-330） / 热力学`
   - 现有摘要: 热平衡的可传递性，定义温度
