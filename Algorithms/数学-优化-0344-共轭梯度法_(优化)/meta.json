@@ -1,0 +1,12 @@
+{
+  "index": 235,
+  "uid": "MATH-0344",
+  "source_number": 344,
+  "name": "共轭梯度法 (优化)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "优化",
+  "folder_name": "数学-优化-0344-共轭梯度法_(优化)",
+  "folder_relpath": "Algorithms/数学-优化-0344-共轭梯度法_(优化)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot15/Docs/Stage0_Blueprint.md"
+}
