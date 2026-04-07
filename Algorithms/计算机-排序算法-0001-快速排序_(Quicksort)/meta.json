@@ -1,0 +1,12 @@
+{
+  "index": 1045,
+  "uid": "CS-0001",
+  "source_number": 1,
+  "name": "快速排序 (Quicksort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0001-快速排序_(Quicksort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0001-快速排序_(Quicksort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
