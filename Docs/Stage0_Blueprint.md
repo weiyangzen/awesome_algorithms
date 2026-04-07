@@ -4244,7 +4244,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `8`
 
-- [ ] [MATH-0483 | 源序号 483] 最大流 - Ford-Fulkerson
+- [x] [MATH-0483 | 源序号 483] 最大流 - Ford-Fulkerson
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `组合数学与图论 / 网络流`
   - 现有摘要: 增广路径最大流算法
