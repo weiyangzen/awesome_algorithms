@@ -1,0 +1,12 @@
+{
+  "index": 102,
+  "uid": "MATH-0154",
+  "source_number": 154,
+  "name": "隐式Runge-Kutta方法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0154-隐式Runge-Kutta方法",
+  "folder_relpath": "Algorithms/数学-数值分析-0154-隐式Runge-Kutta方法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot02/Docs/Stage0_Blueprint.md"
+}
