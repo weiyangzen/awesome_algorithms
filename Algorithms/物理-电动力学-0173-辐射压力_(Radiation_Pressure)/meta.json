@@ -1,0 +1,12 @@
+{
+  "index": 922,
+  "uid": "PHYS-0172",
+  "source_number": 173,
+  "name": "辐射压力 (Radiation Pressure)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "电动力学",
+  "folder_name": "物理-电动力学-0173-辐射压力_(Radiation_Pressure)",
+  "folder_relpath": "Algorithms/物理-电动力学-0173-辐射压力_(Radiation_Pressure)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot02/Docs/Stage0_Blueprint.md"
+}
