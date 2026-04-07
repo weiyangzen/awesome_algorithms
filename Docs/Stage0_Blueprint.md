@@ -8096,7 +8096,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `11`
 
-- [ ] [PHYS-0417 | 源序号 437] 核壳模型 (Nuclear Shell Model)
+- [x] [PHYS-0417 | 源序号 437] 核壳模型 (Nuclear Shell Model)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 核物理`
   - 现有摘要: 核子在平均势场中的能级结构
