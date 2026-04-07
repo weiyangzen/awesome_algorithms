@@ -345,7 +345,7 @@
   - 重要性: 大整数运算的核心优化，广泛应用于密码学实现
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0017 | 源序号 17] 中国剩余定理 (Chinese Remainder Theorem)
+- [x] [MATH-0017 | 源序号 17] 中国剩余定理 (Chinese Remainder Theorem)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论`
   - 现有摘要: 求解同余方程组的定理及其实现算法
