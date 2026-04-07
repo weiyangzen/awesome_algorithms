@@ -7606,7 +7606,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `9`
 
-- [ ] [PHYS-0230 | 源序号 231] 量子纠缠 (Quantum Entanglement)
+- [x] [PHYS-0230 | 源序号 231] 量子纠缠 (Quantum Entanglement)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子信息`
   - 现有摘要: 多粒子系统的非经典关联
