@@ -3250,7 +3250,7 @@
   - 重要性: 多重假设检验的必需校正
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0275 | 源序号 275] Kolmogorov-Smirnov检验
+- [x] [MATH-0275 | 源序号 275] Kolmogorov-Smirnov检验
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `概率论与数理统计 / 统计推断`
   - 现有摘要: 分布拟合的非参数检验
