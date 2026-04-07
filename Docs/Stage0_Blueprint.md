@@ -5814,7 +5814,7 @@
   - 重要性: 高精度量子多体计算
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0314 | 源序号 317] 梅特罗波利斯算法 (Metropolis Algorithm)
+- [x] [PHYS-0314 | 源序号 317] 梅特罗波利斯算法 (Metropolis Algorithm)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第六部分：统计力学与计算物理（301-360） / 计算物理`
   - 现有摘要: 蒙特卡洛模拟的基本算法
