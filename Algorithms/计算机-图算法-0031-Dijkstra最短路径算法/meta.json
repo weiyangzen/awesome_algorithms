@@ -1,0 +1,12 @@
+{
+  "index": 1072,
+  "uid": "CS-0028",
+  "source_number": 31,
+  "name": "Dijkstra最短路径算法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "图算法",
+  "folder_name": "计算机-图算法-0031-Dijkstra最短路径算法",
+  "folder_relpath": "Algorithms/计算机-图算法-0031-Dijkstra最短路径算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
