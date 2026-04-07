@@ -1,0 +1,12 @@
+{
+  "index": 352,
+  "uid": "MATH-0234",
+  "source_number": 234,
+  "name": "Mean Shift聚类",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "机器学习",
+  "folder_name": "数学-机器学习-0234-Mean_Shift聚类",
+  "folder_relpath": "Algorithms/数学-机器学习-0234-Mean_Shift聚类",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
