@@ -240,7 +240,7 @@
   - 重要性: 数学史上最基础、最重要的算法之一，是现代计算机算法和数论的基石，已有2000多年历史
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0002 | 源序号 2] 扩展欧几里得算法 (Extended Euclidean Algorithm)
+- [x] [MATH-0002 | 源序号 2] 扩展欧几里得算法 (Extended Euclidean Algorithm)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论`
   - 现有摘要: 不仅计算GCD，还能找到满足贝祖等式 ax + by = gcd(a,b) 的整数x和y
