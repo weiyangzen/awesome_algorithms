@@ -940,7 +940,7 @@
   - 重要性: 高效的多步方法家族
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0151 | 源序号 151] Adams-Moulton方法
+- [x] [MATH-0151 | 源序号 151] Adams-Moulton方法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析/ODE`
   - 现有摘要: 多步隐式ODE求解方法
