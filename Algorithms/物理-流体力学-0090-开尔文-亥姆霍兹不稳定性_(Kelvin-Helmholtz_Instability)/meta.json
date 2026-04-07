@@ -1,0 +1,12 @@
+{
+  "index": 893,
+  "uid": "PHYS-0090",
+  "source_number": 90,
+  "name": "开尔文-亥姆霍兹不稳定性 (Kelvin-Helmholtz Instability)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "流体力学",
+  "folder_name": "物理-流体力学-0090-开尔文-亥姆霍兹不稳定性_(Kelvin-Helmholtz_Instability)",
+  "folder_relpath": "Algorithms/物理-流体力学-0090-开尔文-亥姆霍兹不稳定性_(Kelvin-Helmholtz_Instability)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot13/Docs/Stage0_Blueprint.md"
+}
