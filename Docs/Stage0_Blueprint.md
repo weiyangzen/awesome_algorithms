@@ -5114,7 +5114,7 @@
   - 重要性: 计算对称电流分布产生的磁场
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0020 | 源序号 20] 磁偶极子场 (Magnetic Dipole Field)
+- [x] [PHYS-0020 | 源序号 20] 磁偶极子场 (Magnetic Dipole Field)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 电磁学核心 / 静磁学`
   - 现有摘要: 小电流环产生的磁场分布
