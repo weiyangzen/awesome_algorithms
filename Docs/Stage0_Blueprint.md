@@ -3306,7 +3306,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `4`
 
-- [ ] [MATH-0261 | 源序号 261] Metropolis-Hastings算法
+- [x] [MATH-0261 | 源序号 261] Metropolis-Hastings算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `概率论与数理统计 / 计算统计`
   - 现有摘要: 通用的MCMC采样方法
