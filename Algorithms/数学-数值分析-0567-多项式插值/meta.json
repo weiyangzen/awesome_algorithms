@@ -1,0 +1,12 @@
+{
+  "index": 171,
+  "uid": "MATH-0567",
+  "source_number": 567,
+  "name": "多项式插值",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0567-多项式插值",
+  "folder_relpath": "Algorithms/数学-数值分析-0567-多项式插值",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot11/Docs/Stage0_Blueprint.md"
+}
