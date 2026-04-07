@@ -1,0 +1,12 @@
+{
+  "index": 199,
+  "uid": "MATH-0096",
+  "source_number": 96,
+  "name": "Sylvester方程求解",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "线性代数",
+  "folder_name": "数学-线性代数-0096-Sylvester方程求解",
+  "folder_relpath": "Algorithms/数学-线性代数-0096-Sylvester方程求解",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
