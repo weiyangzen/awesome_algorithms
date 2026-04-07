@@ -1,0 +1,12 @@
+{
+  "index": 205,
+  "uid": "MATH-0102",
+  "source_number": 102,
+  "name": "主成分分析 (PCA)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "线性代数",
+  "folder_name": "数学-线性代数-0102-主成分分析_(PCA)",
+  "folder_relpath": "Algorithms/数学-线性代数-0102-主成分分析_(PCA)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
