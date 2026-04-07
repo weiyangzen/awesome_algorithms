@@ -7949,7 +7949,7 @@
   - 重要性: 全息原理的启发
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0380 | 源序号 399] 全息原理 (Holographic Principle)
+- [x] [PHYS-0380 | 源序号 399] 全息原理 (Holographic Principle)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第七部分：相对论与宇宙学扩展（361-400） / 量子引力`
   - 现有摘要: 空间区域的自由度由边界描述
