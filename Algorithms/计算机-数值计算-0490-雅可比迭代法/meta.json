@@ -1,0 +1,12 @@
+{
+  "index": 1366,
+  "uid": "CS-0322",
+  "source_number": 490,
+  "name": "雅可比迭代法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "数值计算",
+  "folder_name": "计算机-数值计算-0490-雅可比迭代法",
+  "folder_relpath": "Algorithms/计算机-数值计算-0490-雅可比迭代法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
