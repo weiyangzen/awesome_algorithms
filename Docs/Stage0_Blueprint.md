@@ -1836,7 +1836,7 @@
   - 重要性: 多项式因式分解的经典方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0086 | 源序号 86] Cantor-Zassenhaus算法
+- [x] [MATH-0086 | 源序号 86] Cantor-Zassenhaus算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `代数学 / 计算代数`
   - 现有摘要: 概率性多项式因式分解算法
