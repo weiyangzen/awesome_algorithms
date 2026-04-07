@@ -1,0 +1,12 @@
+{
+  "index": 1110,
+  "uid": "CS-0066",
+  "source_number": 86,
+  "name": "Dijkstra最短路径",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "贪心算法",
+  "folder_name": "计算机-贪心算法-0086-Dijkstra最短路径",
+  "folder_relpath": "Algorithms/计算机-贪心算法-0086-Dijkstra最短路径",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
