@@ -4582,7 +4582,7 @@
   - 重要性: 经典物理学的基础，统治物理学300年，工程技术的基石
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0002 | 源序号 2] 牛顿万有引力定律 (Newton's Law of Universal Gravitation)
+- [x] [PHYS-0002 | 源序号 2] 牛顿万有引力定律 (Newton's Law of Universal Gravitation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 经典力学基础 / 经典力学/引力理论`
   - 现有摘要: 任意两个质点通过连心线方向上的力相互吸引，力与质量乘积成正比，与距离平方成反比
