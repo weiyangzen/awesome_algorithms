@@ -1,0 +1,12 @@
+{
+  "index": 1196,
+  "uid": "CS-0152",
+  "source_number": 296,
+  "name": "Paillier加密",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "密码学",
+  "folder_name": "计算机-密码学-0296-Paillier加密",
+  "folder_relpath": "Algorithms/计算机-密码学-0296-Paillier加密",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot16/Docs/Stage0_Blueprint.md"
+}
