@@ -7732,7 +7732,7 @@
   - 重要性: 拓扑不变量，量子霍尔效应
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0268 | 源序号 271] 拓扑不变量 (Topological Invariants)
+- [x] [PHYS-0268 | 源序号 271] 拓扑不变量 (Topological Invariants)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 拓扑物理`
   - 现有摘要: 描述拓扑态的数学量
