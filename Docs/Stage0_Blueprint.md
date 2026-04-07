@@ -6248,7 +6248,7 @@
   - 重要性: 现代宇宙学的标准模型
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0055 | 源序号 55] 宇宙微波背景辐射 (Cosmic Microwave Background)
+- [x] [PHYS-0055 | 源序号 55] 宇宙微波背景辐射 (Cosmic Microwave Background)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 宇宙学与天体物理 / 宇宙学`
   - 现有摘要: 大爆炸遗留的热辐射，温度约2.7K
