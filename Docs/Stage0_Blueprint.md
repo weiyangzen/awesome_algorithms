@@ -1458,7 +1458,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `37`
 
-- [ ] [MATH-0051 | 源序号 51] 高斯消元法 (Gaussian Elimination)
+- [x] [MATH-0051 | 源序号 51] 高斯消元法 (Gaussian Elimination)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `代数学 / 线性代数`
   - 现有摘要: 求解线性方程组、计算矩阵秩和行列式的经典算法
