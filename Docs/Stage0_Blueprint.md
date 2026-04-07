@@ -5450,7 +5450,7 @@
   - 重要性: 原子光谱的细节
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0245 | 源序号 248] 超精细结构 (Hyperfine Structure)
+- [x] [PHYS-0245 | 源序号 248] 超精细结构 (Hyperfine Structure)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 原子物理`
   - 现有摘要: 核自旋与电子相互作用导致的能级分裂
