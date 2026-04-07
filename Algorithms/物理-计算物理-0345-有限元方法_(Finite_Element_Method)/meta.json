@@ -1,0 +1,12 @@
+{
+  "index": 754,
+  "uid": "PHYS-0338",
+  "source_number": 345,
+  "name": "有限元方法 (Finite Element Method)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0345-有限元方法_(Finite_Element_Method)",
+  "folder_relpath": "Algorithms/物理-计算物理-0345-有限元方法_(Finite_Element_Method)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot14/Docs/Stage0_Blueprint.md"
+}
