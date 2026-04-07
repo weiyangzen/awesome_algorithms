@@ -4799,7 +4799,7 @@
   - 重要性: 现代理论物理的数学框架基础，可处理约束系统
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0007 | 源序号 7] 哈密顿力学 (Hamiltonian Mechanics)
+- [x] [PHYS-0007 | 源序号 7] 哈密顿力学 (Hamiltonian Mechanics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 经典力学基础 / 分析力学`
   - 现有摘要: 用哈密顿量H和正则方程描述系统演化
