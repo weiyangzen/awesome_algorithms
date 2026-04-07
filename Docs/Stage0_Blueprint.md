@@ -2235,7 +2235,7 @@
   - 重要性: 网格生成、插值、有限元的基础
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0190 | 源序号 190] Bowyer-Watson算法
+- [x] [MATH-0190 | 源序号 190] Bowyer-Watson算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `几何学与拓扑学 / 计算几何`
   - 现有摘要: 增量式Delaunay三角剖分
