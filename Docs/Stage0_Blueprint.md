@@ -8257,7 +8257,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `5`
 
-- [ ] [PHYS-0462 | 源序号 485] 拉曼光谱 (Raman Spectroscopy)
+- [x] [PHYS-0462 | 源序号 485] 拉曼光谱 (Raman Spectroscopy)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 光谱学`
   - 现有摘要: 非弹性光散射
