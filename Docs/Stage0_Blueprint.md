@@ -4960,7 +4960,7 @@
   - 重要性: 发电机、变压器的工作原理，麦克斯韦方程组的核心
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0166 | 源序号 167] 电磁感应定律微分形式 (Differential Form of Faraday's Law)
+- [x] [PHYS-0166 | 源序号 167] 电磁感应定律微分形式 (Differential Form of Faraday's Law)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 电磁学`
   - 现有摘要: ∇×E = -∂B/∂t
