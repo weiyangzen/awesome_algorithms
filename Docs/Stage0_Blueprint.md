@@ -7550,7 +7550,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `3`
 
-- [ ] [PHYS-0213 | 源序号 214] 多体微扰理论 (Many-Body Perturbation Theory)
+- [x] [PHYS-0213 | 源序号 214] 多体微扰理论 (Many-Body Perturbation Theory)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子多体理论`
   - 现有摘要: 多粒子系统的微扰展开
