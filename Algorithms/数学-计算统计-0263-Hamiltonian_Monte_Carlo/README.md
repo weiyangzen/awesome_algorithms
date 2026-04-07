@@ -8,208 +8,199 @@
 
 ## R01
 
-本条目实现 Hamiltonian Monte Carlo（HMC）的最小可运行版本，目标是：
-- 从“目标密度 `pi(q)` + 梯度 `grad U(q)`”出发，完整走通 HMC 采样流程；
-- 显式展示“动量扩展 -> leapfrog 积分 -> Metropolis 校正 -> 留样诊断”的链路；
-- 在二维相关高斯目标分布上验证采样质量（均值、协方差、接受率、能量误差、ESS）。
+Hamiltonian Monte Carlo（HMC）是一类基于梯度信息的马尔可夫链蒙特卡罗方法。  
+它把参数采样问题转化为“哈密顿动力学中的轨迹模拟 + Metropolis 修正”，
+目标是在保持正确平稳分布的前提下，用更长距离、低随机游走的提议来提升采样效率。
+
+本目录给出一个可运行 MVP：
+- 从零实现 HMC 的关键模块（动量重采样、leapfrog、接受拒绝）；
+- 仅使用 `numpy`；
+- 在已知真值的二维高斯分布上进行数值校验。
 
 ## R02
 
-问题定义（MVP 范围）：
-- 输入：
-  - 目标势能函数 `U(q) = -log pi(q) + C`；
-  - 势能梯度 `grad U(q)`；
-  - 初始位置 `q0`；
-  - 采样配置 `(step_size, leapfrog_steps, burn_in, num_samples, thin, seed)`；
-  - 质量矩阵 `M`（默认单位阵，可显式传入）。
-- 输出：
-  - 后验样本矩阵 `samples`；
-  - 接受率 `acceptance_rate`；
-  - 哈密顿量误差统计（`mean|max |delta H|`）；
-  - 示例目标上的统计对照（均值/协方差误差与 ESS）。
+HMC 主要解决的问题是：
+- 随机游走型 MCMC（如 Random Walk MH）在相关后验中移动慢、样本自相关高；
+- 维度升高后，盲目局部提议会导致有效样本数（ESS）下降明显。
+
+HMC 通过引入辅助动量变量并沿梯度方向推进，使每次提议可以跨越更远区域，
+通常在相同计算预算下产生更多独立信息量。
 
 ## R03
 
-数学基础：
-
-1. 定义势能和动能：
-`U(q) = -log pi(q) + C`，`K(p) = 1/2 * p^T M^{-1} p`。
-
-2. 增广联合分布：
-`pi(q, p) ∝ exp(-H(q, p))`，其中
-`H(q,p) = U(q) + K(p)`。
-
-3. 哈密顿动力系统：
-`dq/dt = partial H / partial p = M^{-1}p`，
-`dp/dt = -partial H / partial q = -grad U(q)`。
-
-4. 用 leapfrog 做辛积分近似：
-- 半步更新 `p`；
-- 交替整步更新 `q, p`；
-- 末尾再做半步更新 `p`。
-
-5. 用 Metropolis 接受率修正离散化误差：
-`alpha = min(1, exp(H_current - H_proposed))`。
-
-这使得离散积分轨迹仍以目标分布为不变分布。
+问题定义（本条目实现）：
+- 输入：
+  - 目标分布的 `log π(q)` 及梯度 `∇log π(q)`；
+  - HMC 参数：步长 `ε`、leapfrog 步数 `L`、warmup/sampling 迭代数；
+  - 初始位置 `q0` 与随机种子。
+- 输出：
+  - 样本矩阵 `samples`；
+  - 接受率、能量误差、最终步长；
+  - 与真值分布在均值/协方差上的误差对比，以及 ESS 指标。
 
 ## R04
 
-算法流程（MVP）：
-1. 检查配置与矩阵合法性（步长、步数、样本数、`M` 对称正定等）。
-2. 固定随机种子，设置当前状态 `q`。
-3. 每次迭代先采样动量 `p0 ~ N(0, M)`。
-4. 计算当前哈密顿量 `H(q, p0)`。
-5. 用 leapfrog 执行 `L` 步离散动力学，得到 `(q', p')`。
-6. 反转动量 `p' <- -p'` 保证可逆性。
-7. 按 `exp(H_current - H_proposed)` 做接受拒绝，决定是否更新 `q`。
-8. 经过 `burn_in` 后按 `thin` 间隔留样，直到获得 `num_samples`。
-9. 汇总诊断并输出。
+数学建模：
+- 位置变量 `q` 为待采样参数；
+- 引入动量 `p ~ N(0, I)`，联合对数密度
+  `log π(q,p) = log π(q) - 1/2 p^T p`；
+- 哈密顿量 `H(q,p) = U(q) + K(p)`，其中
+  `U(q) = -log π(q)`，`K(p) = 1/2 p^T p`。
+
+理想连续动力学保持哈密顿量不变；离散实现中用 leapfrog 近似该动力学，再用 Metropolis 修正离散误差。
 
 ## R05
 
-核心数据结构：
-- `HMCConfig`（`dataclass`）：
-  - `step_size`、`leapfrog_steps`、`num_samples`、`burn_in`、`thin`、`seed`。
-- `HMCResult`（`dataclass`）：
-  - `samples: ndarray[(num_samples, dim)]`；
-  - `acceptance_rate`；
-  - `mean_abs_energy_error`；
-  - `max_abs_energy_error`。
-- 数值对象：
-  - `mass_matrix`, `mass_inv`, `mass_cholesky`；
-  - `potential(q)` 与 `grad_potential(q)` 可调用对象。
+本实现的 leapfrog（velocity-Verlet）更新为：
+1. `p_{t+1/2} = p_t + (ε/2)∇logπ(q_t)`
+2. `q_{t+1} = q_t + ε p_{t+1/2}`
+3. `p_{t+1} = p_{t+1/2} + (ε/2)∇logπ(q_{t+1})`
+
+重复 `L` 次后得到提议状态 `(q', p')`。
+该积分器时间可逆、体积保持，是 HMC 可用的关键数值基础。
 
 ## R06
 
-正确性要点：
-- 动量扩展后联合分布可分解为 `pi(q)*N(p|0,M)`；
-- 理想哈密顿流保持体积且守恒 `H`，因此保测度；
-- leapfrog 近似具有时间可逆与辛结构，离散误差主要体现在 `delta H`；
-- Metropolis 校正确保马尔可夫链以 `pi(q)` 为不变分布；
-- 丢弃 burn-in、按 thin 留样可减弱初值偏置和自相关影响（但 thin 不是必须，MVP 保留用于演示）。
+Metropolis 接受机制：
+- 当前联合对数密度：`J = log π(q) - 1/2 p^T p`
+- 提议联合对数密度：`J' = log π(q') - 1/2 p'^T p'`
+- 接受概率：`α = min(1, exp(J' - J))`
+
+即使 leapfrog 有离散误差，接受拒绝步骤也可将链修正回正确目标分布。
 
 ## R07
 
-复杂度分析：
-- 记维度为 `d`，每次 leapfrog 步中主成本是一次 `M^{-1}p` 与一次 `grad U(q)`。
-- 在当前密集矩阵实现下：
-  - 单次 leapfrog 约 `O(L * d^2)`；
-  - 总采样迭代 `T = burn_in + num_samples * thin`；
-  - 总时间复杂度约 `O(T * L * d^2)`。
-- 空间复杂度：
-  - 留样主存储 `O(num_samples * d)`；
-  - 其余工作内存约 `O(d^2)`（质量矩阵及其逆）。
+`demo.py` 的实验分布：二维相关高斯
+- 真均值：`[1.0, -1.0]`
+- 真协方差：
+  `[[1.0, 0.75], [0.75, 1.4]]`
+
+输出的关键诊断：
+- warmup/sample 阶段的平均接受概率；
+- sample 阶段接受率；
+- 能量变化绝对值（均值与最大值）；
+- 样本均值、协方差误差；
+- 每一维 ESS。
 
 ## R08
 
-边界与异常处理：
-- `step_size <= 0`、`leapfrog_steps < 1`、`num_samples < 1`、`thin < 1` -> `ValueError`；
-- `initial_position` 不是一维向量 -> `ValueError`；
-- `mass_matrix` 维度不匹配、非对称或非正定 -> `ValueError`；
-- 势能/梯度/动能出现非有限值（`nan/inf`）-> `ValueError`。
+前置知识：
+- 马尔可夫链与平稳分布；
+- 多元高斯、梯度与线性代数；
+- Metropolis-Hastings 接受拒绝机制；
+- 数值积分基本概念。
+
+运行环境：
+- Python 3.9+
+- `numpy`
 
 ## R09
 
-MVP 取舍：
-- 仅实现固定超参数 `(epsilon, L)` 的基础 HMC，不做自适应步长；
-- 不实现 NUTS、对角/稀疏质量矩阵在线学习等进阶机制；
-- 目标分布选解析可微的相关高斯，优先保证算法透明和可复现；
-- 诊断只做基础指标（接受率、能量误差、ESS、矩统计误差），不引入完整 MCMC 诊断框架。
+优点：
+- 借助梯度做“定向长跳”，比随机游走型方法通常混合更快；
+- 对连续可微后验非常有效；
+- 本实现无黑盒采样库，便于源码学习和扩展。
+
+局限：
+- 仍需调步长 `ε` 与步数 `L`；
+- 目标分布几何复杂时，单位质量矩阵可能效率不足；
+- 离散变量或不可微目标不适合直接使用。
 
 ## R10
 
-`demo.py` 职责划分：
-- `make_gaussian_target`：构建二维高斯的势能与梯度函数；
-- `validate_hmc_inputs`：校验配置、位置向量与质量矩阵；
-- `leapfrog`：执行一次哈密顿离散积分；
-- `hmc_sample`：完整采样主循环（动量采样、提案、接受拒绝、留样）；
-- `estimate_ess_per_dimension`：估算各维 ESS；
-- `run_demo`：组织实验并输出诊断；
-- `main`：非交互入口。
+数值稳定策略（MVP 版）：
+- warmup 阶段在 `log(step_size)` 上做小幅自适应，避免步长显著失配；
+- 步长裁剪到 `[1e-4, 2.0]`，减少异常发散；
+- 固定随机种子，保证实验可复现；
+- 输出能量误差统计，快速定位积分不稳定问题。
 
 ## R11
 
-运行方式：
+关键参数含义（见 `HMCConfig`）：
+- `num_warmup`：warmup 迭代数，仅用于调步长；
+- `num_samples`：最终保留样本数；
+- `step_size`：初始 leapfrog 步长 `ε`；
+- `num_leapfrog`：每次提议的积分步数 `L`；
+- `target_accept`：warmup 的目标接受概率；
+- `adapt_rate`：步长更新速度；
+- `seed`：随机种子。
 
-```bash
-cd Algorithms/数学-计算统计-0263-Hamiltonian_Monte_Carlo
-python3 demo.py
-```
-
-脚本无交互输入，会直接输出采样统计与通过状态。
+调参经验：
+- 接受率太低：减小 `step_size` 或减小 `num_leapfrog`；
+- ESS 偏低但接受率很高：可略增 `num_leapfrog` 或 `step_size`；
+- 出现大能量跳变：优先减小 `step_size`。
 
 ## R12
 
-输出字段解读：
-- `Acceptance rate`：提案被接受的比例，过低通常意味着步长过大或轨迹太长；
-- `Mean |delta H|`、`Max |delta H|`：leapfrog 离散误差强度，越小通常越稳定；
-- `Empirical mean/covariance` 与目标参数对比：直观检查采样偏差；
-- `L2(mean error)`、`Frobenius(cov error)`：量化统计误差；
-- `ESS per dimension`：有效样本量估计，反映自相关影响后的“等效独立样本数”。
+复杂度（每次采样迭代）：
+- 时间复杂度约为 `O(L * C_grad)`，其中 `C_grad` 是一次梯度计算成本；
+- 空间复杂度约为 `O(d)`（状态向量与梯度缓存），其中 `d` 是参数维度。
+
+本 MVP 重点放在算法透明度，不包含并行链和高级质量矩阵适配。
 
 ## R13
 
-建议最小测试集：
-- 正常场景：二维相关高斯（当前 demo 默认）；
-- 配置异常：`step_size<=0`、`leapfrog_steps=0`、`thin=0`；
-- 质量矩阵异常：非对称、奇异、非正定；
-- 数值异常：故意返回 `nan` 的势能/梯度函数；
-- 稳定性回归：固定 `seed` 检查接受率和矩误差在合理区间。
+正确性直觉：
+1. 动量重采样扩展了状态空间，使提议方向多样化；
+2. leapfrog 近似哈密顿动力学，倾向于沿等能面远距离移动；
+3. Metropolis 校正积分误差，保障目标分布不变性；
+4. 迭代后得到的样本均值可作为后验期望的一致估计（在常见遍历条件下）。
+
+本目录用“已知真值高斯”做经验校验，验证实现没有明显偏移。
 
 ## R14
 
-关键可调参数：
-- `step_size`：每次 leapfrog 步长；
-- `leapfrog_steps`：单次提案轨迹长度；
-- `burn_in`：前期丢弃样本数；
-- `num_samples`：保留样本规模；
-- `thin`：留样间隔；
-- `mass_matrix`：动量协方差，影响不同维度尺度匹配。
+常见失效模式：
+1. 步长过大：接受率低、能量误差大；
+2. 轨迹太短（`L` 太小）：链移动不足、ESS 低；
+3. 后验几何病态（强相关/尺度悬殊）：采样效率下降明显；
+4. 梯度实现符号或尺度错误：样本偏离真值。
 
-调参经验：
-- 先固定 `L` 调 `step_size`，让接受率落在中高区间；
-- 再调 `L` 平衡“探索距离 vs 计算成本”；
-- 若各维尺度差异大，优先改进 `mass_matrix`。
+排查顺序建议：先看接受率和能量误差，再看均值/协方差偏差，最后逐行核对梯度与 leapfrog。
 
 ## R15
 
-方法对比：
-- 相比 Random-Walk Metropolis：
-  - HMC 利用梯度和动力学轨迹，通常在中高维混合更快；
-  - RWM 步子局部、随机游走效应更明显。
-- 相比 MALA：
-  - MALA 每步只做一次局部梯度修正；
-  - HMC 通过多步 leapfrog 在一次提案里走更长距离。
-- 相比 NUTS：
-  - NUTS 自动调节轨迹长度，工程上更省人工调参；
-  - 本实现更小更透明，适合教学和源码级理解。
+可扩展方向：
+- 多链并行并加入 `R-hat`；
+- 引入质量矩阵（对角或稠密）以改善病态几何；
+- 使用 dual averaging 替代当前轻量步长适配；
+- 进一步升级为 NUTS 自动路径长度。
 
 ## R16
 
-典型应用：
-- 贝叶斯回归与层次模型参数后验采样；
-- 概率图模型中的高维连续变量推断；
-- 物理/统计模型中的配分函数相关抽样问题；
-- 需要“可解释采样轨迹 + 梯度信息”的科研原型验证。
+相关方法比较：
+- Random Walk MH：实现简单，但在相关分布上混合慢；
+- MALA：也用梯度，但轨迹短、随机游走特征仍较明显；
+- HMC：需要手调 `ε` 与 `L`，但采样效率通常更高；
+- NUTS：在 HMC 基础上自动选择路径长度，减少人工调参。
 
 ## R17
 
-后续扩展方向：
-- 对角或稀疏质量矩阵自适应（预条件）；
-- 步长自适应（如 dual averaging）；
-- NUTS 自动轨迹长度；
-- 与 PyTorch/JAX 自动微分结合，支持复杂目标分布；
-- 更系统的收敛诊断（`R-hat`、多链比较、trace/ACF 可视化）。
+交付物与运行方式：
+- `README.md`：R01-R18 完整说明；
+- `demo.py`：可直接运行的 HMC MVP；
+- `meta.json`：任务元数据一致。
+
+运行命令：
+
+```bash
+cd Algorithms/数学-计算统计-0263-Hamiltonian_Monte_Carlo
+uv run python demo.py
+```
+
+预期结果：打印采样诊断与误差指标，最后输出 `All checks passed.`。
 
 ## R18
 
-源码级算法流（对应 `demo.py`，8 步）：
-1. `run_demo` 定义目标高斯的 `mean/cov`，调用 `make_gaussian_target` 生成 `potential` 和 `grad_potential`。  
-2. 组装 `HMCConfig` 与 `initial_position`，进入 `hmc_sample` 主过程。  
-3. `hmc_sample` 内先调用 `validate_hmc_inputs`，并分解质量矩阵得到 `mass_cholesky`、`mass_inv`。  
-4. 每次迭代先采样动量 `p0 = L @ N(0, I)`，计算当前哈密顿量 `H(q, p0)`。  
-5. 调 `leapfrog` 执行“半步动量 + 多步位置/动量 + 半步动量”，得到提案 `(q_prop, p_prop)`。  
-6. 反转提案动量并计算 `H(q_prop, p_prop)`，由 `log(u) < -(H_prop - H_cur)` 执行 Metropolis 接受拒绝。  
-7. 若接受则更新 `q`，然后按 `burn_in` 和 `thin` 规则写入 `samples`。  
-8. 采样结束后汇总接受率、能量误差；`run_demo` 再计算均值/协方差误差与 `ESS`，打印并执行轻量质量门限。  
+`demo.py` 源码级算法流程（8 步）：
+
+1. `main` 中定义二维高斯真值分布与 `HMCConfig`，初始化 `q0` 并调用 `run_hmc`。  
+2. `make_gaussian_target` 构造 `logp_and_grad(q)`，提供 `log π(q)` 和 `∇log π(q)`。  
+3. `run_hmc` 进入迭代循环；每轮调用 `hmc_transition` 先重采样动量 `p0 ~ N(0, I)`。  
+4. `hmc_transition` 使用 `leapfrog` 执行 `L` 次半步动量 + 整步位置更新，得到 `(q', p')`。  
+5. 通过 `joint_log_density` 计算 `J` 与 `J'`，按 `min(1, exp(J'-J))` 执行 Metropolis 接受拒绝。  
+6. warmup 期内，`adapt_step_size` 基于当前接受概率更新 `step_size`（log 尺度小步调整）。  
+7. 采样期保存 `q`，并累计接受率与能量误差统计，形成最终样本矩阵。  
+8. `main` 计算均值误差、协方差误差与 ESS，并用断言验证采样质量后输出 `All checks passed.`。
+
+说明：本实现没有把第三方 HMC 库当黑盒，关键计算流程都能在源码中逐函数追踪。
