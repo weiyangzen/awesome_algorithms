@@ -7368,7 +7368,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `2`
 
-- [ ] [PHYS-0157 | 源序号 158] 克劳修斯-莫索提关系 (Clausius-Mossotti Relation)
+- [x] [PHYS-0157 | 源序号 158] 克劳修斯-莫索提关系 (Clausius-Mossotti Relation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 电介质物理`
   - 现有摘要: 分子极化率与介电常数的关系
