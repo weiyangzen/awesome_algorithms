@@ -1,0 +1,12 @@
+{
+  "index": 1340,
+  "uid": "CS-0296",
+  "source_number": 456,
+  "name": "死代码消除",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "编译原理",
+  "folder_name": "计算机-编译原理-0456-死代码消除",
+  "folder_relpath": "Algorithms/计算机-编译原理-0456-死代码消除",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot20/Docs/Stage0_Blueprint.md"
+}
