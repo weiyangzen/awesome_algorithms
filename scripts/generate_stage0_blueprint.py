@@ -15,6 +15,8 @@ SOURCE_PATHS = {
     "cs": ROOT / "Docs/researches/top_500_cs_algorithms.md",
     "physics": ROOT / "Docs/researches/physics_top500_algorithms.md",
 }
+DISCIPLINE_ORDER = ["数学", "物理", "计算机"]
+DISCIPLINE_PRIORITY = {discipline: idx for idx, discipline in enumerate(DISCIPLINE_ORDER)}
 
 
 DELIVERABLES = [
@@ -69,7 +71,7 @@ DELIVERABLES = [
     (
         "R17",
         "Python MVP 实现方案",
-        "为该算法设计一个以 Python 为主的最小可运行演示；优先使用 numpy、scipy、pandas、scikit-learn。",
+        "为该算法设计一个以 Python 为主的最小可运行演示；工具栈包括但不限于 numpy、scipy、pandas、scikit-learn、PyTorch。",
     ),
     (
         "R18",
@@ -107,6 +109,16 @@ def normalize_subcat(text: str) -> str:
 
 def short_top_label(text: str) -> str:
     return re.sub(r"算法$", "", clean_top_heading(text)).strip()
+
+
+def normalize_algorithm_key(name: str) -> str:
+    text = name.replace("（", "(").replace("）", ")")
+    text = re.sub(r"\([^)]*\)", "", text)
+    text = text.replace("0/1", "01").replace("0-1", "01")
+    text = re.sub(r"^[A-Za-z0-9]+(?=[\u4e00-\u9fff])", "", text)
+    text = re.sub(r"[\s\-–—_/]", "", text)
+    text = re.sub(r"[^\w\u4e00-\u9fff]", "", text)
+    return text.lower()
 
 
 def parse_math(path: Path) -> list[Item]:
@@ -306,21 +318,59 @@ def parse_physics(path: Path) -> list[Item]:
     return items
 
 
-def collect_items() -> list[Item]:
+def dedupe_cross_discipline(items: list[Item]) -> tuple[list[Item], dict[str, object]]:
+    grouped: defaultdict[str, list[Item]] = defaultdict(list)
+    for item in items:
+        grouped[normalize_algorithm_key(item.name)].append(item)
+
+    keep_discipline_by_key: dict[str, str] = {}
+    duplicate_key_count = 0
+    for key, group in grouped.items():
+        disciplines = {item.discipline for item in group}
+        if len(disciplines) <= 1:
+            continue
+        duplicate_key_count += 1
+        keep_discipline_by_key[key] = min(disciplines, key=lambda discipline: DISCIPLINE_PRIORITY[discipline])
+
+    kept: list[Item] = []
+    removed: list[Item] = []
+    for item in items:
+        key = normalize_algorithm_key(item.name)
+        keep_discipline = keep_discipline_by_key.get(key)
+        if keep_discipline is None or item.discipline == keep_discipline:
+            kept.append(item)
+        else:
+            removed.append(item)
+
+    summary = {
+        "raw_total": len(items),
+        "deduped_total": len(kept),
+        "removed_total": len(removed),
+        "duplicate_key_count": duplicate_key_count,
+        "raw_counts": Counter(item.discipline for item in items),
+        "kept_counts": Counter(item.discipline for item in kept),
+        "removed_counts": Counter(item.discipline for item in removed),
+    }
+    return kept, summary
+
+
+def collect_items() -> tuple[list[Item], dict[str, object]]:
     items: list[Item] = []
     items.extend(parse_math(SOURCE_PATHS["math"]))
     items.extend(parse_cs(SOURCE_PATHS["cs"]))
     items.extend(parse_physics(SOURCE_PATHS["physics"]))
+
+    items, dedupe_summary = dedupe_cross_discipline(items)
 
     counters: defaultdict[str, int] = defaultdict(int)
     for item in items:
         counters[item.code_prefix] += 1
         item.uid = f"{item.code_prefix}-{counters[item.code_prefix]:04d}"
 
-    return items
+    return items, dedupe_summary
 
 
-def build_blueprint(items: list[Item]) -> str:
+def build_blueprint(items: list[Item], dedupe_summary: dict[str, object]) -> str:
     counts = Counter(item.discipline for item in items)
     subcounts = Counter((item.discipline, item.subcategory) for item in items)
 
@@ -344,11 +394,19 @@ def build_blueprint(items: list[Item]) -> str:
     lines.append("## 使用规则")
     lines.append("")
     lines.append("- 本蓝图严格按 `学科 -> 子分类` 两级结构组织。")
-    lines.append("- 每个 `[ ]` 项对应当前源文档中的一个算法条目；跨学科同名算法、或同一学科内因上下文不同而重复出现的同名条目，不在本阶段自动合并。")
+    lines.append("- 每个 `[ ]` 项对应当前源文档中的一个算法条目。")
+    lines.append("- 本蓝图会做 `跨学科去重`，但不会做 `同一学科内部去重`；同一学科里的不同变体、不同问题版本、不同应用上下文仍可并存。")
     lines.append("- 子分类、统计表、研究模板、完成标准都不是 checklist item；真正可勾选的只有算法条目本身。")
     lines.append("- 每个算法条目统一引用 `R01-R18` 研究模板，避免在 1400+ 条清单中重复展开长字段。")
-    lines.append("- 每个算法后续演示默认要有 `Python MVP` 路径；首选生态是 `numpy`、`scipy`、`pandas`、`scikit-learn`。")
+    lines.append("- 每个算法后续演示默认要有 `Python MVP` 路径；首选生态包括但不限于 `numpy`、`scipy`、`pandas`、`scikit-learn`、`PyTorch`。")
     lines.append("- 如果某个第三方包通过少量函数调用就能完成任务，也不能把该包当成黑箱；必须补 `R18`，把源码或核心实现路径追出来，并拆成 `3-10` 个算法步骤。")
+    lines.append("")
+    lines.append("## 跨领域去重规则")
+    lines.append("")
+    lines.append("- 去重范围只覆盖 `数学 / 物理 / 计算机` 三个学科之间的重复算法名。")
+    lines.append("- 去重时会规范化算法基准名：去掉括号中的翻译或缩写，统一连接符与空格，并处理少量常见写法差异，例如 `0/1` 与 `01`。")
+    lines.append("- 如果同一基准名同时出现在多个学科，只保留优先级最高的学科，优先级为 `数学 > 物理 > 计算机`。")
+    lines.append("- 如果最高优先级学科内部有多个同名变体，则全部保留；只移除低优先级学科中的跨领域重复项。")
     lines.append("")
     lines.append("## 完成标准")
     lines.append("")
@@ -356,7 +414,7 @@ def build_blueprint(items: list[Item]) -> str:
     lines.append("- `R04-R05` 对纯理论物理条目可解释为“典型计算实现或数值求解复杂度”；如果确实不存在独立算法形式，必须明确写 `N/A + 原因`。")
     lines.append("- `R11-R13` 若不适用，也必须写出 `N/A + 为什么不适用`，不能留空。")
     lines.append("- `R08` 和 `R16` 需要互相校验：前者强调依赖链，后者强调谱系位置和应用落点。")
-    lines.append("- `R17` 需要给出最小可运行演示的实现边界、输入输出和依赖；原则上优先用 `numpy`、`scipy`、`pandas`、`scikit-learn` 完成。")
+    lines.append("- `R17` 需要给出最小可运行演示的实现边界、输入输出和依赖；工具栈包括但不限于 `numpy`、`scipy`、`pandas`、`scikit-learn`、`PyTorch`。")
     lines.append("- 如果 `R17` 主要依赖外部包封装，`R18` 必须回到源码和算法本身，把关键流程拆成 `3-10` 步；只写“调用某函数”不算完成。")
     lines.append("")
     lines.append("## 推荐研究顺序")
@@ -376,25 +434,37 @@ def build_blueprint(items: list[Item]) -> str:
     lines.append("")
     lines.append("## 源快照")
     lines.append("")
-    lines.append(f"- 当前仓库快照实际可解析条目总数: `{len(items)}`")
-    lines.append(f"- 数学: `{counts['数学']}`")
-    lines.append(f"- 计算机: `{counts['计算机']}`")
-    lines.append(f"- 物理: `{counts['物理']}`")
+    lines.append(f"- 当前仓库原始可解析条目总数: `{dedupe_summary['raw_total']}`")
+    lines.append(f"- 跨学科重复基准名数量: `{dedupe_summary['duplicate_key_count']}`")
+    lines.append(f"- 被移除的低优先级跨领域重复条目数: `{dedupe_summary['removed_total']}`")
+    lines.append(f"- 去重后纳入蓝图的条目总数: `{dedupe_summary['deduped_total']}`")
     lines.append("- 结构异常: `Docs/researches/top_500_cs_algorithms.md` 的目录宣称 500 项，但当前文件正文仅能解析出 410 个算法条目，编号 `111-200` 在文件正文中缺失。")
     lines.append("- 本蓝图不补造缺失算法，只收录当前仓库里实际存在且可解析的条目。")
+    lines.append("")
+    lines.append("## 去重统计")
+    lines.append("")
+    lines.append("| 学科 | 原始条目数 | 去重后保留数 | 被去重移除数 |")
+    lines.append("| --- | ---: | ---: | ---: |")
+    for discipline in DISCIPLINE_ORDER:
+        raw_counts = dedupe_summary["raw_counts"]
+        kept_counts = dedupe_summary["kept_counts"]
+        removed_counts = dedupe_summary["removed_counts"]
+        lines.append(
+            f"| {discipline} | {raw_counts[discipline]} | {kept_counts[discipline]} | {removed_counts[discipline]} |"
+        )
     lines.append("")
     lines.append("## 子分类统计")
     lines.append("")
     lines.append("| 学科 | 子分类 | 条目数 |")
     lines.append("| --- | --- | ---: |")
-    for discipline in ["数学", "计算机", "物理"]:
+    for discipline in DISCIPLINE_ORDER:
         for subcat in subcategory_order[discipline]:
             lines.append(f"| {discipline} | {subcat} | {subcounts[(discipline, subcat)]} |")
     lines.append("")
     lines.append("## 权威清单")
     lines.append("")
 
-    for discipline in ["数学", "计算机", "物理"]:
+    for discipline in DISCIPLINE_ORDER:
         lines.append(f"## {discipline}")
         lines.append("")
         for subcat in subcategory_order[discipline]:
@@ -403,7 +473,7 @@ def build_blueprint(items: list[Item]) -> str:
             lines.append(f"### {subcat} ({len(scoped)})")
             lines.append("")
             lines.append(f"- 研究模板: `R01-R18`")
-            lines.append("- MVP 约束: 优先使用 `numpy`、`scipy`、`pandas`、`scikit-learn`；如需其他包，也必须保留算法解释权。")
+            lines.append("- MVP 约束: 工具栈包括但不限于 `numpy`、`scipy`、`pandas`、`scikit-learn`、`PyTorch`；如需其他包，也必须保留算法解释权。")
             lines.append("- 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。")
             lines.append(f"- 本子分类条目数: `{len(scoped)}`")
             lines.append("")
@@ -423,8 +493,8 @@ def build_blueprint(items: list[Item]) -> str:
 
 
 def main() -> None:
-    items = collect_items()
-    OUT_PATH.write_text(build_blueprint(items), encoding="utf-8")
+    items, dedupe_summary = collect_items()
+    OUT_PATH.write_text(build_blueprint(items, dedupe_summary), encoding="utf-8")
     print(f"wrote {OUT_PATH} with {len(items)} items")
 
 
