@@ -1,0 +1,12 @@
+{
+  "index": 1051,
+  "uid": "CS-0007",
+  "source_number": 7,
+  "name": "希尔排序 (Shell Sort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0007-希尔排序_(Shell_Sort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0007-希尔排序_(Shell_Sort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot11/Docs/Stage0_Blueprint.md"
+}
