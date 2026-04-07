@@ -1,0 +1,12 @@
+{
+  "index": 1346,
+  "uid": "CS-0302",
+  "source_number": 463,
+  "name": "MPI通信",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "并行与分布式",
+  "folder_name": "计算机-并行与分布式-0463-MPI通信",
+  "folder_relpath": "Algorithms/计算机-并行与分布式-0463-MPI通信",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
