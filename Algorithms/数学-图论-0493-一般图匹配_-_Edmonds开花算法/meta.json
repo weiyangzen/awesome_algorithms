@@ -1,0 +1,12 @@
+{
+  "index": 317,
+  "uid": "MATH-0493",
+  "source_number": 493,
+  "name": "一般图匹配 - Edmonds开花算法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "图论",
+  "folder_name": "数学-图论-0493-一般图匹配_-_Edmonds开花算法",
+  "folder_relpath": "Algorithms/数学-图论-0493-一般图匹配_-_Edmonds开花算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot17/Docs/Stage0_Blueprint.md"
+}
