@@ -8348,7 +8348,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `3`
 
-- [ ] [PHYS-0473 | 源序号 496] 参量放大 (Parametric Amplification)
+- [x] [PHYS-0473 | 源序号 496] 参量放大 (Parametric Amplification)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 非线性光学`
   - 现有摘要: 非线性光学参量过程
