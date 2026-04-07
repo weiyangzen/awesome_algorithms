@@ -1143,7 +1143,7 @@
   - 重要性: Catmull-Clark、Loop等是动画电影的基础
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0180 | 源序号 180] de Casteljau算法
+- [x] [MATH-0180 | 源序号 180] de Casteljau算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析/CAGD`
   - 现有摘要: Bézier曲线的求值和细分算法
