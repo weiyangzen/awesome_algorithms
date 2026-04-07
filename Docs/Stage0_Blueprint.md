@@ -275,7 +275,7 @@
   - 重要性: 理论计算机科学的里程碑，证明了PRIMES属于P类问题
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0007 | 源序号 7] 费马素性测试 (Fermat Primality Test)
+- [x] [MATH-0007 | 源序号 7] 费马素性测试 (Fermat Primality Test)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论`
   - 现有摘要: 基于费马小定理的简单概率素性测试
