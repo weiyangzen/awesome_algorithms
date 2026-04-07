@@ -7011,7 +7011,7 @@
   - 重要性: 经典物理中最重要的未解决问题之一
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0089 | 源序号 89] 瑞利-泰勒不稳定性 (Rayleigh-Taylor Instability)
+- [x] [PHYS-0089 | 源序号 89] 瑞利-泰勒不稳定性 (Rayleigh-Taylor Instability)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 流体力学核心 / 流体力学`
   - 现有摘要: 重流体加速轻流体时的界面不稳定性
