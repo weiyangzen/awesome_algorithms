@@ -6311,7 +6311,7 @@
   - 重要性: 解决标准宇宙学问题
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0349 | 源序号 367] 慢滚暴胀 (Slow-Roll Inflation)
+- [x] [PHYS-0349 | 源序号 367] 慢滚暴胀 (Slow-Roll Inflation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第七部分：相对论与宇宙学扩展（361-400） / 宇宙学`
   - 现有摘要: 暴胀场的慢滚近似
