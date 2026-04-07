@@ -1360,7 +1360,7 @@
   - 重要性: 波动方程的标准方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0461 | 源序号 461] Lax-Friedrichs格式
+- [x] [MATH-0461 | 源序号 461] Lax-Friedrichs格式
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `微分方程 / 数值分析/CFD`
   - 现有摘要: 一阶守恒型格式
