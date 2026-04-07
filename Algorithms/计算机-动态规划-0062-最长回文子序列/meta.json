@@ -1,0 +1,12 @@
+{
+  "index": 1089,
+  "uid": "CS-0045",
+  "source_number": 62,
+  "name": "最长回文子序列",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "动态规划",
+  "folder_name": "计算机-动态规划-0062-最长回文子序列",
+  "folder_relpath": "Algorithms/计算机-动态规划-0062-最长回文子序列",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
