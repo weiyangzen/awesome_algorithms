@@ -1,0 +1,14 @@
+{
+  "table_id": 3,
+  "sparse_step": 2,
+  "entries": [
+    {
+      "k": "apple",
+      "o": 0
+    },
+    {
+      "k": "date",
+      "o": 71
+    }
+  ]
+}
