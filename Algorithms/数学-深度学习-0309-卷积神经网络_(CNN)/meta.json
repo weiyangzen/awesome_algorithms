@@ -1,0 +1,12 @@
+{
+  "index": 443,
+  "uid": "MATH-0309",
+  "source_number": 309,
+  "name": "卷积神经网络 (CNN)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "深度学习",
+  "folder_name": "数学-深度学习-0309-卷积神经网络_(CNN)",
+  "folder_relpath": "Algorithms/数学-深度学习-0309-卷积神经网络_(CNN)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
