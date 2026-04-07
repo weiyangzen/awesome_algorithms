@@ -359,7 +359,7 @@
   - 重要性: RSA加密的理论基础，数论中最常用的定理之一
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0019 | 源序号 19] 离散对数 - Baby-step Giant-step
+- [x] [MATH-0019 | 源序号 19] 离散对数 - Baby-step Giant-step
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论`
   - 现有摘要: 求解离散对数问题的中间相遇算法，时间复杂度O(√n)
