@@ -1,0 +1,12 @@
+{
+  "index": 1075,
+  "uid": "CS-0031",
+  "source_number": 41,
+  "name": "强连通分量 (SCC) - Tarjan算法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "图算法",
+  "folder_name": "计算机-图算法-0041-强连通分量_(SCC)_-_Tarjan算法",
+  "folder_relpath": "Algorithms/计算机-图算法-0041-强连通分量_(SCC)_-_Tarjan算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot15/Docs/Stage0_Blueprint.md"
+}
