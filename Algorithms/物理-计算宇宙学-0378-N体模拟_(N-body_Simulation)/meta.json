@@ -1,0 +1,12 @@
+{
+  "index": 991,
+  "uid": "PHYS-0360",
+  "source_number": 378,
+  "name": "N体模拟 (N-body Simulation)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算宇宙学",
+  "folder_name": "物理-计算宇宙学-0378-N体模拟_(N-body_Simulation)",
+  "folder_relpath": "Algorithms/物理-计算宇宙学-0378-N体模拟_(N-body_Simulation)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot11/Docs/Stage0_Blueprint.md"
+}
