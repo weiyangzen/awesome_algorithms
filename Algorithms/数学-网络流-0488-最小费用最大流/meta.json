@@ -1,0 +1,12 @@
+{
+  "index": 530,
+  "uid": "MATH-0488",
+  "source_number": 488,
+  "name": "最小费用最大流",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "网络流",
+  "folder_name": "数学-网络流-0488-最小费用最大流",
+  "folder_relpath": "Algorithms/数学-网络流-0488-最小费用最大流",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
