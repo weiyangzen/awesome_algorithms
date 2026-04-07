@@ -233,7 +233,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `39`
 
-- [ ] [MATH-0001 | 源序号 1] 欧几里得算法 (Euclidean Algorithm)
+- [x] [MATH-0001 | 源序号 1] 欧几里得算法 (Euclidean Algorithm)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论/基础算法`
   - 现有摘要: 计算两个整数的最大公约数(GCD)的最古老算法，基于辗转相除原理

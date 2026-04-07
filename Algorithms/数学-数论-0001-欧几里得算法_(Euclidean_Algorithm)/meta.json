@@ -1,0 +1,12 @@
+{
+  "index": 1,
+  "uid": "MATH-0001",
+  "source_number": 1,
+  "name": "欧几里得算法 (Euclidean Algorithm)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数论",
+  "folder_name": "数学-数论-0001-欧几里得算法_(Euclidean_Algorithm)",
+  "folder_relpath": "Algorithms/数学-数论-0001-欧几里得算法_(Euclidean_Algorithm)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
