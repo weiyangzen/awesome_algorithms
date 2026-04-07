@@ -1,0 +1,12 @@
+{
+  "index": 1088,
+  "uid": "CS-0044",
+  "source_number": 61,
+  "name": "钢条切割问题",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "动态规划",
+  "folder_name": "计算机-动态规划-0061-钢条切割问题",
+  "folder_relpath": "Algorithms/计算机-动态规划-0061-钢条切割问题",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot08/Docs/Stage0_Blueprint.md"
+}
