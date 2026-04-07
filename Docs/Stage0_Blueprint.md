@@ -7984,7 +7984,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `4`
 
-- [ ] [PHYS-0394 | 源序号 413] 夸克禁闭 (Quark Confinement)
+- [x] [PHYS-0394 | 源序号 413] 夸克禁闭 (Quark Confinement)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / QCD`
   - 现有摘要: 夸克不能单独存在
