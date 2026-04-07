@@ -1,0 +1,12 @@
+{
+  "index": 745,
+  "uid": "PHYS-0325",
+  "source_number": 330,
+  "name": "速度Verlet (Velocity Verlet)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0330-速度Verlet_(Velocity_Verlet)",
+  "folder_relpath": "Algorithms/物理-计算物理-0330-速度Verlet_(Velocity_Verlet)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
