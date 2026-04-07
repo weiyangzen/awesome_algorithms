@@ -1,0 +1,12 @@
+{
+  "index": 947,
+  "uid": "PHYS-0202",
+  "source_number": 203,
+  "name": "哈特里-福克方法 (Hartree-Fock Method)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "量子化学",
+  "folder_name": "物理-量子化学-0203-哈特里-福克方法_(Hartree-Fock_Method)",
+  "folder_relpath": "Algorithms/物理-量子化学-0203-哈特里-福克方法_(Hartree-Fock_Method)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
