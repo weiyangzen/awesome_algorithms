@@ -7200,7 +7200,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `5`
 
-- [ ] [PHYS-0142 | 源序号 142] 球谐函数 (Spherical Harmonics)
+- [x] [PHYS-0142 | 源序号 142] 球谐函数 (Spherical Harmonics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第二部分：经典力学扩展（101-150） / 数学物理`
   - 现有摘要: 球坐标下拉普拉斯方程的角度解
