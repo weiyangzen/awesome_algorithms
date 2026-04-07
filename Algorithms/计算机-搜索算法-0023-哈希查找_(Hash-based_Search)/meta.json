@@ -1,0 +1,12 @@
+{
+  "index": 1067,
+  "uid": "CS-0023",
+  "source_number": 23,
+  "name": "哈希查找 (Hash-based Search)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "搜索算法",
+  "folder_name": "计算机-搜索算法-0023-哈希查找_(Hash-based_Search)",
+  "folder_relpath": "Algorithms/计算机-搜索算法-0023-哈希查找_(Hash-based_Search)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
