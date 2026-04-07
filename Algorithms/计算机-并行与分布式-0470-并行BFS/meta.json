@@ -1,0 +1,12 @@
+{
+  "index": 1353,
+  "uid": "CS-0309",
+  "source_number": 470,
+  "name": "并行BFS",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "并行与分布式",
+  "folder_name": "计算机-并行与分布式-0470-并行BFS",
+  "folder_relpath": "Algorithms/计算机-并行与分布式-0470-并行BFS",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot13/Docs/Stage0_Blueprint.md"
+}
