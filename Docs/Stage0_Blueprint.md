@@ -4603,7 +4603,7 @@
   - 重要性: 比能量守恒更普适，在相对论和量子力学中依然成立
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0005 | 源序号 5] 角动量守恒定律 (Law of Conservation of Angular Momentum)
+- [x] [PHYS-0005 | 源序号 5] 角动量守恒定律 (Law of Conservation of Angular Momentum)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 经典力学基础 / 经典力学`
   - 现有摘要: 孤立系统的总角动量保持不变
