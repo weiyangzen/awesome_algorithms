@@ -8,124 +8,98 @@
 
 ## R01
 
-滑动窗口协议（Sliding Window Protocol）是一类可靠传输机制，用有限大小的“发送窗口”与“接收窗口”实现流水线传输。与停等协议相比，它允许在未收到前一帧 ACK 时继续发送后续帧，从而显著提升链路利用率。
+滑动窗口协议用于在不可靠链路上提升吞吐：发送方无需“发一个等一个 ACK”，而是允许在窗口内并行发送多个分组。
 
-本条目 MVP 采用 **Go-Back-N（GBN）** 变体：
-- 发送方维护窗口 `[base, base + window_size - 1]`。
-- 接收方只接收按序到达的数据。
-- ACK 为累计确认（`ACK=k` 表示 `0..k` 均已按序收到）。
-- 超时后发送方回退并重传 `[base, next_seq-1]`。
+本条目实现的是教学化的 **选择性重传（Selective Repeat, SR-ARQ）** MVP：
+- 发送窗口内每个分组独立确认；
+- 丢失的分组只重传该分组，不回退整个窗口；
+- 用离散时间 tick 模型显式演示窗口滑动、超时、重传与 ACK 丢失影响。
 
 ## R02
 
-问题目标：在存在数据包与 ACK 丢失的信道上，保证数据最终按序、无缺失地送达。
-
-最小化描述：
-- 输入：`N` 个待发送帧、窗口大小 `W`、丢包概率、超时阈值。
-- 输出：传输日志与统计信息，验证协议可在非理想信道中完成可靠传输。
-- 约束：不依赖交互输入；应可直接 `uv run python demo.py` 运行。
+问题定义（MVP 范围）：
+- 输入：
+1. 协议参数 `total_packets / window_size / timeout_ticks / propagation_delay`；
+2. 首发数据包丢失集合 `data_loss_on_first_tx`；
+3. 首次 ACK 丢失集合 `ack_loss_on_first_emit`。
+- 输出：
+1. 每个 tick 的发送基序号、接收基序号、在途包数量、当 tick 新发/重传/确认信息；
+2. `sender_base`、`receiver_base`、累计重传次数的确定性序列；
+3. 断言结果（最终完成性与固定轨迹一致性）。
 
 ## R03
 
-核心机制分为 4 个并发逻辑：
-- **发送滑动**：只要 `next_seq < base + W` 就允许继续发新帧。
-- **累计确认**：收到较大 ACK 会一次性推进 `base`，窗口整体右移。
-- **乱序处理**：接收方对乱序帧丢弃并回 ACK 最近连续确认点。
-- **超时重传**：若最老未确认帧超时，重传窗口内所有未确认帧。
+核心协议规则（SR-ARQ 简化版）：
+- 发送端维护：`sender_base`、`next_seq`、每包发送时间、每包 ACK 状态；
+- 接收端维护：`receiver_base`、接收缓存位图 `received[]`；
+- 发送约束：仅允许 `seq in [sender_base, sender_base + window_size)` 的分组在途；
+- 接收行为：窗口内分组可乱序接收并缓存，随后尝试推进 `receiver_base`；
+- 确认机制：按分组独立 ACK；
+- 超时机制：某个未确认分组超过 `timeout_ticks` 后，单独重传该分组。
 
 ## R04
 
-本实现使用离散时间（tick）仿真，主要状态变量如下：
-- 发送方：`base`、`next_seq`、`timer_start`。
-- 接收方：`receiver_expected`（下一个期望的序号）。
-- 事件队列：`data_events[tick]`、`ack_events[tick]`。
-- 统计量：发送总次数、重传次数、超时次数、丢包次数等。
-
-这种事件驱动方式比“立即送达”的简化模型更能展示窗口与 RTT 的关系。
+`demo.py` 每个 tick 的执行顺序：
+1. 处理到达接收端的数据包（含重复包/过期包）；
+2. 接收端生成 ACK（可命中“首次 ACK 丢失”规则）；
+3. 处理到达发送端的 ACK，并推进 `sender_base`；
+4. 扫描发送窗口中超时分组，触发选择性重传；
+5. 在窗口允许范围内发送新分组；
+6. 记录 `TickRecord` 到时间线；
+7. 全部分组确认且链路清空后结束。
 
 ## R05
 
-高层伪代码（GBN）：
-
-```text
-while base < total_frames:
-    处理本 tick 到达的 DATA
-    处理本 tick 到达的 ACK
-
-    while next_seq < total_frames and next_seq < base + window_size:
-        发送 next_seq
-        next_seq += 1
-
-    if oldest_unacked_timeout:
-        for s in [base, next_seq):
-            重传 s
-```
-
-接收方逻辑：
-
-```text
-if seq == expected:
-    accept(seq)
-    expected += 1
-    send ACK(expected - 1)
-else:
-    drop(seq)
-    send ACK(expected - 1)
-```
+关键数据结构：
+- `ProtocolConfig`：协议参数配置；
+- `TickRecord`：单个 tick 的状态快照；
+- `acked: np.ndarray[bool]`：发送端确认位图；
+- `received: np.ndarray[bool]`：接收端缓存位图；
+- `inflight_data / inflight_acks`：在途数据和 ACK 队列（到达 tick, seq）；
+- `pandas.DataFrame`：最终打印的可读时间线。
 
 ## R06
 
 正确性直觉：
-- 任何未被确认的最小序号始终由 `base` 标识。
-- `base` 只会在收到 `ACK >= base` 时单调递增，不会回退。
-- 丢包不会导致永久停滞，因为超时会触发重传。
-- 接收方只按序交付，保证输出流有序。
-
-因此，当丢包概率小于 1 且超时机制可重复触发时，协议会以概率 1 最终完成传输（在该随机模型下）。
+- “窗口”保证链路并行度，“独立 ACK + 独立计时器”保证局部恢复；
+- 接收端缓存乱序包，避免 Go-Back-N 的整段回退；
+- 当 ACK 丢失时，发送端虽会超时重传，但接收端可识别旧包并再次回 ACK，从而最终收敛；
+- `sender_base == total_packets` 且 `receiver_base == total_packets` 表示端到端传输完成。
 
 ## R07
 
-复杂度（单次仿真，设发送总尝试次数为 `S`）：
-- 时间复杂度：`O(S)`，每次发送/接收/确认事件处理为 `O(1)`。
-- 空间复杂度：`O(W + E)`，`W` 为窗口规模，`E` 为暂存的在途事件数量。
-
-说明：由于重传存在，`S` 可大于原始帧数 `N`。
+复杂度（`N=total_packets`，`T=仿真 tick 数`，`W=window_size`）：
+- 时间复杂度：`O(T * W)`（每 tick 扫描一个发送窗口处理超时）；
+- 空间复杂度：`O(N + W)`（确认位图、接收位图和在途队列）。
 
 ## R08
 
-与停等协议（Stop-and-Wait）对比：
-- 停等：任意时刻最多 1 个在途帧，吞吐易受 RTT 限制。
-- 滑动窗口：允许最多 `W` 个在途帧，能更好填满“带宽-时延积”。
-- 代价：状态管理、计时器与重传控制更复杂。
+边界与异常处理：
+- `total_packets <= 0`、`window_size <= 0`、`timeout_ticks <= 0` 等参数非法时抛 `ValueError`；
+- 丢包配置序号越界时抛 `ValueError`；
+- `max_ticks` 内未完成收敛时抛 `RuntimeError`（防止死循环）；
+- 对重复到达的旧包，接收端不会重复交付，但会重发 ACK。
 
 ## R09
 
-与选择重传（Selective Repeat, SR）对比：
-- GBN（本实现）：接收方不缓存乱序帧，发送方超时后回退重传一段。
-- SR：接收方可缓存乱序帧，发送方只重传真丢失帧。
-- 结论：GBN 实现更简单，但在高丢包场景下可能产生更多冗余重传。
+MVP 设计取舍：
+- 采用离散 tick 仿真，放弃真实字节流/中断/内核队列细节，换取可读和可验证；
+- 仅使用 `numpy + pandas` 做状态序列与输出展示，工具栈小、逻辑透明；
+- 将丢包建模为“首次发送/首次 ACK 固定丢失”，保证复现实验结果可重复；
+- 不引入第三方协议栈黑箱库，窗口推进与重传策略全部源码显式实现。
 
 ## R10
 
-`demo.py` 的实现边界：
-- 仅使用 Python 标准库（`dataclasses`, `random`, `typing`）。
-- 非交互、固定随机种子，保证结果可复现。
-- 采用离散 tick + 事件队列，显式模拟：发送、在途传播、接收、ACK 返回、超时重传。
+`demo.py` 函数职责：
+- `validate_inputs`：校验配置与丢包集合；
+- `_emit_ack`：按规则发 ACK（含首次 ACK 丢失）；
+- `_send_data_packet`：发送/重传数据包（含首次数据包丢失）；
+- `simulate_sliding_window_sr`：主仿真循环；
+- `records_to_dataframe`：时间线表格化；
+- `run_demo`：固定样例、断言与打印；
+- `main`：无交互入口。
 
 ## R11
-
-默认参数（`main()` 内）：
-- `total_frames=12`：要发送的帧总数。
-- `window_size=4`：发送窗口大小。
-- `timeout_ticks=4`：最老未确认帧超时阈值。
-- `propagation_delay=1`：单向传播时延（tick）。
-- `data_loss_prob=0.25`：数据帧丢失概率。
-- `ack_loss_prob=0.15`：ACK 丢失概率。
-- `seed=7`：随机种子。
-
-可自行修改上述参数观察不同网络条件下的行为变化。
-
-## R12
 
 运行方式：
 
@@ -134,67 +108,75 @@ cd Algorithms/计算机-计算机网络-0364-滑动窗口协议
 uv run python demo.py
 ```
 
-程序会输出：
-- 分 tick 的事件日志
-- 最终统计汇总
-- 完成性检查（若未完成会抛异常）
+脚本无需任何输入，直接执行固定实验并输出结果。
+
+## R12
+
+输出说明：
+- `Tick timeline`：每个 tick 的窗口位置、在途包、新发/重传、ACK 与事件说明；
+- `sender_base series`：发送端滑窗基序号轨迹；
+- `receiver_base series`：接收端滑窗基序号轨迹；
+- `cumulative_retransmissions series`：累计重传轨迹；
+- `All checks passed.`：全部断言通过。
 
 ## R13
 
-输出重点解读：
-- `发送方首次发送 seq=x`：新数据进入信道。
-- `DATA 丢失` / `ACK 丢失`：模拟不可靠链路。
-- `窗口左边界 a -> b`：累计确认推动窗口滑动。
-- `超时触发：重传区间 [l, r]`：GBN 回退重传行为。
-- `最终 base == total_frames`：表示全部帧可靠送达。
+最小验证清单：
+- 最终条件：`sender_base` 与 `receiver_base` 都到达 `total_packets`；
+- 轨迹条件：`sender_base / receiver_base / retrans` 序列与预期完全一致；
+- 重传条件：重传发生在固定 tick `[3, 5, 8]`；
+- 次数条件：总重传次数为 `3`（2 次数据首发丢失 + 1 次 ACK 首次丢失触发的超时重传）。
 
 ## R14
 
-建议关注的关键观测指标：
-- 可靠性：`最终 base` 是否等于 `total_frames`。
-- 重传开销：`retransmissions / sent_total`。
-- 信道质量影响：`data_dropped` 与 `ack_dropped`。
-- 协议效率：`timeouts` 次数与完成总 tick。
+固定实验参数：
+- `total_packets = 8`
+- `window_size = 4`
+- `timeout_ticks = 3`
+- `propagation_delay = 1`
+- `data_loss_on_first_tx = {2, 6}`
+- `ack_loss_on_first_emit = {4}`
 
-通过调小丢包率、增大窗口，通常可观察到更高的有效吞吐。
+该配置覆盖三类关键路径：
+- 数据首发丢失后的选择性重传（`seq=2,6`）；
+- ACK 丢失导致的“冗余重传但可恢复”（`seq=4`）；
+- 乱序缓存后批量推进接收基序号。
 
 ## R15
 
-边界与鲁棒性讨论：
-- `window_size=1` 时退化为停等式行为。
-- 高丢包率下可能需要更多 tick 才能完成，`max_ticks` 过小会提前终止。
-- ACK 重复/过期是正常现象，发送方会忽略不推进窗口的 ACK。
-
-本 MVP 已处理上述边界，不会因为重复 ACK 导致状态回退。
+与相关协议差异：
+- 停等协议（Stop-and-Wait）：并行度最低，每次只允许一个未确认分组；
+- 回退 N 帧（Go-Back-N）：单个丢包可能触发后续整段重传；
+- 选择性重传（本条目）：只重传超时分组，链路利用率通常更高；
+- TCP 滑窗：工程实现更复杂（字节流、拥塞控制、重排序队列等），本实现仅保留 ARQ 核心思想。
 
 ## R16
 
-当前 MVP 的简化假设：
-- 未实现序号回绕（wrap-around）。
-- 单连接、单方向数据流。
-- 计时器模型为“单一最老未确认帧定时器”。
-- 未引入拥塞控制（如慢启动/拥塞避免）。
+适用场景：
+- 网络协议教学中演示“滑动窗口 + 选择性重传”；
+- 离散事件仿真中快速验证窗口/超时策略；
+- 作为后续实现 Go-Back-N、TCP 细化模型的基线。
 
-这些是教学模拟中的常见取舍，不影响理解滑动窗口核心思想。
+不适用场景：
+- 需要与真实 TCP 内核行为逐字节对齐；
+- 需要拥塞控制、公平性、多流竞争、带宽估计等复杂机制。
 
 ## R17
 
-工程映射（到 TCP 语境）：
-- GBN 的“累计 ACK + 超时重传”可对应 TCP 的基础可靠传输思想。
-- 实际 TCP 还叠加了：快速重传、快速恢复、拥塞控制、流量控制、选择确认（SACK）等。
-- 因此本例适合做“可靠传输机制”的第一性演示，而非 TCP 全量行为仿真。
+可扩展方向：
+- 增加随机丢包与抖动，做多轮统计（吞吐、时延、重传率）；
+- 引入 ACK 压缩、乱序上限、接收缓存容量限制；
+- 对比 SR 与 Go-Back-N 在不同丢包率下的效率差异；
+- 将当前单链路扩展为多流共享瓶颈链路。
 
 ## R18
 
-`demo.py` 源码级算法流程（8 步）：
-
-1. `main()` 构造 `GoBackNSimulator`，注入窗口、超时、丢包率和随机种子。
-2. `run()` 进入按 tick 推进的主循环，并记录当前 `base/next_seq/receiver_expected`。
-3. `_process_data_arrivals()` 处理到达接收方的数据：按序则接收并前移 `receiver_expected`，乱序则丢弃。
-4. 接收方针对每个到达数据生成累计 ACK，并按 `ack_loss_prob` 决定是否丢失；未丢失则排入 `ack_events`。
-5. `_process_ack_arrivals()` 处理 ACK：若 `ack >= base`，发送方把 `base` 推进到 `ack+1`，实现窗口滑动。
-6. `_send_new_data_within_window()` 在 `next_seq < base + window_size` 条件下持续发新帧，并把成功发送的数据排入未来 tick 的 `data_events`。
-7. `_maybe_timeout_and_retransmit()` 检查最老未确认帧是否超时，若超时则重传区间 `[base, next_seq-1]`（Go-Back-N 回退）。
-8. 当 `base == total_frames` 时主循环结束，输出日志与统计；若未完成则抛异常提示参数不合适。
-
-该实现未把第三方库当黑盒，协议状态流转全部在源码中可追踪、可单步验证。
+`demo.py` 源码级算法流（8 步，非黑箱）：
+1. `main` 调用 `run_demo`，构造固定协议参数和两个丢失集合。  
+2. `run_demo` 调 `simulate_sliding_window_sr`，先在 `validate_inputs` 中检查参数合法性与序号范围。  
+3. 初始化发送端位图 `acked`、接收端位图 `received`、窗口指针 `sender_base/next_seq/receiver_base`、在途队列与发送时间表。  
+4. 每个 tick 先消费 `inflight_data`：接收端判断是否在窗口内，写入缓存并通过 `_emit_ack` 产生 ACK（或按规则丢弃首次 ACK）。  
+5. 再消费 `inflight_acks`：发送端将对应分组标记已确认，并按连续确认结果推进 `sender_base`。  
+6. 扫描当前发送窗口中未确认且超时的分组，调用 `_send_data_packet` 做选择性重传并累计重传计数。  
+7. 在窗口余量允许下发送新分组，更新 `next_seq` 与在途数据队列；将本 tick 状态写入 `TickRecord`。  
+8. 仿真结束后返回三条 `numpy` 序列；`run_demo` 做精确断言、打印 `pandas` 时间线，最终输出 `All checks passed.`。
