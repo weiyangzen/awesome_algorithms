@@ -8518,7 +8518,7 @@
   - 重要性: ★★★☆☆
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [CS-0018 | 源序号 18] 插值查找 (Interpolation Search)
+- [x] [CS-0018 | 源序号 18] 插值查找 (Interpolation Search)
   - 来源: `Docs/researches/top_500_cs_algorithms.md`
   - 原始类目: `核心基础算法 / 搜索算法`
   - 现有摘要: 改进的二分查找，根据值分布估计位置

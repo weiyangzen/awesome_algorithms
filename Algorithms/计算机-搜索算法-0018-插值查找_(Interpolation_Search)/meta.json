@@ -1,0 +1,12 @@
+{
+  "index": 1062,
+  "uid": "CS-0018",
+  "source_number": 18,
+  "name": "插值查找 (Interpolation Search)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "搜索算法",
+  "folder_name": "计算机-搜索算法-0018-插值查找_(Interpolation_Search)",
+  "folder_relpath": "Algorithms/计算机-搜索算法-0018-插值查找_(Interpolation_Search)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot02/Docs/Stage0_Blueprint.md"
+}
