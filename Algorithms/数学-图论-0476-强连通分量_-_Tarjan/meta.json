@@ -1,0 +1,12 @@
+{
+  "index": 308,
+  "uid": "MATH-0476",
+  "source_number": 476,
+  "name": "强连通分量 - Tarjan",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "图论",
+  "folder_name": "数学-图论-0476-强连通分量_-_Tarjan",
+  "folder_relpath": "Algorithms/数学-图论-0476-强连通分量_-_Tarjan",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot08/Docs/Stage0_Blueprint.md"
+}
