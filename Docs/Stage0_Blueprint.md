@@ -2242,7 +2242,7 @@
   - 重要性: Delaunay三角剖分的常用实现方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0191 | 源序号 191] Delaunay三角剖分 - 分治法
+- [x] [MATH-0191 | 源序号 191] Delaunay三角剖分 - 分治法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `几何学与拓扑学 / 计算几何`
   - 现有摘要: O(n log n)的分治Delaunay算法
