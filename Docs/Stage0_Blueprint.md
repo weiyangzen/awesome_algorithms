@@ -7753,7 +7753,7 @@
   - 重要性: 温度概念的基础
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0279 | 源序号 282] 热力学第一定律 (First Law of Thermodynamics)
+- [x] [PHYS-0279 | 源序号 282] 热力学第一定律 (First Law of Thermodynamics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第五部分：统计力学与热力学扩展（281-330） / 热力学`
   - 现有摘要: 能量守恒在热力学中的表达
