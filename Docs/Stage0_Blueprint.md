@@ -8285,7 +8285,7 @@
   - 重要性: 局域结构
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0466 | 源序号 489] 光致发光 (Photoluminescence)
+- [x] [PHYS-0466 | 源序号 489] 光致发光 (Photoluminescence)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 光谱学`
   - 现有摘要: 光激发后的发光
