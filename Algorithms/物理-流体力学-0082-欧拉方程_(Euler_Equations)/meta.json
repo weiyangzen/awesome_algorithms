@@ -1,0 +1,12 @@
+{
+  "index": 886,
+  "uid": "PHYS-0082",
+  "source_number": 82,
+  "name": "欧拉方程 (Euler Equations)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "流体力学",
+  "folder_name": "物理-流体力学-0082-欧拉方程_(Euler_Equations)",
+  "folder_relpath": "Algorithms/物理-流体力学-0082-欧拉方程_(Euler_Equations)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
