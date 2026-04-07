@@ -1,0 +1,12 @@
+{
+  "index": 584,
+  "uid": "PHYS-0127",
+  "source_number": 127,
+  "name": "刚体碰撞 (Rigid Body Collision)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "经典力学",
+  "folder_name": "物理-经典力学-0127-刚体碰撞_(Rigid_Body_Collision)",
+  "folder_relpath": "Algorithms/物理-经典力学-0127-刚体碰撞_(Rigid_Body_Collision)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
