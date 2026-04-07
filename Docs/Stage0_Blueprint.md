@@ -6619,7 +6619,7 @@
   - 重要性: 格点QCD、夸克禁闭
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0395 | 源序号 414] 渐近态 (Asymptotic States)
+- [x] [PHYS-0395 | 源序号 414] 渐近态 (Asymptotic States)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 量子场论`
   - 现有摘要: 散射理论的入态和出态
