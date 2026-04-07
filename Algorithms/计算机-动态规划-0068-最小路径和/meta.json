@@ -1,0 +1,12 @@
+{
+  "index": 1095,
+  "uid": "CS-0051",
+  "source_number": 68,
+  "name": "最小路径和",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "动态规划",
+  "folder_name": "计算机-动态规划-0068-最小路径和",
+  "folder_relpath": "Algorithms/计算机-动态规划-0068-最小路径和",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
