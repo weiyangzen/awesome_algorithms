@@ -1,0 +1,12 @@
+{
+  "index": 741,
+  "uid": "PHYS-0321",
+  "source_number": 325,
+  "name": "吉布斯采样 (Gibbs Sampling)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0325-吉布斯采样_(Gibbs_Sampling)",
+  "folder_relpath": "Algorithms/物理-计算物理-0325-吉布斯采样_(Gibbs_Sampling)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
