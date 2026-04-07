@@ -5485,7 +5485,7 @@
   - 重要性: 原子能级的实验证实
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0251 | 源序号 254] 斯特恩-盖拉赫实验 (Stern-Gerlach Experiment)
+- [x] [PHYS-0251 | 源序号 254] 斯特恩-盖拉赫实验 (Stern-Gerlach Experiment)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 原子物理`
   - 现有摘要: 银原子束在非均匀磁场中的分裂
