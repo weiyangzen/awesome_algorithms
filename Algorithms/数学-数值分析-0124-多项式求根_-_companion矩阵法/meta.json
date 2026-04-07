@@ -1,0 +1,12 @@
+{
+  "index": 72,
+  "uid": "MATH-0124",
+  "source_number": 124,
+  "name": "多项式求根 - companion矩阵法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0124-多项式求根_-_companion矩阵法",
+  "folder_relpath": "Algorithms/数学-数值分析-0124-多项式求根_-_companion矩阵法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
