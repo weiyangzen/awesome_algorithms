@@ -1,0 +1,12 @@
+{
+  "index": 187,
+  "uid": "MATH-0066",
+  "source_number": 66,
+  "name": "Jacobi迭代法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "线性代数",
+  "folder_name": "数学-线性代数-0066-Jacobi迭代法",
+  "folder_relpath": "Algorithms/数学-线性代数-0066-Jacobi迭代法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
