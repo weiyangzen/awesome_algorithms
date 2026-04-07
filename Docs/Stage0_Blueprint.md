@@ -7242,7 +7242,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `2`
 
-- [ ] [PHYS-0146 | 源序号 146] 变分原理 (Variational Principle)
+- [x] [PHYS-0146 | 源序号 146] 变分原理 (Variational Principle)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第二部分：经典力学扩展（101-150） / 理论物理`
   - 现有摘要: 物理定律可表述为某泛函的极值
