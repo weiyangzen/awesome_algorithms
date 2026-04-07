@@ -7865,7 +7865,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `1`
 
-- [ ] [PHYS-0305 | 源序号 308] 昂萨格倒易关系 (Onsager Reciprocal Relations)
+- [x] [PHYS-0305 | 源序号 308] 昂萨格倒易关系 (Onsager Reciprocal Relations)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第六部分：统计力学与计算物理（301-360） / 非平衡统计`
   - 现有摘要: 耦合输运过程的倒易关系
