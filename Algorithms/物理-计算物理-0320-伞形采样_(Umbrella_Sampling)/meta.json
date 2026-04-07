@@ -1,0 +1,12 @@
+{
+  "index": 737,
+  "uid": "PHYS-0317",
+  "source_number": 320,
+  "name": "伞形采样 (Umbrella Sampling)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0320-伞形采样_(Umbrella_Sampling)",
+  "folder_relpath": "Algorithms/物理-计算物理-0320-伞形采样_(Umbrella_Sampling)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot17/Docs/Stage0_Blueprint.md"
+}
