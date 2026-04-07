@@ -1,0 +1,12 @@
+{
+  "index": 244,
+  "uid": "MATH-0353",
+  "source_number": 353,
+  "name": "模拟退火算法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "优化",
+  "folder_name": "数学-优化-0353-模拟退火算法",
+  "folder_relpath": "Algorithms/数学-优化-0353-模拟退火算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
