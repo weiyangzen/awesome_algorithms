@@ -1,0 +1,12 @@
+{
+  "index": 1324,
+  "uid": "CS-0280",
+  "source_number": 440,
+  "name": "词法分析 - 有限自动机",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "编译原理",
+  "folder_name": "计算机-编译原理-0440-词法分析_-_有限自动机",
+  "folder_relpath": "Algorithms/计算机-编译原理-0440-词法分析_-_有限自动机",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
