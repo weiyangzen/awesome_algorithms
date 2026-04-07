@@ -1,0 +1,12 @@
+{
+  "index": 1076,
+  "uid": "CS-0032",
+  "source_number": 42,
+  "name": "强连通分量 - Kosaraju算法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "图算法",
+  "folder_name": "计算机-图算法-0042-强连通分量_-_Kosaraju算法",
+  "folder_relpath": "Algorithms/计算机-图算法-0042-强连通分量_-_Kosaraju算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot16/Docs/Stage0_Blueprint.md"
+}
