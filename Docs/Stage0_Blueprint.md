@@ -576,7 +576,7 @@
   - 重要性: 渐近最优的大数乘法算法，是现代密码学库的核心
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0043 | 源序号 43] Schönhage-Strassen算法
+- [x] [MATH-0043 | 源序号 43] Schönhage-Strassen算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 算法/数论`
   - 现有摘要: 基于FFT的大整数乘法，理论复杂度O(n log n log log n)

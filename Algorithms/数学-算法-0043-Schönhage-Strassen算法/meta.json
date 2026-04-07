@@ -1,0 +1,12 @@
+{
+  "index": 48,
+  "uid": "MATH-0043",
+  "source_number": 43,
+  "name": "Schönhage-Strassen算法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "算法",
+  "folder_name": "数学-算法-0043-Schönhage-Strassen算法",
+  "folder_relpath": "Algorithms/数学-算法-0043-Schönhage-Strassen算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot08/Docs/Stage0_Blueprint.md"
+}
