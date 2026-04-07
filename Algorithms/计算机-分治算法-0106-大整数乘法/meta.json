@@ -1,0 +1,12 @@
+{
+  "index": 1129,
+  "uid": "CS-0085",
+  "source_number": 106,
+  "name": "大整数乘法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "分治算法",
+  "folder_name": "计算机-分治算法-0106-大整数乘法",
+  "folder_relpath": "Algorithms/计算机-分治算法-0106-大整数乘法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
