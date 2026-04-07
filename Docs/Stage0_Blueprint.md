@@ -7536,7 +7536,7 @@
   - 重要性: 电子相关能计算
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0212 | 源序号 213] 耦合簇理论 (Coupled Cluster Theory)
+- [x] [PHYS-0212 | 源序号 213] 耦合簇理论 (Coupled Cluster Theory)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子化学`
   - 现有摘要: 指数形式的波函数展开
