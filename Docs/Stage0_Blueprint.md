@@ -1808,7 +1808,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `10`
 
-- [ ] [MATH-0082 | 源序号 82] Buchberger算法
+- [x] [MATH-0082 | 源序号 82] Buchberger算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `代数学 / 计算代数/交换代数`
   - 现有摘要: 计算多项式理想的Gröbner基
