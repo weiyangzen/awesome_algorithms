@@ -814,7 +814,7 @@
   - 重要性: 相同节点数下精度最高的积分方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0133 | 源序号 133] Gauss-Laguerre求积
+- [x] [MATH-0133 | 源序号 133] Gauss-Laguerre求积
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析`
   - 现有摘要: 半无穷区间上的Gauss求积
