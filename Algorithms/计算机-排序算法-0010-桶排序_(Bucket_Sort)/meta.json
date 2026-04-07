@@ -1,0 +1,12 @@
+{
+  "index": 1054,
+  "uid": "CS-0010",
+  "source_number": 10,
+  "name": "桶排序 (Bucket Sort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0010-桶排序_(Bucket_Sort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0010-桶排序_(Bucket_Sort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot14/Docs/Stage0_Blueprint.md"
+}
