@@ -1,0 +1,12 @@
+{
+  "index": 998,
+  "uid": "PHYS-0392",
+  "source_number": 411,
+  "name": "格点QCD (Lattice QCD)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算粒子物理",
+  "folder_name": "物理-计算粒子物理-0411-格点QCD_(Lattice_QCD)",
+  "folder_relpath": "Algorithms/物理-计算粒子物理-0411-格点QCD_(Lattice_QCD)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot18/Docs/Stage0_Blueprint.md"
+}
