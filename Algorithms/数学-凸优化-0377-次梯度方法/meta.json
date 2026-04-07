@@ -1,0 +1,12 @@
+{
+  "index": 484,
+  "uid": "MATH-0377",
+  "source_number": 377,
+  "name": "次梯度方法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "凸优化",
+  "folder_name": "数学-凸优化-0377-次梯度方法",
+  "folder_relpath": "Algorithms/数学-凸优化-0377-次梯度方法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
