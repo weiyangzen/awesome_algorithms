@@ -1,0 +1,12 @@
+{
+  "index": 9,
+  "uid": "MATH-0009",
+  "source_number": 9,
+  "name": "试除法 (Trial Division)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数论",
+  "folder_name": "数学-数论-0009-试除法_(Trial_Division)",
+  "folder_relpath": "Algorithms/数学-数论-0009-试除法_(Trial_Division)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
