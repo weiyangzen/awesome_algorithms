@@ -6717,7 +6717,7 @@
   - 重要性: 有效质量计算
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0434 | 源序号 454] 有效质量近似 (Effective Mass Approximation)
+- [x] [PHYS-0434 | 源序号 454] 有效质量近似 (Effective Mass Approximation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 固体物理`
   - 现有摘要: 用有效质量描述能带曲率
