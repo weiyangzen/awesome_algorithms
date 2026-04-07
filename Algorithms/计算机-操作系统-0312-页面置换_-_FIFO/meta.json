@@ -1,0 +1,12 @@
+{
+  "index": 1211,
+  "uid": "CS-0167",
+  "source_number": 312,
+  "name": "页面置换 - FIFO",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "操作系统",
+  "folder_name": "计算机-操作系统-0312-页面置换_-_FIFO",
+  "folder_relpath": "Algorithms/计算机-操作系统-0312-页面置换_-_FIFO",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
