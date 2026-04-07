@@ -1,0 +1,17 @@
+{"type": "BEGIN", "txid": 1, "prev_lsn": null, "lsn": 1}
+{"type": "UPDATE", "txid": 1, "prev_lsn": 1, "page_id": "P1", "before": 0, "after": 10, "lsn": 2}
+{"type": "COMMIT", "txid": 1, "prev_lsn": 2, "lsn": 3}
+{"type": "END", "txid": 1, "prev_lsn": 3, "lsn": 4}
+{"type": "BEGIN_CKPT", "lsn": 5}
+{"type": "END_CKPT", "begin_lsn": 5, "att": {}, "dpt": {}, "lsn": 6}
+{"type": "BEGIN", "txid": 2, "prev_lsn": null, "lsn": 7}
+{"type": "UPDATE", "txid": 2, "prev_lsn": 7, "page_id": "P1", "before": 10, "after": 15, "lsn": 8}
+{"type": "UPDATE", "txid": 2, "prev_lsn": 8, "page_id": "P2", "before": 0, "after": 7, "lsn": 9}
+{"type": "BEGIN", "txid": 3, "prev_lsn": null, "lsn": 10}
+{"type": "UPDATE", "txid": 3, "prev_lsn": 10, "page_id": "P3", "before": 0, "after": 4, "lsn": 11}
+{"type": "COMMIT", "txid": 3, "prev_lsn": 11, "lsn": 12}
+{"type": "ABORT", "txid": 2, "prev_lsn": 9, "lsn": 13}
+{"type": "END", "txid": 3, "prev_lsn": 12, "lsn": 14}
+{"type": "CLR", "txid": 2, "prev_lsn": 13, "page_id": "P2", "before": 7, "after": 0, "undo_next_lsn": 8, "lsn": 15}
+{"type": "CLR", "txid": 2, "prev_lsn": 15, "page_id": "P1", "before": 15, "after": 10, "undo_next_lsn": 7, "lsn": 16}
+{"type": "END", "txid": 2, "prev_lsn": 16, "lsn": 17}
