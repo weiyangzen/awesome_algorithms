@@ -6206,7 +6206,7 @@
   - 重要性: 最一般的稳态黑洞解
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0377 | 源序号 396] 黑洞热力学 (Black Hole Thermodynamics)
+- [x] [PHYS-0377 | 源序号 396] 黑洞热力学 (Black Hole Thermodynamics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第七部分：相对论与宇宙学扩展（361-400） / 广义相对论`
   - 现有摘要: 黑洞具有温度、熵等热力学量
