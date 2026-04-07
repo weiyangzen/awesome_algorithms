@@ -1,0 +1,12 @@
+{
+  "index": 1119,
+  "uid": "CS-0075",
+  "source_number": 95,
+  "name": "划分字母区间",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "贪心算法",
+  "folder_name": "计算机-贪心算法-0095-划分字母区间",
+  "folder_relpath": "Algorithms/计算机-贪心算法-0095-划分字母区间",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
