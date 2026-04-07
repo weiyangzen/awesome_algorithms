@@ -6500,7 +6500,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `21`
 
-- [ ] [PHYS-0062 | 源序号 62] 量子电动力学 (Quantum Electrodynamics, QED)
+- [x] [PHYS-0062 | 源序号 62] 量子电动力学 (Quantum Electrodynamics, QED)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 粒子物理核心 / 量子场论`
   - 现有摘要: 电磁相互作用的量子场论
