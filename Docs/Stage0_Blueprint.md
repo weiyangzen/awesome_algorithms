@@ -569,7 +569,7 @@
   - 重要性: 大数乘法的进一步优化，在密码学实现中使用
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0042 | 源序号 42] 快速傅里叶变换乘法 (FFT Multiplication)
+- [x] [MATH-0042 | 源序号 42] 快速傅里叶变换乘法 (FFT Multiplication)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 算法/数论/数值分析`
   - 现有摘要: 利用FFT在O(n log n)时间内完成大数乘法
