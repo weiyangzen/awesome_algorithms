@@ -6829,7 +6829,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `15`
 
-- [ ] [PHYS-0077 | 源序号 77] 金兹堡-朗道理论 (Ginzburg-Landau Theory)
+- [x] [PHYS-0077 | 源序号 77] 金兹堡-朗道理论 (Ginzburg-Landau Theory)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 凝聚态物理核心 / 凝聚态物理`
   - 现有摘要: 用序参量描述超导/超流的唯象理论
