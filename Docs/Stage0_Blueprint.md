@@ -7319,7 +7319,7 @@
   - 重要性: 经典辐射理论
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0175 | 源序号 176] 电四极辐射 (Electric Quadrupole Radiation)
+- [x] [PHYS-0175 | 源序号 176] 电四极辐射 (Electric Quadrupole Radiation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 电动力学`
   - 现有摘要: 电四极矩变化产生的辐射
