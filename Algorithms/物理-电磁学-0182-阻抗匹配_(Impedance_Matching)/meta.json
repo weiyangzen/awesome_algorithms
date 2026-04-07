@@ -1,0 +1,12 @@
+{
+  "index": 626,
+  "uid": "PHYS-0181",
+  "source_number": 182,
+  "name": "阻抗匹配 (Impedance Matching)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "电磁学",
+  "folder_name": "物理-电磁学-0182-阻抗匹配_(Impedance_Matching)",
+  "folder_relpath": "Algorithms/物理-电磁学-0182-阻抗匹配_(Impedance_Matching)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
