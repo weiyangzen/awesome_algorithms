@@ -6871,7 +6871,7 @@
   - 重要性: 新型存储器件
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0277 | 源序号 280] 磁电效应 (Magnetoelectric Effect)
+- [x] [PHYS-0277 | 源序号 280] 磁电效应 (Magnetoelectric Effect)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 凝聚态物理`
   - 现有摘要: 磁场诱导电极化或电场诱导磁化
