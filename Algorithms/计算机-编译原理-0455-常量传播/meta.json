@@ -1,0 +1,12 @@
+{
+  "index": 1339,
+  "uid": "CS-0295",
+  "source_number": 455,
+  "name": "常量传播",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "编译原理",
+  "folder_name": "计算机-编译原理-0455-常量传播",
+  "folder_relpath": "Algorithms/计算机-编译原理-0455-常量传播",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
