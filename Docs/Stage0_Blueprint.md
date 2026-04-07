@@ -6108,7 +6108,7 @@
   - 重要性: 广义相对论中的"运动方程"
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0047 | 源序号 47] 史瓦西解 (Schwarzschild Solution)
+- [x] [PHYS-0047 | 源序号 47] 史瓦西解 (Schwarzschild Solution)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 相对论基础 / 广义相对论`
   - 现有摘要: 球对称质量外部时空的爱因斯坦场方程解
