@@ -5926,7 +5926,7 @@
   - 重要性: 快速平衡
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0330 | 源序号 337] Parrinello-Rahman方法 (Parrinello-Rahman Method)
+- [x] [PHYS-0330 | 源序号 337] Parrinello-Rahman方法 (Parrinello-Rahman Method)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第六部分：统计力学与计算物理（301-360） / 计算物理`
   - 现有摘要: 可变形状模拟盒的MD
