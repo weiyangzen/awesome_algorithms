@@ -7417,7 +7417,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `1`
 
-- [ ] [PHYS-0183 | 源序号 184] 电磁辐射的相对论变换 (Relativistic Transformation of EM Fields)
+- [x] [PHYS-0183 | 源序号 184] 电磁辐射的相对论变换 (Relativistic Transformation of EM Fields)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 相对论电动力学`
   - 现有摘要: 电磁场在不同惯性系间的变换
