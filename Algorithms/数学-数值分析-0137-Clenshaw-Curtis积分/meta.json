@@ -1,0 +1,12 @@
+{
+  "index": 85,
+  "uid": "MATH-0137",
+  "source_number": 137,
+  "name": "Clenshaw-Curtis积分",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0137-Clenshaw-Curtis积分",
+  "folder_relpath": "Algorithms/数学-数值分析-0137-Clenshaw-Curtis积分",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}

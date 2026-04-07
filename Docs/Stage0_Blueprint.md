@@ -842,7 +842,7 @@
   - 重要性: 数值库中高精度积分的首选
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0137 | 源序号 137] Clenshaw-Curtis积分
+- [x] [MATH-0137 | 源序号 137] Clenshaw-Curtis积分
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析`
   - 现有摘要: 基于Chebyshev展开的积分方法
