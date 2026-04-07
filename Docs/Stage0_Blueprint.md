@@ -7340,7 +7340,7 @@
   - 重要性: 运动电荷辐射的精确描述
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0185 | 源序号 186] 同步辐射 (Synchrotron Radiation)
+- [x] [PHYS-0185 | 源序号 186] 同步辐射 (Synchrotron Radiation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 电动力学`
   - 现有摘要: 相对论性电子在磁场中的辐射
