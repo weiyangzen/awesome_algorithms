@@ -5569,7 +5569,7 @@
   - 重要性: 重整化群的基础
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0297 | 源序号 300] 重整化群 (Renormalization Group)
+- [x] [PHYS-0297 | 源序号 300] 重整化群 (Renormalization Group)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第五部分：统计力学与热力学扩展（281-330） / 统计力学/场论`
   - 现有摘要: 研究尺度变换下物理系统行为的理论
