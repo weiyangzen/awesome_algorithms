@@ -1,0 +1,12 @@
+{
+  "index": 762,
+  "uid": "PHYS-0441",
+  "source_number": 462,
+  "name": "线性化缀加平面波法 (LAPW)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0462-线性化缀加平面波法_(LAPW)",
+  "folder_relpath": "Algorithms/物理-计算物理-0462-线性化缀加平面波法_(LAPW)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot02/Docs/Stage0_Blueprint.md"
+}
