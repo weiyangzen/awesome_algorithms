@@ -1,0 +1,12 @@
+{
+  "index": 221,
+  "uid": "MATH-0085",
+  "source_number": 85,
+  "name": "Berlekamp算法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "计算代数",
+  "folder_name": "数学-计算代数-0085-Berlekamp算法",
+  "folder_relpath": "Algorithms/数学-计算代数-0085-Berlekamp算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
