@@ -821,7 +821,7 @@
   - 重要性: Gamma函数、概率分布计算的标准工具
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0134 | 源序号 134] Gauss-Hermite求积
+- [x] [MATH-0134 | 源序号 134] Gauss-Hermite求积
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析`
   - 现有摘要: 全无穷区间上的Gauss求积
