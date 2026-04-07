@@ -6395,7 +6395,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `3`
 
-- [ ] [PHYS-0058 | 源序号 58] 恒星结构方程 (Stellar Structure Equations)
+- [x] [PHYS-0058 | 源序号 58] 恒星结构方程 (Stellar Structure Equations)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 宇宙学与天体物理 / 天体物理`
   - 现有摘要: 描述恒星内部结构（质量、压强、温度、光度分布）的方程组
