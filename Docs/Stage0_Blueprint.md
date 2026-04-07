@@ -5233,7 +5233,7 @@
   - 重要性: 量子场论、统计力学的统一框架
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0220 | 源序号 221] 费曼路径积分 (Feynman Path Integral)
+- [x] [PHYS-0220 | 源序号 221] 费曼路径积分 (Feynman Path Integral)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子力学`
   - 现有摘要: 对所有可能路径求和的量子振幅
