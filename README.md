@@ -1,94 +1,283 @@
 # Awesome Algorithms
 
-> ✨ A growing, execution-driven algorithm repository that aims to turn abstract names on a blueprint into runnable Python MVPs, readable notes, and source-level algorithm breakdowns.
+> 🌍 **Language / 言語 / 语言**: [中文](#中文) | [日本語](#日本語) | [English](#english)
 
-If you have ever opened an algorithm repository and thought:
+> ✨ A large-scale algorithm repository that turns algorithm names into runnable Python MVPs, readable notes, and source-level breakdowns.
 
-- "This list is impressive, but where is the runnable code?"
-- "I know the algorithm name, but what does it actually do step by step?"
-- "Can I learn the idea, the history, the complexity, and the implementation path in one place?"
+---
 
-This repo is built for exactly that.
+## 中文
 
-## Why This Repo Exists 🚀
+> 想找的不只是“算法名字大全”，而是一套**能读、能跑、能拆、能复用**的算法资料库？  
+> 这个仓库就是朝这个方向做的。
 
-Most algorithm repositories do one of these well, but not all of them together:
+### 为什么值得看 🚀
 
-- They collect famous algorithm names.
-- They show a few code snippets.
-- They explain theory in isolation.
-- They focus only on interview-style implementations.
+很多算法仓库只解决了其中一部分问题：
 
-This project is trying to go much further.
+- 有列表，但没有可运行代码
+- 有代码，但没有解释为什么这样做
+- 有理论，但没有最小可验证 Demo
+- 有 API 调用，但看不到算法到底是怎么一步步工作的
 
-The goal is to build a large-scale algorithm library where each completed algorithm becomes its own small, useful learning unit:
+这个仓库想把这些东西合起来。
 
-- 📚 clear enough for readers who want intuition
-- 🧠 deep enough for readers who want theory
-- 🛠 runnable enough for readers who want code
-- 🔬 structured enough for readers who want to inspect the real algorithm path instead of a black-box API call
+它的目标不是“再做一份算法清单”，而是做成一个真正可用的算法工作区：
 
-In short:
+- 📚 你能快速理解算法在干什么
+- 🧠 你能看到它的背景、意义、复杂度与依赖链
+- 🛠 你能直接运行 Python MVP
+- 🔍 你能看到源码级 3-10 步拆解，而不是停留在黑盒包调用
 
-This is not meant to be just a list of algorithms.  
-It is meant to become an algorithm workspace you can actually learn from, run, and reuse.
+### 怎么用 🧭
 
-## What Is Inside Right Now 🗺️
+#### 1. 先看蓝图
 
-The repository is organized around a single authoritative blueprint:
+从这里开始：
 
 - [`Docs/Stage0_Blueprint.md`](Docs/Stage0_Blueprint.md)
 
-That blueprint tracks a deduplicated cross-discipline algorithm universe covering:
+它定义了：
 
-- Mathematics
-- Physics
-- Computer Science
+- 仓库覆盖了哪些算法
+- 数学 / 物理 / 计算机三大领域如何分类
+- 每个算法需要补哪些研究字段
+- 每个算法文件夹应交付什么
 
-Each algorithm is intended to become its own folder under:
+如果你想看最终交付总览，再看：
 
-- `Algorithms/领域-分类-编号-名字/`
+- [`Docs/Stage0_Final_Summary.md`](Docs/Stage0_Final_Summary.md)
 
-When an item is completed, it is no longer just a checkbox in the blueprint.  
-It becomes a concrete artifact with code, notes, and implementation detail.
+#### 2. 再看具体算法目录
 
-## How To Use This Repo 🧭
-
-### 1. Start from the blueprint
-
-Open the blueprint first:
-
-- [`Docs/Stage0_Blueprint.md`](Docs/Stage0_Blueprint.md)
-
-It tells you:
-
-- what algorithms are covered
-- how the repo is categorized
-- what research fields each algorithm must complete
-- what the expected MVP and source-level breakdown standards are
-
-### 2. Jump into a finished algorithm folder
-
-Completed algorithms live in:
+每个已完成算法都对应一个目录：
 
 - `Algorithms/领域-分类-编号-名字/`
 
-Each finished folder is meant to include:
+目录里通常包含：
 
 - `README.md`
 - `demo.py`
 - `meta.json`
 
-That gives you a compact workflow:
+这意味着你可以直接：
 
-1. Read the algorithm note
+1. 读说明
+2. 跑 Demo
+3. 看实现
+4. 理解它的算法路径
+
+#### 3. 跑 Python MVP
+
+这个仓库用 `uv` 管理 Python 环境。
+
+先同步依赖：
+
+```bash
+uv sync
+```
+
+再进入某个算法目录运行：
+
+```bash
+cd "Algorithms/<领域-分类-编号-名字>"
+uv run python demo.py
+```
+
+### 蓝图完成后你能得到什么 🎁
+
+现在 Stage0 已经完成，所以这些收益不是“未来式”，而是你已经可以开始使用的东西：
+
+- 🗺 一张跨数学、物理、计算机的算法地图
+- 🗂 一套统一的“每个算法一个目录”的结构
+- 📖 每个算法都有概念、背景、意义、复杂度、依赖、应用说明
+- 🧪 每个算法都有可运行的 Python MVP
+- 🔬 每个算法都尽量给出源码级拆解，而不是只写“调用某个库函数”
+- 🧱 一个适合学习、教学、演示、原型验证的算法资料库
+
+### 这个仓库适合谁 👀
+
+- 想系统补算法的人
+- 想把“听过名字”变成“真正理解”的人
+- 想直接运行最小 demo 的工程师
+- 想做讲解、课程、分享、演示的人
+- 想从经典算法继续往上做原型的人
+
+### 一句话总结 🌟
+
+你在这里拿到的，不是一份“算法名单”。  
+你拿到的是一套**可以阅读、可以运行、可以拆解、可以继续扩展**的算法基础设施。
+
+---
+
+## 日本語
+
+> 「アルゴリズム名の一覧」だけではなく、**読める・動く・分解できる・再利用できる**リポジトリが欲しいなら、この repo はそのために作られています。
+
+### なぜこのリポジトリが面白いのか 🚀
+
+多くのアルゴリズム系リポジトリは、次のどれか一つには強いです。
+
+- 名前の網羅
+- コード例
+- 理論解説
+- 実装スニペット
+
+でも、この repo はそこを一つにまとめようとしています。
+
+目標は、各アルゴリズムを「名前」ではなく、**小さくても完成した学習単位**として提供することです。
+
+- 📚 何をするアルゴリズムかが分かる
+- 🧠 背景・意味・計算量・依存関係が分かる
+- 🛠 Python MVP を実際に動かせる
+- 🔍 ブラックボックス API ではなく、3〜10 ステップの実装分解まで追える
+
+### 使い方 🧭
+
+#### 1. まず Blueprint を見る
+
+入口はここです：
+
+- [`Docs/Stage0_Blueprint.md`](Docs/Stage0_Blueprint.md)
+
+ここに以下がまとまっています：
+
+- 何のアルゴリズムをカバーしているか
+- 数学 / 物理 / 計算機科学の分類
+- 各アルゴリズムに必要な研究項目
+- 完成フォルダに求められる成果物
+
+最終的な集計を見たい場合は：
+
+- [`Docs/Stage0_Final_Summary.md`](Docs/Stage0_Final_Summary.md)
+
+#### 2. 完成済みアルゴリズムのフォルダへ行く
+
+完成済みアルゴリズムは次にあります：
+
+- `Algorithms/分野-分類-番号-名前/`
+
+通常、各フォルダには以下があります：
+
+- `README.md`
+- `demo.py`
+- `meta.json`
+
+つまり、次の流れで使えます：
+
+1. 説明を読む
+2. Demo を動かす
+3. 実装を見る
+4. アルゴリズムの流れを理解する
+
+#### 3. Python MVP を実行する
+
+この repo は `uv` で Python 環境を管理しています。
+
+最初に：
+
+```bash
+uv sync
+```
+
+その後、任意のアルゴリズムフォルダで：
+
+```bash
+cd "Algorithms/<分野-分類-番号-名前>"
+uv run python demo.py
+```
+
+### Blueprint 完了後に何が得られるか 🎁
+
+Stage0 はすでに完了しているので、今この repo から得られるものは次の通りです。
+
+- 🗺 数学・物理・計算機を横断するアルゴリズム地図
+- 🗂 アルゴリズムごとに統一されたフォルダ構造
+- 📖 背景・意味・計算量・依存・応用まで含む説明
+- 🧪 実際に動く Python MVP
+- 🔬 ソースレベルの手順分解
+- 🧱 学習・教育・デモ・試作に使えるアルゴリズム基盤
+
+### どんな人に向いているか 👀
+
+- アルゴリズムを体系的に学びたい人
+- 名前だけでなく中身まで理解したい人
+- 最小実装をすぐ動かしたい人
+- 教材・講義・発表の素材を探している人
+- 古典アルゴリズムから実験的に広げたい人
+
+### ひとことで言うと 🌟
+
+これは単なる一覧ではありません。  
+**読めて、動かせて、分解できて、再利用できるアルゴリズム基盤**です。
+
+---
+
+## English
+
+> Looking for more than an algorithm list?  
+> This repository is designed to be **readable, runnable, explainable, and reusable**.
+
+### Why This Repo Matters 🚀
+
+Most algorithm repositories are strong in one dimension:
+
+- name collection
+- code snippets
+- theory notes
+- implementation demos
+
+This repo tries to combine all of them.
+
+The goal is not to build another long list of algorithm names.  
+The goal is to turn each completed algorithm into a compact but useful learning unit:
+
+- 📚 easy to read
+- 🧠 rich in theory and context
+- 🛠 runnable as a Python MVP
+- 🔍 traceable at the source-level instead of ending at a black-box package call
+
+### How To Use It 🧭
+
+#### 1. Start with the blueprint
+
+Begin here:
+
+- [`Docs/Stage0_Blueprint.md`](Docs/Stage0_Blueprint.md)
+
+It defines:
+
+- what the repository covers
+- how math / physics / computer science are structured
+- what research fields each algorithm is expected to include
+- what a completed algorithm folder should contain
+
+For the final delivered summary, open:
+
+- [`Docs/Stage0_Final_Summary.md`](Docs/Stage0_Final_Summary.md)
+
+#### 2. Jump into a completed algorithm folder
+
+Completed algorithms live under:
+
+- `Algorithms/<discipline-category-id-name>/`
+
+Each finished folder is expected to contain:
+
+- `README.md`
+- `demo.py`
+- `meta.json`
+
+That gives you a simple workflow:
+
+1. Read the note
 2. Run the MVP
-3. Inspect the core steps
-4. Compare idea vs implementation
+3. Inspect the implementation
+4. Understand the algorithm path
 
-### 3. Run the Python MVP
+#### 3. Run the Python MVP
 
-This repo uses `uv` to manage Python dependencies.
+This repo uses `uv` for Python dependency management.
 
 Setup:
 
@@ -96,123 +285,35 @@ Setup:
 uv sync
 ```
 
-Then run a finished algorithm demo:
+Then run a finished demo:
 
 ```bash
-cd "Algorithms/<领域-分类-编号-名字>"
+cd "Algorithms/<discipline-category-id-name>"
 uv run python demo.py
 ```
 
-This matters because the repo is not trying to be "just theory."  
-If an algorithm is marked complete, you should be able to actually run something.
+### What You Get After The Blueprint Is Finished 🎁
 
-### 4. Learn at two levels
-
-Each finished algorithm is designed to support two reading modes:
-
-- ⚡ Quick mode: read the summary, complexity, example, and run the demo
-- 🧩 Deep mode: inspect the source-level breakdown and understand the algorithm in 3-10 concrete steps
-
-That second mode is especially important here.
-
-The project does **not** want to stop at:
-
-- "import package"
-- "call one function"
-- "done"
-
-If a third-party library can solve something in one line, this repo still tries to trace the real algorithm structure underneath it.
-
-## What You Can Get From This Repo When The Blueprint Is Fully Finished 🎁
-
-If the blueprint is completed end-to-end, this repo becomes much more than a reference list.
+Stage0 is already complete, so this is not hypothetical anymore.
 
 You get:
 
-- 🧠 A broad algorithm map across math, physics, and CS in one place
-- 🗂 A consistent folder-per-algorithm structure
-- 📖 For each algorithm: concept, history, context, meaning, dependencies, and applications
-- ⏱ Complexity analysis with both theory and practical cost awareness
-- 🧪 Runnable Python MVPs, not just pseudocode
-- 🔍 Source-level algorithm decomposition, so readers can see how an implementation is really built
-- 🧱 A reusable base for teaching, self-study, demos, and experimentation
-- 🧰 A practical "algorithm lab" where you can open a folder and immediately start learning or testing
+- 🗺 a cross-discipline algorithm map across math, physics, and CS
+- 🗂 a consistent one-folder-per-algorithm structure
+- 📖 concept, history, significance, complexity, dependencies, and applications
+- 🧪 runnable Python MVPs
+- 🔬 source-level breakdowns instead of black-box references
+- 🧱 a reusable algorithm knowledge base for learning, teaching, demos, and prototyping
 
-At that point, this repo becomes useful for several very different people:
+### Who This Repo Is For 👀
 
-- students who want intuition + examples
+- learners who want structure
 - engineers who want runnable baselines
-- researchers who want structured algorithm notes
-- builders who want to prototype from classical methods upward
+- researchers who want organized notes
+- educators who want reusable teaching material
+- builders who want to prototype from classical algorithms upward
 
-## Why It Is Worth Reading Even Before It Is Finished 👀
+### Final Hook 🌟
 
-Because this repo is being built in a highly explicit way.
-
-You can already see:
-
-- how the blueprint defines quality
-- how completed algorithms are shaped
-- how MVPs are expected to be runnable
-- how black-box usage is pushed back into readable algorithm steps
-
-That means even the unfinished version is not random accumulation.  
-It is a visible construction process.
-
-And that makes it interesting.
-
-You are not just reading a repository.  
-You are watching a large algorithm system being assembled.
-
-## Project Philosophy ⚙️
-
-The intended standard for each completed algorithm is:
-
-- readable
-- runnable
-- structured
-- comparable
-- reusable
-
-The ideal finished folder should answer all of these:
-
-- What is this algorithm for?
-- Why was it invented?
-- What does it depend on?
-- How expensive is it?
-- How do I run a minimum working demo?
-- What are the actual implementation steps?
-- Where does it sit in the larger algorithm landscape?
-
-If a folder can answer those well, it is no longer just a code sample.  
-It becomes a real learning object.
-
-## Repo Structure At A Glance 📦
-
-```text
-Docs/
-  Stage0_Blueprint.md
-  researches/
-Algorithms/
-  <领域-分类-编号-名字>/
-    README.md
-    demo.py
-    meta.json
-scripts/
-  generate_stage0_blueprint.py
-```
-
-## Final Hook 🌟
-
-There are many places to find algorithm names.  
-There are fewer places to find algorithms that are:
-
-- organized at scale
-- explained in plain language
-- backed by runnable MVPs
-- traced down to real implementation steps
-
-That is the bet this repo is making.
-
-If it reaches the end of its blueprint, it will not just be a catalog.  
-It will be a serious, hands-on algorithm knowledge base.
+This is not just a catalog of names.  
+It is an algorithm infrastructure you can actually **read, run, inspect, and build on top of**.
