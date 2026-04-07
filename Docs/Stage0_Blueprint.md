@@ -6472,7 +6472,7 @@
   - 重要性: 对撞机数据分析
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0404 | 源序号 424] 反kT算法 (Anti-kT Algorithm)
+- [x] [PHYS-0404 | 源序号 424] 反kT算法 (Anti-kT Algorithm)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 粒子物理`
   - 现有摘要: 另一种喷注聚类算法
