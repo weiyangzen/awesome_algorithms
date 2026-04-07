@@ -4953,7 +4953,7 @@
   - 重要性: 预言光即电磁波，揭示光的电磁本质
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0016 | 源序号 16] 法拉第电磁感应定律 (Faraday's Law of Induction)
+- [x] [PHYS-0016 | 源序号 16] 法拉第电磁感应定律 (Faraday's Law of Induction)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 电磁学核心 / 电磁学`
   - 现有摘要: 变化的磁通量产生感应电动势
