@@ -1,0 +1,12 @@
+{
+  "index": 1232,
+  "uid": "CS-0188",
+  "source_number": 335,
+  "name": "磁盘调度 - FCFS",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "操作系统",
+  "folder_name": "计算机-操作系统-0335-磁盘调度_-_FCFS",
+  "folder_relpath": "Algorithms/计算机-操作系统-0335-磁盘调度_-_FCFS",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
