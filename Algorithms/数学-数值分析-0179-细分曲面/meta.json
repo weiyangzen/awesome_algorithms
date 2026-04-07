@@ -1,0 +1,12 @@
+{
+  "index": 127,
+  "uid": "MATH-0179",
+  "source_number": 179,
+  "name": "细分曲面",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0179-细分曲面",
+  "folder_relpath": "Algorithms/数学-数值分析-0179-细分曲面",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
