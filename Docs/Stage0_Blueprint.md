@@ -6059,7 +6059,7 @@
   - 重要性: 核能的理论基础，20世纪最著名的物理公式
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0049 | 源序号 49] 多普勒效应（相对论） (Relativistic Doppler Effect)
+- [x] [PHYS-0049 | 源序号 49] 多普勒效应（相对论） (Relativistic Doppler Effect)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 相对论基础 / 狭义相对论`
   - 现有摘要: 相对论性运动源的光频变化
