@@ -1,0 +1,12 @@
+{
+  "index": 1241,
+  "uid": "CS-0197",
+  "source_number": 344,
+  "name": "TCP拥塞控制 - 拥塞避免",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "计算机网络",
+  "folder_name": "计算机-计算机网络-0344-TCP拥塞控制_-_拥塞避免",
+  "folder_relpath": "Algorithms/计算机-计算机网络-0344-TCP拥塞控制_-_拥塞避免",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot01/Docs/Stage0_Blueprint.md"
+}
