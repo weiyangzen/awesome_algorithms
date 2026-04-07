@@ -5247,7 +5247,7 @@
   - 重要性: 隧穿率的计算
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0222 | 源序号 223] WKB近似 (WKB Approximation)
+- [x] [PHYS-0222 | 源序号 223] WKB近似 (WKB Approximation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子力学`
   - 现有摘要: 半经典近似方法
