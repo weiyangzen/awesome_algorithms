@@ -7907,7 +7907,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `1`
 
-- [ ] [PHYS-0373 | 源序号 392] 引力波探测器 (Gravitational Wave Detectors)
+- [x] [PHYS-0373 | 源序号 392] 引力波探测器 (Gravitational Wave Detectors)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第七部分：相对论与宇宙学扩展（361-400） / 实验引力物理`
   - 现有摘要: 激光干涉仪探测引力波
