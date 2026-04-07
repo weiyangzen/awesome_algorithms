@@ -5359,7 +5359,7 @@
   - 重要性: 量子统计的基础
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0262 | 源序号 265] 量子芝诺效应 (Quantum Zeno Effect)
+- [x] [PHYS-0262 | 源序号 265] 量子芝诺效应 (Quantum Zeno Effect)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子力学`
   - 现有摘要: 频繁测量抑制量子演化
