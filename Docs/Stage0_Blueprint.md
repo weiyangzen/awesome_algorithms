@@ -5191,7 +5191,7 @@
   - 重要性: 解释原子结构、元素周期表、物质稳定性
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0026 | 源序号 26] 量子谐振子 (Quantum Harmonic Oscillator)
+- [x] [PHYS-0026 | 源序号 26] 量子谐振子 (Quantum Harmonic Oscillator)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 量子力学基础 / 量子力学`
   - 现有摘要: 量子化的简谐振子，能级等间距分布

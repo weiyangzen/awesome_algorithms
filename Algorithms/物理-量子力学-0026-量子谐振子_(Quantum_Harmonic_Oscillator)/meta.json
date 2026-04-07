@@ -1,0 +1,12 @@
+{
+  "index": 650,
+  "uid": "PHYS-0026",
+  "source_number": 26,
+  "name": "量子谐振子 (Quantum Harmonic Oscillator)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "量子力学",
+  "folder_name": "物理-量子力学-0026-量子谐振子_(Quantum_Harmonic_Oscillator)",
+  "folder_relpath": "Algorithms/物理-量子力学-0026-量子谐振子_(Quantum_Harmonic_Oscillator)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
