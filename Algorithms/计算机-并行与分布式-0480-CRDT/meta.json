@@ -1,0 +1,12 @@
+{
+  "index": 1362,
+  "uid": "CS-0318",
+  "source_number": 480,
+  "name": "CRDT",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "并行与分布式",
+  "folder_name": "计算机-并行与分布式-0480-CRDT",
+  "folder_relpath": "Algorithms/计算机-并行与分布式-0480-CRDT",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot02/Docs/Stage0_Blueprint.md"
+}
