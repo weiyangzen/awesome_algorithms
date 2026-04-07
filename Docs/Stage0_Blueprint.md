@@ -7991,7 +7991,7 @@
   - 重要性: 强子的基本性质
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0399 | 源序号 418] 部分子分布函数 (Parton Distribution Functions)
+- [x] [PHYS-0399 | 源序号 418] 部分子分布函数 (Parton Distribution Functions)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / QCD`
   - 现有摘要: 核子中夸克和胶子的动量分布
