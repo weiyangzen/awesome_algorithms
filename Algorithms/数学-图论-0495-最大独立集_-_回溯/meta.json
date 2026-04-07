@@ -1,0 +1,12 @@
+{
+  "index": 318,
+  "uid": "MATH-0495",
+  "source_number": 495,
+  "name": "最大独立集 - 回溯",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "图论",
+  "folder_name": "数学-图论-0495-最大独立集_-_回溯",
+  "folder_relpath": "Algorithms/数学-图论-0495-最大独立集_-_回溯",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot18/Docs/Stage0_Blueprint.md"
+}
