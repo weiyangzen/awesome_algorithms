@@ -5716,7 +5716,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `2`
 
-- [ ] [PHYS-0034 | 源序号 34] 费米-狄拉克统计 (Fermi-Dirac Statistics)
+- [x] [PHYS-0034 | 源序号 34] 费米-狄拉克统计 (Fermi-Dirac Statistics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 统计力学核心 / 量子统计`
   - 现有摘要: 费米子（半整数自旋）的量子统计分布
