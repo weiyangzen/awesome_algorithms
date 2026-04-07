@@ -1,0 +1,12 @@
+{
+  "index": 285,
+  "uid": "MATH-0201",
+  "source_number": 201,
+  "name": "最近邻搜索 - LSH",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "计算几何",
+  "folder_name": "数学-计算几何-0201-最近邻搜索_-_LSH",
+  "folder_relpath": "Algorithms/数学-计算几何-0201-最近邻搜索_-_LSH",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
