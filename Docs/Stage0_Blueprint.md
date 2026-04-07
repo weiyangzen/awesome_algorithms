@@ -6234,7 +6234,7 @@
   - 重要性: 标准宇宙学模型的基础方程
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0053 | 源序号 53] 宇宙学原理 (Cosmological Principle)
+- [x] [PHYS-0053 | 源序号 53] 宇宙学原理 (Cosmological Principle)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 宇宙学与天体物理 / 宇宙学`
   - 现有摘要: 宇宙在大尺度上是均匀且各向同性的
