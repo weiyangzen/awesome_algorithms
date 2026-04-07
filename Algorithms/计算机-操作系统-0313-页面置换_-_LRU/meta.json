@@ -1,0 +1,12 @@
+{
+  "index": 1212,
+  "uid": "CS-0168",
+  "source_number": 313,
+  "name": "页面置换 - LRU",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "操作系统",
+  "folder_name": "计算机-操作系统-0313-页面置换_-_LRU",
+  "folder_relpath": "Algorithms/计算机-操作系统-0313-页面置换_-_LRU",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
