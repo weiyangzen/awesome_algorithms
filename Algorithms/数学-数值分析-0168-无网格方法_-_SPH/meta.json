@@ -1,0 +1,12 @@
+{
+  "index": 116,
+  "uid": "MATH-0168",
+  "source_number": 168,
+  "name": "无网格方法 - SPH",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0168-无网格方法_-_SPH",
+  "folder_relpath": "Algorithms/数学-数值分析-0168-无网格方法_-_SPH",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot16/Docs/Stage0_Blueprint.md"
+}
