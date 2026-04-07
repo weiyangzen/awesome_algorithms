@@ -338,7 +338,7 @@
   - 重要性: 模运算的基础，在密码学、数论计算中无处不在
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0016 | 源序号 16] 蒙哥马利模乘 (Montgomery Multiplication)
+- [x] [MATH-0016 | 源序号 16] 蒙哥马利模乘 (Montgomery Multiplication)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论/计算数论`
   - 现有摘要: 避免除法运算的快速模乘算法
