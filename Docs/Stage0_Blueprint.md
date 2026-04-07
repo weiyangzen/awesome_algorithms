@@ -2725,7 +2725,7 @@
   - 重要性: 物流配送的核心问题
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0228 | 源序号 228] facility location算法
+- [x] [MATH-0228 | 源序号 228] facility location算法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `几何学与拓扑学 / 组合优化`
   - 现有摘要: 设施选址问题的近似算法
