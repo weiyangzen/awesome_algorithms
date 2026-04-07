@@ -1,0 +1,12 @@
+{
+  "index": 1068,
+  "uid": "CS-0024",
+  "source_number": 24,
+  "name": "二分搜索树查找 (BST Search)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "搜索算法",
+  "folder_name": "计算机-搜索算法-0024-二分搜索树查找_(BST_Search)",
+  "folder_relpath": "Algorithms/计算机-搜索算法-0024-二分搜索树查找_(BST_Search)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot08/Docs/Stage0_Blueprint.md"
+}
