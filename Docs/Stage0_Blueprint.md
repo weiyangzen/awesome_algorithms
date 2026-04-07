@@ -6465,7 +6465,7 @@
   - 重要性: QCD的实验验证
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0403 | 源序号 422] 喷注聚类算法 (Jet Clustering Algorithms)
+- [x] [PHYS-0403 | 源序号 422] 喷注聚类算法 (Jet Clustering Algorithms)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 粒子物理`
   - 现有摘要: 将强子归为喷注的方法
