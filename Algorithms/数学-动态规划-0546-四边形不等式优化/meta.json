@@ -1,0 +1,12 @@
+{
+  "index": 467,
+  "uid": "MATH-0546",
+  "source_number": 546,
+  "name": "四边形不等式优化",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "动态规划",
+  "folder_name": "数学-动态规划-0546-四边形不等式优化",
+  "folder_relpath": "Algorithms/数学-动态规划-0546-四边形不等式优化",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
