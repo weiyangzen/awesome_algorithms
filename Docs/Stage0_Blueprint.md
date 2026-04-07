@@ -8679,7 +8679,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `22`
 
-- [ ] [CS-0039 | 源序号 56] 编辑距离 (Levenshtein Distance)
+- [x] [CS-0039 | 源序号 56] 编辑距离 (Levenshtein Distance)
   - 来源: `Docs/researches/top_500_cs_algorithms.md`
   - 原始类目: `核心基础算法 / 动态规划`
   - 现有摘要: 计算两个字符串的编辑距离

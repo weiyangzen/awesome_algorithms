@@ -1,0 +1,12 @@
+{
+  "index": 1083,
+  "uid": "CS-0039",
+  "source_number": 56,
+  "name": "编辑距离 (Levenshtein Distance)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "动态规划",
+  "folder_name": "计算机-动态规划-0056-编辑距离_(Levenshtein_Distance)",
+  "folder_relpath": "Algorithms/计算机-动态规划-0056-编辑距离_(Levenshtein_Distance)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot03/Docs/Stage0_Blueprint.md"
+}
