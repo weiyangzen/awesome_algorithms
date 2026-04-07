@@ -1,0 +1,12 @@
+{
+  "index": 1025,
+  "uid": "PHYS-0450",
+  "source_number": 473,
+  "name": "扫描隧道显微镜 (STM)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "纳米科学",
+  "folder_name": "物理-纳米科学-0473-扫描隧道显微镜_(STM)",
+  "folder_relpath": "Algorithms/物理-纳米科学-0473-扫描隧道显微镜_(STM)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
