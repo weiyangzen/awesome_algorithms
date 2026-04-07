@@ -6003,7 +6003,7 @@
   - 重要性: 精确高效的DFT计算
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0440 | 源序号 461] 线性 muffin-tin 轨道法 (LMTO)
+- [x] [PHYS-0440 | 源序号 461] 线性 muffin-tin 轨道法 (LMTO)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 计算物理`
   - 现有摘要: muffin-tin 势中的轨道方法
