@@ -1,0 +1,12 @@
+{
+  "index": 1049,
+  "uid": "CS-0005",
+  "source_number": 5,
+  "name": "选择排序 (Selection Sort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0005-选择排序_(Selection_Sort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0005-选择排序_(Selection_Sort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
