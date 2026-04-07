@@ -8299,7 +8299,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `1`
 
-- [ ] [PHYS-0467 | 源序号 490] 电致发光 (Electroluminescence)
+- [x] [PHYS-0467 | 源序号 490] 电致发光 (Electroluminescence)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 光电子学`
   - 现有摘要: 电注入导致的发光
