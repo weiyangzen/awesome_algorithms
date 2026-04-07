@@ -1,0 +1,12 @@
+{
+  "index": 1240,
+  "uid": "CS-0196",
+  "source_number": 343,
+  "name": "TCP拥塞控制 - 慢启动",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "计算机网络",
+  "folder_name": "计算机-计算机网络-0343-TCP拥塞控制_-_慢启动",
+  "folder_relpath": "Algorithms/计算机-计算机网络-0343-TCP拥塞控制_-_慢启动",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot20/Docs/Stage0_Blueprint.md"
+}
