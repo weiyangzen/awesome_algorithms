@@ -1,0 +1,12 @@
+{
+  "index": 990,
+  "uid": "PHYS-0342",
+  "source_number": 360,
+  "name": "张量网络 (Tensor Network)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "量子多体",
+  "folder_name": "物理-量子多体-0360-张量网络_(Tensor_Network)",
+  "folder_relpath": "Algorithms/物理-量子多体-0360-张量网络_(Tensor_Network)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
