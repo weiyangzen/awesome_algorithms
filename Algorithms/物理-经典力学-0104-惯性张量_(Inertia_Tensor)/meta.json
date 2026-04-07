@@ -1,0 +1,12 @@
+{
+  "index": 576,
+  "uid": "PHYS-0104",
+  "source_number": 104,
+  "name": "惯性张量 (Inertia Tensor)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "经典力学",
+  "folder_name": "物理-经典力学-0104-惯性张量_(Inertia_Tensor)",
+  "folder_relpath": "Algorithms/物理-经典力学-0104-惯性张量_(Inertia_Tensor)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot16/Docs/Stage0_Blueprint.md"
+}
