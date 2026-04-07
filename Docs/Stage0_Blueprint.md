@@ -5842,7 +5842,7 @@
   - 重要性: 自由能计算
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0318 | 源序号 321] 自由能微扰 (Free Energy Perturbation)
+- [x] [PHYS-0318 | 源序号 321] 自由能微扰 (Free Energy Perturbation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第六部分：统计力学与计算物理（301-360） / 计算物理`
   - 现有摘要: 计算自由能变化的微扰方法
