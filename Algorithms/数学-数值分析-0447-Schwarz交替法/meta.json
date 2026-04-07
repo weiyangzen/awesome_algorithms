@@ -1,0 +1,12 @@
+{
+  "index": 145,
+  "uid": "MATH-0447",
+  "source_number": 447,
+  "name": "Schwarz交替法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0447-Schwarz交替法",
+  "folder_relpath": "Algorithms/数学-数值分析-0447-Schwarz交替法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot05/Docs/Stage0_Blueprint.md"
+}
