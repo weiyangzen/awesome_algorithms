@@ -1542,7 +1542,7 @@
   - 重要性: QR分解、三对角化的核心构造方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0063 | 源序号 63] 共轭梯度法 (Conjugate Gradient)
+- [x] [MATH-0063 | 源序号 63] 共轭梯度法 (Conjugate Gradient)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `代数学 / 线性代数/数值分析`
   - 现有摘要: 求解对称正定线性方程组的迭代算法
