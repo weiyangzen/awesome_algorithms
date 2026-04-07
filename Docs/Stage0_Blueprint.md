@@ -7935,7 +7935,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `4`
 
-- [ ] [PHYS-0378 | 源序号 397] 霍金辐射 (Hawking Radiation)
+- [x] [PHYS-0378 | 源序号 397] 霍金辐射 (Hawking Radiation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第七部分：相对论与宇宙学扩展（361-400） / 量子引力`
   - 现有摘要: 黑洞的量子热辐射
