@@ -1,0 +1,12 @@
+{
+  "index": 287,
+  "uid": "MATH-0203",
+  "source_number": 203,
+  "name": "线段相交检测 - 扫描线",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "计算几何",
+  "folder_name": "数学-计算几何-0203-线段相交检测_-_扫描线",
+  "folder_relpath": "Algorithms/数学-计算几何-0203-线段相交检测_-_扫描线",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
