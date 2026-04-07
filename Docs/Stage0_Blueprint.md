@@ -1409,7 +1409,7 @@
   - 重要性: Godunov方法的高效实现
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0468 | 源序号 468] HLL/HLLC求解器
+- [x] [MATH-0468 | 源序号 468] HLL/HLLC求解器
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `微分方程 / 数值分析/CFD`
   - 现有摘要: 近似的Riemann求解器
