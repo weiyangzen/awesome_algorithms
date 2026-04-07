@@ -1,0 +1,12 @@
+{
+  "index": 1155,
+  "uid": "CS-0111",
+  "source_number": 241,
+  "name": "LeNet",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "机器学习/深度学习",
+  "folder_name": "计算机-机器学习／深度学习-0241-LeNet",
+  "folder_relpath": "Algorithms/计算机-机器学习／深度学习-0241-LeNet",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
