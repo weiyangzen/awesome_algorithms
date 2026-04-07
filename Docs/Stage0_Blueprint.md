@@ -5478,7 +5478,7 @@
   - 重要性: 精密物理常数
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0250 | 源序号 253] 弗兰克-赫兹实验 (Franck-Hertz Experiment)
+- [x] [PHYS-0250 | 源序号 253] 弗兰克-赫兹实验 (Franck-Hertz Experiment)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 原子物理`
   - 现有摘要: 电子与原子的非弹性碰撞
