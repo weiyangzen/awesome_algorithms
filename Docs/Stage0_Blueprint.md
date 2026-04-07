@@ -7522,7 +7522,7 @@
   - 重要性: 原子分子计算的标准方法
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0210 | 源序号 211] 组态相互作用 (Configuration Interaction, CI)
+- [x] [PHYS-0210 | 源序号 211] 组态相互作用 (Configuration Interaction, CI)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 量子化学`
   - 现有摘要: 多电子波函数的组态展开
