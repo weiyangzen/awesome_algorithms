@@ -5170,7 +5170,7 @@
   - 重要性: 非相对论量子力学的基本方程，原子分子物理的基础
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0022 | 源序号 22] 海森堡不确定性原理 (Heisenberg Uncertainty Principle)
+- [x] [PHYS-0022 | 源序号 22] 海森堡不确定性原理 (Heisenberg Uncertainty Principle)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 量子力学基础 / 量子力学`
   - 现有摘要: 共轭物理量（如位置和动量）不能同时被精确测量
