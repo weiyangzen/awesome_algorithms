@@ -1,0 +1,12 @@
+{
+  "index": 1144,
+  "uid": "CS-0100",
+  "source_number": 222,
+  "name": "朴素贝叶斯 (Naive Bayes)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "机器学习/深度学习",
+  "folder_name": "计算机-机器学习／深度学习-0222-朴素贝叶斯_(Naive_Bayes)",
+  "folder_relpath": "Algorithms/计算机-机器学习／深度学习-0222-朴素贝叶斯_(Naive_Bayes)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot04/Docs/Stage0_Blueprint.md"
+}
