@@ -1,0 +1,12 @@
+{
+  "index": 152,
+  "uid": "MATH-0454",
+  "source_number": 454,
+  "name": "ADI方法",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0454-ADI方法",
+  "folder_relpath": "Algorithms/数学-数值分析-0454-ADI方法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
