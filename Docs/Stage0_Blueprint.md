@@ -5765,7 +5765,7 @@
   - 重要性: DFT的实际计算框架
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0205 | 源序号 206] 交换关联能 (Exchange-Correlation Energy)
+- [x] [PHYS-0205 | 源序号 206] 交换关联能 (Exchange-Correlation Energy)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第四部分：量子力学扩展（201-280） / 计算物理`
   - 现有摘要: DFT中需要近似的能量项

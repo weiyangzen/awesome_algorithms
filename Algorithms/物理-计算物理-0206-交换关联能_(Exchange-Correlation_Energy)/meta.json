@@ -1,0 +1,12 @@
+{
+  "index": 727,
+  "uid": "PHYS-0205",
+  "source_number": 206,
+  "name": "交换关联能 (Exchange-Correlation Energy)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0206-交换关联能_(Exchange-Correlation_Energy)",
+  "folder_relpath": "Algorithms/物理-计算物理-0206-交换关联能_(Exchange-Correlation_Energy)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
