@@ -5499,7 +5499,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `30`
 
-- [ ] [PHYS-0031 | 源序号 31] 玻尔兹曼分布 (Boltzmann Distribution)
+- [x] [PHYS-0031 | 源序号 31] 玻尔兹曼分布 (Boltzmann Distribution)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 统计力学核心 / 统计力学`
   - 现有摘要: 热平衡系统中粒子按能量的指数分布律
