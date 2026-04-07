@@ -1,0 +1,12 @@
+{
+  "index": 215,
+  "uid": "MATH-0079",
+  "source_number": 79,
+  "name": "张量分解 - Tensor Train",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "多重线性代数",
+  "folder_name": "数学-多重线性代数-0079-张量分解_-_Tensor_Train",
+  "folder_relpath": "Algorithms/数学-多重线性代数-0079-张量分解_-_Tensor_Train",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot15/Docs/Stage0_Blueprint.md"
+}
