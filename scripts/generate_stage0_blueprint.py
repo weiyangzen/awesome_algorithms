@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_PATH = ROOT / "Stage0_Blueprint.md"
+OUT_PATH = ROOT / "Docs/Stage0_Blueprint.md"
 SOURCE_PATHS = {
     "math": ROOT / "Docs/researches/top_500_math_algorithms.md",
     "cs": ROOT / "Docs/researches/top_500_cs_algorithms.md",
