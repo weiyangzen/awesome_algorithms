@@ -926,7 +926,7 @@
   - 重要性: 最常用的ODE数值方法，精度与效率的平衡
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0149 | 源序号 149] Runge-Kutta-Fehlberg方法
+- [x] [MATH-0149 | 源序号 149] Runge-Kutta-Fehlberg方法
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析/ODE`
   - 现有摘要: 带自适应步长控制的RK方法
