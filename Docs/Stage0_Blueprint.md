@@ -6045,7 +6045,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `4`
 
-- [ ] [PHYS-0042 | 源序号 42] 洛伦兹变换 (Lorentz Transformation)
+- [x] [PHYS-0042 | 源序号 42] 洛伦兹变换 (Lorentz Transformation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 相对论基础 / 狭义相对论`
   - 现有摘要: 不同惯性系之间时空坐标的变换关系
