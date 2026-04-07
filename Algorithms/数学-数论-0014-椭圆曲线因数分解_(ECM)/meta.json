@@ -1,0 +1,12 @@
+{
+  "index": 14,
+  "uid": "MATH-0014",
+  "source_number": 14,
+  "name": "椭圆曲线因数分解 (ECM)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数论",
+  "folder_name": "数学-数论-0014-椭圆曲线因数分解_(ECM)",
+  "folder_relpath": "Algorithms/数学-数论-0014-椭圆曲线因数分解_(ECM)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot14/Docs/Stage0_Blueprint.md"
+}
