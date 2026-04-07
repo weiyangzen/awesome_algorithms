@@ -1,0 +1,10 @@
+{"txid": "tx1", "op": "BEGIN", "lsn": 1}
+{"txid": "tx1", "op": "SET", "key": "x", "value": 1, "lsn": 2}
+{"txid": "tx1", "op": "SET", "key": "y", "value": 2, "lsn": 3}
+{"txid": "tx1", "op": "COMMIT", "lsn": 4}
+{"txid": "tx2", "op": "BEGIN", "lsn": 5}
+{"txid": "tx2", "op": "SET", "key": "x", "value": 10, "lsn": 6}
+{"txid": "tx2", "op": "DELETE", "key": "y", "lsn": 7}
+{"txid": "tx2", "op": "COMMIT", "lsn": 8}
+{"txid": "tx3", "op": "BEGIN", "lsn": 9}
+{"txid": "tx3", "op": "SET", "key": "z", "value": 999, "lsn": 10}
