@@ -716,7 +716,7 @@
   - 重要性: 最可靠的求根方法，保证收敛但速度较慢
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0119 | 源序号 119] 试位法 (False Position/Regula Falsi)
+- [x] [MATH-0119 | 源序号 119] 试位法 (False Position/Regula Falsi)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `分析学与数值分析 / 数值分析`
   - 现有摘要: 结合二分法和割线法的求根方法

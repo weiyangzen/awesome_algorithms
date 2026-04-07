@@ -1,0 +1,12 @@
+{
+  "index": 67,
+  "uid": "MATH-0119",
+  "source_number": 119,
+  "name": "试位法 (False Position/Regula Falsi)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0119-试位法_(False_Position／Regula_Falsi)",
+  "folder_relpath": "Algorithms/数学-数值分析-0119-试位法_(False_Position／Regula_Falsi)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot07/Docs/Stage0_Blueprint.md"
+}
