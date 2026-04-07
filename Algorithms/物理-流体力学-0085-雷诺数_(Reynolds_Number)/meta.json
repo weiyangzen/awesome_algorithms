@@ -1,0 +1,12 @@
+{
+  "index": 889,
+  "uid": "PHYS-0085",
+  "source_number": 85,
+  "name": "雷诺数 (Reynolds Number)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "流体力学",
+  "folder_name": "物理-流体力学-0085-雷诺数_(Reynolds_Number)",
+  "folder_relpath": "Algorithms/物理-流体力学-0085-雷诺数_(Reynolds_Number)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
