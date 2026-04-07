@@ -1,0 +1,12 @@
+{
+  "index": 748,
+  "uid": "PHYS-0328",
+  "source_number": 335,
+  "name": "Andersen恒温器 (Andersen Thermostat)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0335-Andersen恒温器_(Andersen_Thermostat)",
+  "folder_relpath": "Algorithms/物理-计算物理-0335-Andersen恒温器_(Andersen_Thermostat)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot08/Docs/Stage0_Blueprint.md"
+}
