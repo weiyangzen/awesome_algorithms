@@ -1,0 +1,12 @@
+{
+  "index": 1369,
+  "uid": "CS-0325",
+  "source_number": 495,
+  "name": "牛顿迭代法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "数值计算",
+  "folder_name": "计算机-数值计算-0495-牛顿迭代法",
+  "folder_relpath": "Algorithms/计算机-数值计算-0495-牛顿迭代法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
