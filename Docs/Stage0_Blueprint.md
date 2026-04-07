@@ -268,7 +268,7 @@
   - 重要性: 现代密码学(RSA、Diffie-Hellman)的核心算法，用于生成大素数
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0006 | 源序号 6] AKS素性测试 (AKS Primality Test)
+- [x] [MATH-0006 | 源序号 6] AKS素性测试 (AKS Primality Test)
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `数论与基础算法 / 数论/计算复杂性`
   - 现有摘要: 第一个被证明的多项式时间确定性素性测试算法
