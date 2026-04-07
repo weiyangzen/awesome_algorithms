@@ -1,0 +1,12 @@
+{
+  "index": 1060,
+  "uid": "CS-0016",
+  "source_number": 16,
+  "name": "二分查找 (Binary Search)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "搜索算法",
+  "folder_name": "计算机-搜索算法-0016-二分查找_(Binary_Search)",
+  "folder_relpath": "Algorithms/计算机-搜索算法-0016-二分查找_(Binary_Search)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot20/Docs/Stage0_Blueprint.md"
+}
