@@ -1,0 +1,12 @@
+{
+  "index": 306,
+  "uid": "MATH-0474",
+  "source_number": 474,
+  "name": "广度优先搜索 (BFS)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "图论",
+  "folder_name": "数学-图论-0474-广度优先搜索_(BFS)",
+  "folder_relpath": "Algorithms/数学-图论-0474-广度优先搜索_(BFS)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
