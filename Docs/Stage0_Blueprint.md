@@ -4722,7 +4722,7 @@
   - 重要性: 分子振动、晶格动力学
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0132 | 源序号 132] 简正模分析 (Normal Mode Analysis)
+- [x] [PHYS-0132 | 源序号 132] 简正模分析 (Normal Mode Analysis)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第二部分：经典力学扩展（101-150） / 经典力学`
   - 现有摘要: 多自由度系统振动模态的分解
