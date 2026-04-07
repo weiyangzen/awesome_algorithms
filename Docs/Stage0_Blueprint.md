@@ -8138,7 +8138,7 @@
   - 重要性: 费米的理论
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0423 | 源序号 443] 伽莫夫-泰勒跃迁 (Gamow-Teller Transitions)
+- [x] [PHYS-0423 | 源序号 443] 伽莫夫-泰勒跃迁 (Gamow-Teller Transitions)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 核物理`
   - 现有摘要: 自旋翻转的β衰变
