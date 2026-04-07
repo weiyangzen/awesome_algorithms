@@ -7767,7 +7767,7 @@
   - 重要性: 物理学最重要的定律之一
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0281 | 源序号 284] 热力学第三定律 (Third Law of Thermodynamics)
+- [x] [PHYS-0281 | 源序号 284] 热力学第三定律 (Third Law of Thermodynamics)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第五部分：统计力学与热力学扩展（281-330） / 热力学`
   - 现有摘要: 绝对零度不可达到
