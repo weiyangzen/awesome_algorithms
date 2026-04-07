@@ -1,0 +1,12 @@
+{
+  "index": 1350,
+  "uid": "CS-0306",
+  "source_number": 467,
+  "name": "并行快速排序",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "并行与分布式",
+  "folder_name": "计算机-并行与分布式-0467-并行快速排序",
+  "folder_relpath": "Algorithms/计算机-并行与分布式-0467-并行快速排序",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
