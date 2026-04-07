@@ -6556,7 +6556,7 @@
   - 重要性: 最低阶近似
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0384 | 源序号 403] 一圈图计算 (One-Loop Calculation)
+- [x] [PHYS-0384 | 源序号 403] 一圈图计算 (One-Loop Calculation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 量子场论`
   - 现有摘要: 含一个圈的费曼图计算
