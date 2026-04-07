@@ -1,0 +1,12 @@
+{
+  "index": 110,
+  "uid": "MATH-0162",
+  "source_number": 162,
+  "name": "间断Galerkin方法 (DG)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "数值分析",
+  "folder_name": "数学-数值分析-0162-间断Galerkin方法_(DG)",
+  "folder_relpath": "Algorithms/数学-数值分析-0162-间断Galerkin方法_(DG)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
