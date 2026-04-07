@@ -8166,7 +8166,7 @@
   - 重要性: 恒星能源、氢弹
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0457 | 源序号 480] 穆斯堡尔谱 (Mössbauer Spectroscopy)
+- [x] [PHYS-0457 | 源序号 480] 穆斯堡尔谱 (Mössbauer Spectroscopy)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 核物理/凝聚态`
   - 现有摘要: 无反冲γ射线共振吸收
