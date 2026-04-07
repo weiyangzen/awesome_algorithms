@@ -1,0 +1,12 @@
+{
+  "index": 289,
+  "uid": "MATH-0205",
+  "source_number": 205,
+  "name": "多边形裁剪 - Sutherland-Hodgman",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "计算几何",
+  "folder_name": "数学-计算几何-0205-多边形裁剪_-_Sutherland-Hodgman",
+  "folder_relpath": "Algorithms/数学-计算几何-0205-多边形裁剪_-_Sutherland-Hodgman",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot09/Docs/Stage0_Blueprint.md"
+}
