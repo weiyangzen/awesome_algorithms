@@ -1,0 +1,12 @@
+{
+  "index": 740,
+  "uid": "PHYS-0320",
+  "source_number": 324,
+  "name": "马尔可夫链蒙特卡洛 (Markov Chain Monte Carlo, MCMC)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0324-马尔可夫链蒙特卡洛_(Markov_Chain_Monte_Carlo,_MCMC)",
+  "folder_relpath": "Algorithms/物理-计算物理-0324-马尔可夫链蒙特卡洛_(Markov_Chain_Monte_Carlo,_MCMC)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot20/Docs/Stage0_Blueprint.md"
+}
