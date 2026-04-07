@@ -5177,7 +5177,7 @@
   - 重要性: 量子力学的核心特征，区别于经典物理的本质
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0023 | 源序号 23] 波函数诠释 (Wave Function Interpretation)
+- [x] [PHYS-0023 | 源序号 23] 波函数诠释 (Wave Function Interpretation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 量子力学基础 / 量子力学`
   - 现有摘要: |ψ|²给出粒子在空间中出现的概率密度
