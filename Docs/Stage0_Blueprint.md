@@ -6724,7 +6724,7 @@
   - 重要性: 半导体物理
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0435 | 源序号 455] 包络函数近似 (Envelope Function Approximation)
+- [x] [PHYS-0435 | 源序号 455] 包络函数近似 (Envelope Function Approximation)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第九部分：凝聚态物理与光学扩展（451-500） / 固体物理`
   - 现有摘要: 慢变包络调制布洛赫函数
