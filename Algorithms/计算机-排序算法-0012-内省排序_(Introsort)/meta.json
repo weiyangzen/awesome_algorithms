@@ -1,0 +1,12 @@
+{
+  "index": 1056,
+  "uid": "CS-0012",
+  "source_number": 12,
+  "name": "内省排序 (Introsort)",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "排序算法",
+  "folder_name": "计算机-排序算法-0012-内省排序_(Introsort)",
+  "folder_relpath": "Algorithms/计算机-排序算法-0012-内省排序_(Introsort)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot16/Docs/Stage0_Blueprint.md"
+}
