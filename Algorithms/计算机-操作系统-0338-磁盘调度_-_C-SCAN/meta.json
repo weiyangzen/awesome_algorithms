@@ -1,0 +1,12 @@
+{
+  "index": 1235,
+  "uid": "CS-0191",
+  "source_number": 338,
+  "name": "磁盘调度 - C-SCAN",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "操作系统",
+  "folder_name": "计算机-操作系统-0338-磁盘调度_-_C-SCAN",
+  "folder_relpath": "Algorithms/计算机-操作系统-0338-磁盘调度_-_C-SCAN",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot20/Docs/Stage0_Blueprint.md"
+}
