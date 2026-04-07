@@ -1,0 +1,12 @@
+{
+  "index": 52,
+  "uid": "MATH-0560",
+  "source_number": 560,
+  "name": "快速数论变换 (NTT)",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "算法",
+  "folder_name": "数学-算法-0560-快速数论变换_(NTT)",
+  "folder_relpath": "Algorithms/数学-算法-0560-快速数论变换_(NTT)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot12/Docs/Stage0_Blueprint.md"
+}
