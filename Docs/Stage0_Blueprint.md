@@ -7263,7 +7263,7 @@
 - 拆解约束: 遇到黑箱包实现时，必须追源码并整理为 `3-10` 步。
 - 本子分类条目数: `14`
 
-- [ ] [PHYS-0155 | 源序号 156] 多极展开 (Multipole Expansion)
+- [x] [PHYS-0155 | 源序号 156] 多极展开 (Multipole Expansion)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第三部分：电磁学扩展（151-200） / 电动力学`
   - 现有摘要: 远场电荷分布的势展开
