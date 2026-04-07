@@ -1,0 +1,12 @@
+{
+  "index": 1010,
+  "uid": "PHYS-0414",
+  "source_number": 434,
+  "name": "多丝正比室 (Multiwire Proportional Chamber)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "粒子物理实验",
+  "folder_name": "物理-粒子物理实验-0434-多丝正比室_(Multiwire_Proportional_Chamber)",
+  "folder_relpath": "Algorithms/物理-粒子物理实验-0434-多丝正比室_(Multiwire_Proportional_Chamber)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot10/Docs/Stage0_Blueprint.md"
+}
