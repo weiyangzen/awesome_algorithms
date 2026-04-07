@@ -1,0 +1,12 @@
+{
+  "index": 717,
+  "uid": "PHYS-0331",
+  "source_number": 338,
+  "name": "恒压系综 (NPT Ensemble)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "统计力学",
+  "folder_name": "物理-统计力学-0338-恒压系综_(NPT_Ensemble)",
+  "folder_relpath": "Algorithms/物理-统计力学-0338-恒压系综_(NPT_Ensemble)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot17/Docs/Stage0_Blueprint.md"
+}
