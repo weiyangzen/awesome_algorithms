@@ -1,0 +1,12 @@
+{
+  "index": 338,
+  "uid": "MATH-0224",
+  "source_number": 224,
+  "name": "旅行商问题 - Held-Karp",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "组合优化",
+  "folder_name": "数学-组合优化-0224-旅行商问题_-_Held-Karp",
+  "folder_relpath": "Algorithms/数学-组合优化-0224-旅行商问题_-_Held-Karp",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot18/Docs/Stage0_Blueprint.md"
+}
