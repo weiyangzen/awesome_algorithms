@@ -1,0 +1,12 @@
+{
+  "index": 466,
+  "uid": "MATH-0545",
+  "source_number": 545,
+  "name": "斜率优化DP",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "动态规划",
+  "folder_name": "数学-动态规划-0545-斜率优化DP",
+  "folder_relpath": "Algorithms/数学-动态规划-0545-斜率优化DP",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
