@@ -1,0 +1,17 @@
+[project]
+name = "awesome-algorithms"
+version = "0.1.0"
+description = "Algorithm MVP workspace managed with uv."
+readme = "Docs/Stage0_Blueprint.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "scipy",
+  "pandas",
+  "scikit-learn",
+  "torch",
+  "catboost",
+]
+
+[tool.uv]
+package = false
