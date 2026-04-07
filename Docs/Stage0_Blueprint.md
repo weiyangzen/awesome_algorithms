@@ -5184,7 +5184,7 @@
   - 重要性: 玻恩诠释，量子力学的概率解释
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0025 | 源序号 25] 泡利不相容原理 (Pauli Exclusion Principle)
+- [x] [PHYS-0025 | 源序号 25] 泡利不相容原理 (Pauli Exclusion Principle)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第一部分：最核心算法（1-100） / 量子力学基础 / 量子力学`
   - 现有摘要: 两个全同费米子不能处于相同的量子态
