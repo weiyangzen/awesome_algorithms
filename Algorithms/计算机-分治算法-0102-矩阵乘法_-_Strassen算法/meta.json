@@ -1,0 +1,12 @@
+{
+  "index": 1126,
+  "uid": "CS-0082",
+  "source_number": 102,
+  "name": "矩阵乘法 - Strassen算法",
+  "status": "[ ]",
+  "discipline": "计算机",
+  "subcategory": "分治算法",
+  "folder_name": "计算机-分治算法-0102-矩阵乘法_-_Strassen算法",
+  "folder_relpath": "Algorithms/计算机-分治算法-0102-矩阵乘法_-_Strassen算法",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot06/Docs/Stage0_Blueprint.md"
+}
