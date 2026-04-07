@@ -1,0 +1,12 @@
+{
+  "index": 751,
+  "uid": "PHYS-0335",
+  "source_number": 342,
+  "name": "粗粒化模拟 (Coarse-Grained Simulation)",
+  "status": "[ ]",
+  "discipline": "物理",
+  "subcategory": "计算物理",
+  "folder_name": "物理-计算物理-0342-粗粒化模拟_(Coarse-Grained_Simulation)",
+  "folder_relpath": "Algorithms/物理-计算物理-0342-粗粒化模拟_(Coarse-Grained_Simulation)",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot11/Docs/Stage0_Blueprint.md"
+}
