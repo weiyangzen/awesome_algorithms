@@ -1,179 +1,163 @@
-"""Minimal runnable MVP for the Working Set page replacement algorithm."""
+"""Minimal runnable MVP for the working set page replacement algorithm."""
 
 from __future__ import annotations
 
-from collections import Counter, deque
 from dataclasses import dataclass
-from typing import Deque, Dict, Iterable, List, Optional, Set
-
-import numpy as np
+from typing import Dict, List, Optional, Sequence, Set, Tuple
 
 
-@dataclass
+@dataclass(frozen=True)
 class StepRecord:
-    """One access step snapshot for inspection."""
+    """One access step in the simulation."""
 
-    t: int
+    step: int
     page: int
     hit: bool
+    expired: Tuple[int, ...]
     evicted: Optional[int]
-    resident_old_to_new: List[int]
-    ws_before: List[int]
-    ws_after: List[int]
+    resident: Tuple[int, ...]
+    faults: int
 
 
 class WorkingSetPager:
+    """Working set algorithm with an optional hard frame cap.
+
+    - `delta`: working-set window size in number of references.
+    - `max_frames`: hard memory cap used in this MVP to keep memory bounded.
     """
-    Working Set based pager.
 
-    - window_size (Delta): references in the recent window define working set.
-    - frame_limit: maximum number of resident pages.
-    """
+    def __init__(self, delta: int, max_frames: Optional[int] = None) -> None:
+        if delta <= 0:
+            raise ValueError("delta must be positive")
+        if max_frames is not None and max_frames <= 0:
+            raise ValueError("max_frames must be positive when provided")
 
-    def __init__(self, frame_limit: int, window_size: int) -> None:
-        if frame_limit <= 0:
-            raise ValueError("frame_limit must be positive")
-        if window_size <= 0:
-            raise ValueError("window_size must be positive")
-
-        self.frame_limit = frame_limit
-        self.window_size = window_size
-
-        self.t = 0
-        self.hits = 0
-        self.faults = 0
-        self.evictions = 0
-
+        self.delta = delta
+        self.max_frames = max_frames
+        self.time = 0
         self.resident: Set[int] = set()
-        self.last_access: Dict[int, int] = {}
-        self._history: Deque[int] = deque()
-        self._history_counter: Counter[int] = Counter()
+        self.last_seen: Dict[int, int] = {}
+        self.faults = 0
+        self.records: List[StepRecord] = []
 
-    def _working_set(self) -> Set[int]:
-        return set(self._history_counter.keys())
+    def _expire_stale_pages(self) -> List[int]:
+        """Drop pages not referenced within the last `delta` references."""
 
-    def _push_history(self, page: int) -> None:
-        if len(self._history) >= self.window_size:
-            old_page = self._history.popleft()
-            self._history_counter[old_page] -= 1
-            if self._history_counter[old_page] == 0:
-                del self._history_counter[old_page]
-        self._history.append(page)
-        self._history_counter[page] += 1
+        threshold = self.time - self.delta
+        expired = [p for p in self.resident if self.last_seen.get(p, 0) < threshold]
+        for page in expired:
+            self.resident.remove(page)
+        return sorted(expired)
 
-    def _choose_victim(self, ws_before: Set[int]) -> int:
-        stale_pages = [p for p in self.resident if p not in ws_before]
-        candidate_pages = stale_pages if stale_pages else list(self.resident)
-        return min(candidate_pages, key=lambda p: self.last_access[p])
+    def access(self, page: int) -> None:
+        """Process one page reference."""
 
-    def access(self, page: int) -> StepRecord:
-        self.t += 1
-        ws_before = self._working_set()
+        self.time += 1
+        expired = self._expire_stale_pages()
 
         hit = page in self.resident
         evicted: Optional[int] = None
 
-        if hit:
-            self.hits += 1
-        else:
+        if not hit:
             self.faults += 1
-            if len(self.resident) >= self.frame_limit:
-                victim = self._choose_victim(ws_before)
-                self.resident.remove(victim)
-                evicted = victim
-                self.evictions += 1
+            if self.max_frames is not None and len(self.resident) >= self.max_frames:
+                # Fallback policy when the working set still does not fit: evict oldest page.
+                evicted = min(self.resident, key=lambda p: self.last_seen[p])
+                self.resident.remove(evicted)
             self.resident.add(page)
 
-        self.last_access[page] = self.t
-        self._push_history(page)
-        ws_after = self._working_set()
+        self.last_seen[page] = self.time
 
-        resident_old_to_new = sorted(self.resident, key=lambda p: self.last_access[p])
-
-        return StepRecord(
-            t=self.t,
-            page=page,
-            hit=hit,
-            evicted=evicted,
-            resident_old_to_new=resident_old_to_new,
-            ws_before=sorted(ws_before),
-            ws_after=sorted(ws_after),
+        self.records.append(
+            StepRecord(
+                step=self.time,
+                page=page,
+                hit=hit,
+                expired=tuple(expired),
+                evicted=evicted,
+                resident=tuple(sorted(self.resident)),
+                faults=self.faults,
+            )
         )
 
-    def simulate(self, reference_string: Iterable[int]) -> dict:
-        steps: List[StepRecord] = []
-        for page in reference_string:
-            steps.append(self.access(page))
 
-        total = self.hits + self.faults
-        fault_rate = (self.faults / total) if total else 0.0
-        hit_rate = (self.hits / total) if total else 0.0
-
-        ws_sizes = np.array([len(s.ws_after) for s in steps], dtype=np.float64)
-        avg_ws_size = float(np.mean(ws_sizes)) if ws_sizes.size else 0.0
-        max_ws_size = int(np.max(ws_sizes)) if ws_sizes.size else 0
-
-        return {
-            "frame_limit": self.frame_limit,
-            "window_size": self.window_size,
-            "total": total,
-            "hits": self.hits,
-            "faults": self.faults,
-            "evictions": self.evictions,
-            "hit_rate": hit_rate,
-            "fault_rate": fault_rate,
-            "avg_ws_size": avg_ws_size,
-            "max_ws_size": max_ws_size,
-            "steps": steps,
-        }
+def simulate_working_set(
+    reference_string: Sequence[int], delta: int, max_frames: Optional[int]
+) -> WorkingSetPager:
+    pager = WorkingSetPager(delta=delta, max_frames=max_frames)
+    for page in reference_string:
+        pager.access(page)
+    return pager
 
 
-def run_sanity_checks() -> None:
-    case_a = WorkingSetPager(frame_limit=3, window_size=3)
-    result_a = case_a.simulate([1, 2, 3, 1])
-    assert result_a["faults"] == 3
-    assert result_a["hits"] == 1
+def simulate_lru_faults(reference_string: Sequence[int], capacity: int) -> int:
+    if capacity <= 0:
+        raise ValueError("capacity must be positive")
 
-    case_b = WorkingSetPager(frame_limit=2, window_size=2)
-    result_b = case_b.simulate([1, 2, 3])
-    assert result_b["faults"] == 3
-    assert result_b["evictions"] == 1
+    time = 0
+    faults = 0
+    resident: Set[int] = set()
+    last_seen: Dict[int, int] = {}
+
+    for page in reference_string:
+        time += 1
+        if page in resident:
+            last_seen[page] = time
+            continue
+
+        faults += 1
+        if len(resident) >= capacity:
+            victim = min(resident, key=lambda p: last_seen[p])
+            resident.remove(victim)
+
+        resident.add(page)
+        last_seen[page] = time
+
+    return faults
+
+
+def format_records(records: Sequence[StepRecord]) -> str:
+    header = (
+        f"{'step':>4} {'page':>4} {'hit':>4} {'expired':>12} "
+        f"{'evicted':>7} {'resident':>20} {'faults':>6}"
+    )
+    lines = [header, "-" * len(header)]
+
+    for r in records:
+        lines.append(
+            f"{r.step:>4} "
+            f"{r.page:>4} "
+            f"{('Y' if r.hit else 'N'):>4} "
+            f"{str(list(r.expired)):>12} "
+            f"{str(r.evicted) if r.evicted is not None else '-':>7} "
+            f"{str(list(r.resident)):>20} "
+            f"{r.faults:>6}"
+        )
+
+    return "\n".join(lines)
 
 
 def main() -> None:
-    run_sanity_checks()
+    # Deterministic demo reference string (no interactive input required).
+    reference_string = [1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+    delta = 4
+    max_frames = 4
 
-    reference_string = [1, 2, 3, 1, 2, 4, 1, 2, 5, 1, 2, 3, 4, 5, 6, 2, 1, 2, 7, 2, 1, 8, 2, 1]
-    frame_limit = 4
-    window_size = 5
-
-    pager = WorkingSetPager(frame_limit=frame_limit, window_size=window_size)
-    result = pager.simulate(reference_string)
-
-    print("Working Set Page Replacement Demo")
-    print(f"Reference string: {reference_string}")
-    print(f"Frame limit    : {frame_limit}")
-    print(f"Window size Δ  : {window_size}")
-    print()
-    print("Step | Ref | Result | Evicted | Resident(old->new) | WS(before) | WS(after)")
-    print("-----+-----+--------+---------+---------------------+------------+----------")
-
-    for step in result["steps"]:
-        result_text = "HIT" if step.hit else "FAULT"
-        evicted_text = "-" if step.evicted is None else str(step.evicted)
-        print(
-            f"{step.t:>4} | {step.page:>3} | {result_text:>6} | {evicted_text:>7} | "
-            f"{str(step.resident_old_to_new):>19} | {str(step.ws_before):>10} | {step.ws_after}"
-        )
-
-    print()
-    print(
-        "Summary: "
-        f"total={result['total']}, hits={result['hits']}, faults={result['faults']}, "
-        f"evictions={result['evictions']}, hit_rate={result['hit_rate']:.2%}, "
-        f"fault_rate={result['fault_rate']:.2%}, avg_ws_size={result['avg_ws_size']:.2f}, "
-        f"max_ws_size={result['max_ws_size']}"
+    pager = simulate_working_set(
+        reference_string=reference_string,
+        delta=delta,
+        max_frames=max_frames,
     )
+    lru_faults = simulate_lru_faults(reference_string, capacity=max_frames)
+
+    print("Working Set Algorithm MVP")
+    print(f"reference_string = {reference_string}")
+    print(f"delta = {delta}, max_frames = {max_frames}")
+    print()
+    print(format_records(pager.records))
+    print()
+    print(f"Working Set faults: {pager.faults}")
+    print(f"LRU faults (same frame cap): {lru_faults}")
 
 
 if __name__ == "__main__":
