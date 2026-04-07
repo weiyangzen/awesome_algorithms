@@ -3593,7 +3593,7 @@
   - 重要性: Transformer的核心组件
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [MATH-0315 | 源序号 315] BERT
+- [x] [MATH-0315 | 源序号 315] BERT
   - 来源: `Docs/researches/top_500_math_algorithms.md`
   - 原始类目: `概率论与数理统计 / 深度学习/NLP`
   - 现有摘要: 双向Transformer预训练
