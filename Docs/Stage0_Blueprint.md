@@ -8117,7 +8117,7 @@
   - 重要性: 核结合能、裂变
   - 完成条件: `R01-R18` 全部完成，且 `R08/R16`、`R04/R12`、`R11/R13/R14`、`R17/R18` 四组内容互相一致。
 
-- [ ] [PHYS-0420 | 源序号 440] 半经验质量公式 (Semi-Empirical Mass Formula)
+- [x] [PHYS-0420 | 源序号 440] 半经验质量公式 (Semi-Empirical Mass Formula)
   - 来源: `Docs/researches/physics_top500_algorithms.md`
   - 原始类目: `第八部分：粒子物理与核物理扩展（401-450） / 核物理`
   - 现有摘要: 核结合能的经验公式
