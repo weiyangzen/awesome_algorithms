@@ -1,0 +1,12 @@
+{
+  "index": 399,
+  "uid": "MATH-0255",
+  "source_number": 255,
+  "name": "测地线计算",
+  "status": "[ ]",
+  "discipline": "数学",
+  "subcategory": "微分几何",
+  "folder_name": "数学-微分几何-0255-测地线计算",
+  "folder_relpath": "Algorithms/数学-微分几何-0255-测地线计算",
+  "blueprint_path": "/Users/wangweiyang/GitHub/awesome_algorithms/.cron/stage0_exec_repo_slot19/Docs/Stage0_Blueprint.md"
+}
